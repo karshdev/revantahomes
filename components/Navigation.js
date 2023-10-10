@@ -14,20 +14,20 @@ const Navigation = () => {
   </div>  
   </div>
   <div className='flex gap-10 mr-[100px] '>
-    <div className="w-[178px] h-10 px-[15px] py-[13px] bg-gray-600 border border-white justify-center items-center gap-2 inline-flex">
+    <div className="w-[190px] h-10 px-[15px] py-[13px] bg-gray-600 border border-white justify-center items-center gap-[10px] inline-flex">
       <img src='download.svg' />
      <a
-          className=""
-          href=""
+          className="text-white text-sm font-[400px]font-['Manrope'] leading-[14px] "
+          href="/brochure.pdf"
           download
        >
-        Download
+        Download Brochure
        </a>
        </div>
        <div className='w-[119px] h-10 px-1 py-[9px] justify-start items-center gap-[13px] inline-flex'>
         <img src='/language.svg' />
         <div className='flex gap-3 items-center justify-center'>
-          <span className="text-white text-sm font-semibold font-['Manrope'] leading-[14px]">English</span>
+          <span className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px] cursor-pointer">English</span>
           <img src='/down.svg' />
         </div>
        </div>
