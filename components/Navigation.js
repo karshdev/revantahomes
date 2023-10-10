@@ -3,7 +3,7 @@ import React from 'react'
 
 const Navigation = () => {
   return (
-    <div className='flex p-4  items-center justify-between' >
+    <div className='position relative flex p-4  items-center justify-between' >
       <div className='flex justify-center items-center gap-20 md:gap-15 '>
      <div>
       <img src='/LOGO.png' className='w-[80px] h-[72px] sm:w-[98px] sm:h-[92px]'/>
