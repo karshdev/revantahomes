@@ -2,15 +2,15 @@
 import React, { useState } from 'react'
 
 const Section2Images = () => {
-    const[src,setSrc]=useState("")
+    const[src,setSrc]=useState("/1.png")
   return (
     <div className='h-[50%] w-[40%] flex flex-col gap-3'>
-        <img src={`/${src}.png`} className='w-[100%] h-[100%] object-cover'  /> 
+        <img src={`${src}`} className='w-[100%] h-[100%] object-cover'  /> 
         <div className='flex gap-4 items-center justify-center'>
-        <img src='/1.png' className='w-[100px] h-[100px] hover:bg-black hover:bg-opacity-50 hover:border-2 hover:border-yellow-600'  onMouseEnter={()=>setSrc("1")}/> 
-        <img src='/2.png' className='w-[100px] h-[100px]'  onMouseEnter={()=>setSrc("2")}/> 
-        <img src='/3.png' className='w-[100px] h-[100px]'  onMouseEnter={()=>setSrc("3")}/> 
-        <img src='/4.png' className='w-[100px] h-[100px]'  onMouseEnter={()=>setSrc("4")}/> 
+        <img src='/1.png' className='w-[100px] h-[100px] hover:border-2 hover:border-yellow-600' onMouseEnter={()=>setSrc("/1.png")}/> 
+        <img src='/2.png' className='w-[100px] h-[100px] hover:border-2 hover:border-yellow-600'  onMouseEnter={()=>setSrc("/2.png")}/> 
+        <img src='/3.png' className='w-[100px] h-[100px] hover:border-2 hover:border-yellow-600'  onMouseEnter={()=>setSrc("/3.png")}/> 
+        <img src='/4.png' className='w-[100px] h-[100px] hover:border-2 hover:border-yellow-600'  onMouseEnter={()=>setSrc("/4.png")}/> 
         </div>
       
     </div>
