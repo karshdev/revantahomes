@@ -7,6 +7,7 @@ const Header = () => {
     <div className="w-[100vw] h-[100vh] bg-gradient-to-tr from-blue-100 to-blue-100 overflow-hidden">
       <Navigation />
       <Section1 />
+    
     </div>
   )
 }
