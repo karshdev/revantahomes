@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Navigation = () => {
@@ -9,8 +10,8 @@ const Navigation = () => {
      </div>
      
 <div className='flex gap-14 '>
-  <span className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px]">Home</span>
-  <span className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px]">About US</span>
+  <Link href="/" className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px]">Home</Link>
+  <Link  href="/" className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px]">About US</Link>
   </div>  
   </div>
   <div className='flex gap-10 mr-[100px] '>
