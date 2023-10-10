@@ -3,14 +3,13 @@ import React from 'react'
 
 const Navigation = () => {
   return (
-    <div className='flex p-4 justify-between items-center' >
-      <div className='flex justify-center items-center gap-20 md:gap-15'>
+    <div className='flex p-4  items-center justify-between' >
+      <div className='flex justify-center items-center gap-20 md:gap-15 '>
      <div>
       <img src='/LOGO.png' className='w-[80px] h-[72px] sm:w-[98px] sm:h-[92px]'/>
      </div>
-     
 <div className=' hidden sm:flex sm:gap-14 sm:visible  '>
-  <Link href="/" className="text-gray-600 text-base font-[http://localhost:3000/Cloud2.png400px] font-['Manrope'] leading-[14px]">Home</Link>
+  <Link href="/" className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px]">Home</Link>
   <Link  href="/" className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px]">About Us</Link>
   </div>  
   </div>
