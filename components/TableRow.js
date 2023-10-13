@@ -20,13 +20,13 @@ const handleDelete = () => {
 
 return (
     <tr className="hover:bg-gray-100" key={editedValue.id}>
-        <td className="py-2 px-4 border-b text-center">{editedValue.id}</td>
-        <td className="py-2 px-4 border-b text-center">
+        <td className="py-2 px-4 border-b text-center  w-12">{editedValue.id}</td>
+        <td className="py-2 px-4  w-12 border-b text-center ">
             {isEdit ? (
                 <input
                     type="text"
                     name="fullName"
-                    className='border-[1px] border-gray-500 max-w-max'
+                    className=' border-gray-500 w-[96px]'
                     value={editedValue.fullName}
                     onChange={handleInputChange}
                 />
@@ -34,12 +34,12 @@ return (
                 editedValue.fullName
             )}
         </td>
-        <td className="py-2 px-4 border-b text-center">
+        <td className="py-2 px-4 w-12 border-b text-center">
             {isEdit ? (
                 <input
                     type="text"
                     name="email"
-                    className='border-[1px] border-gray-500 max-w-max'
+                    className=' border-gray-500 w-[96px]'
                     value={editedValue.email}
                     onChange={handleInputChange}
                 />
@@ -47,12 +47,12 @@ return (
                 editedValue.email
             )}
         </td>
-        <td className="py-2 px-4 border-b text-center">
+        <td className="py-2 px-4 border-b text-center w-12">
             {isEdit ? (
                 <input
                     type="text"
                     name="phone"
-                    className='border-[1px] border-gray-500 max-w-max'
+                    className=' border-gray-500  w-[96px]'
                     value={editedValue.phone}
                     onChange={handleInputChange}
                 />
@@ -60,12 +60,12 @@ return (
                 editedValue.phone
             )}
         </td>
-        <td className="py-2 px-4 border-b text-center">
+        <td className="py-2 px-4 border-b text-center w-12">
             {isEdit ? (
                 <input
                     type="text"
                     name="address"
-                    className='border-[1px] border-gray-500 max-w-max'
+                    className=' border-gray-500 w-[96px]'
                     value={editedValue.address}
                     onChange={handleInputChange}
                 />
@@ -74,8 +74,8 @@ return (
             )}
         </td>
         {/* Repeat the same pattern for other columns... */}
-        <td className="py-2 px-4 border-b text-center">Edited</td>
-        <td className="py-2 px-4 border-b text-center">
+        <td className="py-2 px-4 border-b text-center w-12">Edited</td>
+        <td className="py-2 px-4 border-b text-center w-12">
             {isEdit ? (
                 <div className='flex gap-2 items-center justify-center'>
                 <button className='underline text-blue-400' onClick={handleSave}>
