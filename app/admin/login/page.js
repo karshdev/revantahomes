@@ -1,4 +1,4 @@
-// pages/login.js
+
 "use client"
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
@@ -11,13 +11,9 @@ const LoginPage = () => {
         redirect: true,
         email: credentials.email,
         password: credentials.password,
-        callbackUrl: '/'
+        callbackUrl: '/admin'
     })
-    if (!result.error) {
-      window.location.href = '/';
-    } else {
-      console.error('Sign-in error:', result.error);
-    }
+
   };
 
   return (

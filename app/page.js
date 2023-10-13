@@ -1,16 +1,15 @@
-import Header from "./Header";
-import Section2 from "./Section2";
-import Section3 from "./Section3";
-import Section4 from "./Section4";
+"use client"
+import { useSession } from "next-auth/react";
+import AdminDashboard from "./admin/page";
+import UserLanding from "./UserLanding";
 
 export default function Home() {
-  return (
-   <>
-   <Header />
-   <Section2 />
-   <Section3 />
-   <Section4 />
+const{ data :session }=useSession()
 
+  return (
+    <>
+   {session?.user?.role==="admin" && <AdminDashboard /> }
+   {session?.user?.role==="user" && <UserLanding /> }
    </>
   )
 }
