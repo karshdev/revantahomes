@@ -1,5 +1,5 @@
-import Section2Images from '@/components/Section2Images';
-import TextContainer from '@/components/TextContainer';
+import Section2Images from '../components/Section2Images';
+import TextContainer from '../components/TextContainer';
 import React from 'react'
 
 const Section2 = () => {

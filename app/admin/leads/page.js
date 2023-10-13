@@ -1,17 +1,17 @@
-import AdminNavbar from '@/components/AdminNavbar'
+import AdminNavbar from '../../../components/AdminNavbar'
 import React from 'react'
-import dummyData from '@/dummy/dummy'
-import TableRow from './(components)/TableRow'
-import Link from 'next/link'
+import dummyData from '../../../dummy/dummy'
+
+import TableRow from '../../../components/TableRow'
 const Leads = () => {
   return (
     <>
       <AdminNavbar />
       <div className='flex flex-col items-center justify-center gap-20 p-10'>
       <div className='w-[100%] flex items-center justify-evenly'>
-      <Link href='admin/leads/add'  className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition">
+      <a href='/leads/add'  className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition">
             Add Users
-          </Link>
+          </a>
         <div className='flex gap-4 items-center justify-center'>
       <input type="text" className='p-4 border-gray-300 border-2 focus:outline-none  rounded-lg' placeholder='write'/>
       <input type='date'  className='p-4 border-gray-300 border-2 focus:outline-none  rounded-lg' placeholder='write'/>

@@ -1,7 +1,7 @@
 
 
 
-import TextAndSlider from '@/components/TextAndSlider'
+import TextAndSlider from '../components/TextAndSlider'
 import React from 'react'
 
 const Section1 = () => {

@@ -1,7 +1,8 @@
 
-import Navigation from '@/components/Navigation'
+import Navigation from "../components/Navigation"
 import React from 'react'
 import Section1 from './Section1'
+
 
 
 const Header = () => {
