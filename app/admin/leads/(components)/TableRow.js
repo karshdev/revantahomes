@@ -12,6 +12,7 @@ const handleInputChange = (e) => {
 
 const handleSave = () => {
    //api call
+   setIsEdit(!isEdit)
 };
 const handleDelete = () => {
 //api call
@@ -38,7 +39,7 @@ return (
                 <input
                     type="text"
                     name="email"
-                    
+                    className='border-[1px] border-gray-500 max-w-max'
                     value={editedValue.email}
                     onChange={handleInputChange}
                 />
@@ -51,6 +52,7 @@ return (
                 <input
                     type="text"
                     name="phone"
+                    className='border-[1px] border-gray-500 max-w-max'
                     value={editedValue.phone}
                     onChange={handleInputChange}
                 />
@@ -63,6 +65,7 @@ return (
                 <input
                     type="text"
                     name="address"
+                    className='border-[1px] border-gray-500 max-w-max'
                     value={editedValue.address}
                     onChange={handleInputChange}
                 />
