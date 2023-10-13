@@ -1,12 +1,11 @@
 "use client"
-import { signOut, useSession } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import React from 'react'
 
 const Navigation =  () => {
   const { data: session } = useSession();
  
-  
   return (
     <div className='position relative flex p-4  items-center justify-between' >
       <div className='flex justify-center items-center gap-20 md:gap-15 '>
@@ -16,7 +15,7 @@ const Navigation =  () => {
 <div className=' hidden sm:flex sm:gap-14 sm:visible  '>
   <Link href="/" className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px] ">Home</Link>
   <Link  href="/" className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px] ">About Us</Link>
-  {session?.user?.role==="admin" && <a  href="/admin/leads" className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px]">Leads</a>}
+  {session?.user?.role==="admin" && <Link  href="/admin/leads" className="text-gray-600 text-base font-[400px] font-['Manrope'] leading-[14px]">Leads</Link>}
   </div>  
   </div>
   <div className='flex gap-10 '>
