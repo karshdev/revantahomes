@@ -1,7 +1,7 @@
 "use client"
 import { signOut } from "next-auth/react";
 
-const AdminDashboard = () => {
+const AdminNavbar = () => {
   
   const handleSignOut = async () => {
     await signOut({ redirect: true, callbackUrl: '/admin/login' });
@@ -30,5 +30,5 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default AdminNavbar;
 

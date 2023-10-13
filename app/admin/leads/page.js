@@ -1,10 +1,14 @@
 import React from 'react'
+import AdminNavbar from '../page'
 
 const Leads = () => {
   return (
-    <div>
-      Leads
-    </div>
+    <>
+      <AdminNavbar />
+       <div className='flex justify-center items-center h-[95vh] w-[100vw]'>
+        Table
+       </div>
+    </>
   )
 }
 
