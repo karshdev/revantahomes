@@ -7,11 +7,11 @@ const LoginPage = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await signIn('credentials', {
+     await signIn('credentials', {
         redirect: true,
         email: credentials.email,
         password: credentials.password,
-        callbackUrl: '/admin'
+        callbackUrl: '/'
     })
 
   };

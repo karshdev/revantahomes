@@ -1,8 +1,6 @@
 
 import Link from 'next/link'
 const Navigation =  () => {
- 
- 
   return (
     <div className='position relative flex p-4  items-center justify-between' >
       <div className='flex justify-center items-center gap-20 md:gap-15 '>

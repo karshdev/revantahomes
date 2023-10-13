@@ -5,11 +5,12 @@ import UserLanding from "./UserLanding";
 
 export default function Home() {
 const{ data :session }=useSession()
-
+if(!session){
+  return  <UserLanding />
+}
   return (
     <>
-   {session?.user?.role==="admin" && <AdminDashboard /> }
-   {session?.user?.role==="user" && <UserLanding /> }
+   {session?.user?.role==="admin" ? <AdminDashboard /> : <UserLanding /> }
    </>
   )
 }
