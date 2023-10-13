@@ -1,5 +1,6 @@
+import AdminNavbar from '@/components/AdminNavbar'
 import React from 'react'
-import AdminNavbar from '../page'
+
 
 const Leads = () => {
   return (
