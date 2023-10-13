@@ -4,9 +4,14 @@ import React, { useState } from 'react';
 const TableRow = ({ value }) => {
     const [editedValue, setEditedValue] = useState(value);
     const [isEdit, setIsEdit] = useState(false);
+    const [selectedOption, setSelectedOption] = useState(editedValue.option);
 
 const handleInputChange = (e) => {
     const { name, value } = e.target;
+    if (name === 'option') {
+        const selectedOption = e.target.value;
+        setSelectedOption(selectedOption);
+      }
     setEditedValue({ ...editedValue, [name]: value });
 };
 
@@ -73,8 +78,25 @@ return (
                 editedValue.address
             )}
         </td>
+        <td className="py-2 px-4 border-b text-center w-12">
+        { isEdit ? (
+            <select 
+            value={selectedOption}
+            name="option"
+            onChange={handleInputChange}
+            >
+                <option>a</option>
+                <option>b</option>
+                <option>c</option>
+            </select>
+           ):(
+               
+                 editedValue.option
+               
+            )}
+            </td>
         {/* Repeat the same pattern for other columns... */}
-        <td className="py-2 px-4 border-b text-center w-12">Edited</td>
+       
         <td className="py-2 px-4 border-b text-center w-12">
             {isEdit ? (
                 <div className='flex gap-2 items-center justify-center'>

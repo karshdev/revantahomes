@@ -5,6 +5,7 @@ const dummyData = [
       email: 'john.doe@example.com',
       phone: '555-1234',
       address: '123 Main St, Cityville',
+      option:'Select'
     },
     {
       id: 2,
@@ -12,6 +13,7 @@ const dummyData = [
       email: 'jane.smith@example.com',
       phone: '555-5678',
       address: '456 Oak St, Townsville',
+      option:'Select'
     },
     {
       id: 3,
@@ -19,6 +21,7 @@ const dummyData = [
       email: 'bob.johnson@example.com',
       phone: '555-9876',
       address: '789 Pine St, Villagetown',
+      option:'Select'
     },
     {
       id: 4,
@@ -26,6 +29,7 @@ const dummyData = [
       email: 'alice.williams@example.com',
       phone: '555-4321',
       address: '101 Elm St, Hamletville',
+      option:'Select'
     },
     {
       id: 5,
@@ -33,6 +37,7 @@ const dummyData = [
       email: 'charlie.brown@example.com',
       phone: '555-8765',
       address: '202 Birch St, Suburbia',
+      option:'Select'
     },
     {
       id: 6,
@@ -40,6 +45,7 @@ const dummyData = [
       email: 'eva.davis@example.com',
       phone: '555-5678',
       address: '303 Cedar St, Countryside',
+      option:'Select'
     },
     {
       id: 7,
@@ -47,6 +53,7 @@ const dummyData = [
       email: 'david.white@example.com',
       phone: '555-4321',
       address: '404 Maple St, Riverside',
+      option:'Select'
     },
     {
       id: 8,
@@ -54,6 +61,7 @@ const dummyData = [
       email: 'grace.miller@example.com',
       phone: '555-8765',
       address: '505 Pine St, Mountainside',
+      option:'Select'
     },
     {
       id: 9,
@@ -61,6 +69,7 @@ const dummyData = [
       email: 'frank.brown@example.com',
       phone: '555-1234',
       address: '606 Oak St, Lakeshore',
+      option:'Select'
     },
     {
       id: 10,
@@ -68,6 +77,7 @@ const dummyData = [
       email: 'helen.taylor@example.com',
       phone: '555-9876',
       address: '707 Elm St, Seaside',
+      option:'Select'
     },
   ];
   
