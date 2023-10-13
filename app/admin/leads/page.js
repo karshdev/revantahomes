@@ -1,7 +1,7 @@
 import AdminNavbar from '@/components/AdminNavbar'
 import React from 'react'
 import dummyData from '@/dummy/dummy'
-
+import TableRow from './(components)/TableRow'
 const Leads = () => {
   return (
     <>
@@ -27,20 +27,8 @@ const Leads = () => {
         </thead>
         <tbody>
           {/* Sample Row */}
-          {dummyData.map((vlaue)=>(
-             <tr className="hover:bg-gray-100" key={vlaue.id}>
-             <td className="py-2 px-4 border-b text-center">{vlaue.id}</td>
-             <td className="py-2 px-4 border-b text-center">{vlaue.fullName}</td>
-             <td className="py-2 px-4 border-b text-center">{vlaue.email}</td>
-             <td className="py-2 px-4 border-b text-center">{vlaue.phone}</td>
-             <td className="py-2 px-4 border-b text-center">{vlaue.address}</td>
-             <td className="py-2 px-4 border-b text-center">Edited</td>
-             <td className="py-2 px-4 border-b text-center">
-               <button className='underline text-blue-400'>
-                 View
-               </button>
-             </td>
-           </tr>
+          {dummyData.map((value, i)=>(
+             <TableRow key={i} value={value} />
           ))
          }
         
