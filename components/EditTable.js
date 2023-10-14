@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from 'react'
 
-const EditTable = ({value}) => {
+const EditTable = ({value,setIsEdit}) => {
+    const[id,setId]=useState(value._id)
     const [fullName, setfullName] = useState(value.fullName)
     const [email, setemail] = useState(value.email)
     const [phone, setPhone] = useState(value.phone)
@@ -9,9 +10,29 @@ const EditTable = ({value}) => {
     const [type, settype] = useState(value.type)
     const [status, setstatus] = useState(value.status)
     const [message, setMessage] = useState(value.message)
+   const handleSubmit=async ()=>{
+    try {
+        const response = await fetch(`/api/leads/`,{
+          method:"PUT",
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ id,fullName,email,phone,address,type,status,message}),
+        });
+        const res = await response.json()
+        if (res.message==="Updated") {
+          setIsEdit(false)
+         return true
+        } else{
+          return false
+        }
+      } catch (error) {
+       
+      }
+   }
   return (
     <div className=" fixed backdrop w-full h-full top-0 m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000] ">
-    <div className="bg-[#95bbf4] shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-[100px] ml-[20px] max-w-md sm:ml-[500px]">
+    <div className="shadow-lg  rounded-md px-8 pt-6 pb-8 mb-4 mt-[100px] ml-[20px] bg-white  max-w-md sm:ml-[500px]">
              <h2 className="text-2xl font-bold mb-4 text-center">Edit User</h2>
              <form onSubmit={e => e.preventDefault()}>
             <div className="flex flex-wrap -mx-4 mb-4">
@@ -121,7 +142,7 @@ const EditTable = ({value}) => {
             <button
               type="button"
               className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
-          
+          onClick={handleSubmit}
             >
               Submit
             </button>

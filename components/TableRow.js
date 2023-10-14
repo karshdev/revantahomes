@@ -39,7 +39,7 @@ return (
                         Delete
                     </button>
                     </div>
-                    {isEdit && <EditTable value={value} />}
+                    {isEdit && <EditTable value={value} setIsEdit={setIsEdit}/>}
         
         </td>
     </tr>
