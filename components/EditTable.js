@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 
 const EditTable = ({value,setIsEdit}) => {
-    const[id,setId]=useState(value._id)
+    const id=useState(value._id)
     const [fullName, setfullName] = useState(value.fullName)
     const [email, setemail] = useState(value.email)
     const [phone, setPhone] = useState(value.phone)
@@ -10,6 +10,7 @@ const EditTable = ({value,setIsEdit}) => {
     const [type, settype] = useState(value.type)
     const [status, setstatus] = useState(value.status)
     const [message, setMessage] = useState(value.message)
+
    const handleSubmit=async ()=>{
     try {
         const response = await fetch(`/api/leads/`,{
@@ -22,6 +23,7 @@ const EditTable = ({value,setIsEdit}) => {
         const res = await response.json()
         if (res.message==="Updated") {
           setIsEdit(false)
+          window.location.reload()
          return true
         } else{
           return false

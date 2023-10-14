@@ -13,8 +13,10 @@ const Leads = () => {
         cache: "no-cache",
       })
       const res = await response.json()
-      setData(res)
-      return true
+      if(res){
+        setData(res)
+        return true
+      }
     } catch (err) {
     }
   }
@@ -52,9 +54,9 @@ const Leads = () => {
         </thead>
         <tbody>
          
-          {data?.map((value, i)=>(
+          {data.length>=1 ? data?.map((value, i)=>(
              <TableRow key={i} value={value}  index={i+1}/>
-          ))
+          )):null
          }
          
         </tbody>

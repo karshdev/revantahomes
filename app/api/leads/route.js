@@ -47,4 +47,17 @@ export async function PUT(req) {
     } catch (err) {
         return NextResponse.json({ message: "SOME ERROR" }, { status: 500 })
     }
+}export async function DELETE(req) {
+    await connectMongoDB()
+    const{searchParams}=new URL(req.url)
+
+    const id=searchParams.get("id")
+    console.log(id);
+    try {
+      const handleDelete=await LeadsModel.findByIdAndDelete({_id:id})
+        return NextResponse.json({ message: "Deleted" }, { status: 200 })
+    } catch (err) {
+        return NextResponse.json({ message: "SOME ERROR" }, { status: 500 })
+    }
+
 }

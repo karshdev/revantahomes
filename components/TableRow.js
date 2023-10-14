@@ -4,8 +4,25 @@ import EditTable from '../components/EditTable'
 const TableRow = ({ value ,index}) => {
     const [isEdit, setIsEdit] = useState(false);
   
-const handleDelete = () => {
-//api call
+const handleDelete =async  (id) => {
+   
+    try {
+        const response = await fetch(`/api/leads?id=${id}`,{
+            method:"DELETE",
+            headers: {
+              'Content-Type': 'application/json',
+            },
+        })
+        const res= await response.json()
+        if (res.message==="Deleted") {
+            window.location.reload()
+         return true
+        } else {
+       return false
+        }
+      } catch (error) {
+
+      }
 }
 
 return (
@@ -35,7 +52,7 @@ return (
                     <button onClick={() => setIsEdit(!isEdit)} className='underline text-blue-400'>
                         Edit
                     </button>
-                    <button onClick={handleDelete} className='underline text-blue-400'>
+                    <button onClick={()=>handleDelete(value._id)} className='underline text-blue-400'>
                         Delete
                     </button>
                     </div>
