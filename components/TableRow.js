@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import EditTable from '../components/EditTable'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const TableRow = ({ value ,index}) => {
     const [isEdit, setIsEdit] = useState(false);
   
@@ -18,6 +20,7 @@ const handleDelete =async  (id) => {
             window.location.reload()
          return true
         } else {
+           return false
        return false
         }
       } catch (error) {
@@ -26,6 +29,7 @@ const handleDelete =async  (id) => {
 }
 
 return (
+    <>
     <tr className="hover:bg-gray-100" key={value._id}>
         <td className="py-2 px-4 border-b text-center  w-12">{index}</td>
         <td className="py-2 px-4  w-12 border-b text-center ">
@@ -60,6 +64,7 @@ return (
         
         </td>
     </tr>
+    </>
 );
 };
 

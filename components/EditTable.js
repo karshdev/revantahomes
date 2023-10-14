@@ -22,10 +22,13 @@ const EditTable = ({value,setIsEdit}) => {
         });
         const res = await response.json()
         if (res.message==="Updated") {
+          
           setIsEdit(false)
           window.location.reload()
          return true
         } else{
+          
+          setIsEdit(false)
           return false
         }
       } catch (error) {

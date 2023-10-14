@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import AdminNavbar from '../../../../components/AdminNavbar';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddLeads = () => {
   const [fullName, setfullName] = useState('')
@@ -26,7 +27,23 @@ const AddLeads = () => {
         body: JSON.stringify({fullName,email,phone,address,type,status,message}),
       })
       const res = await response.json()
-      console.log(res.message);
+      if(res.message==="Leads Created"){
+        toast.success("Successfully added",{
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+        });
+      }else{
+        toast.error("Something went Wrong",{
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+        });
+      }
     } catch (err) {
       console.log(err.message);
     }
@@ -35,6 +52,7 @@ const AddLeads = () => {
   return (
     <>
       <AdminNavbar />
+      <ToastContainer />
 
       <div className="flex items-center justify-center mt-10  ">
         <div className="bg-white p-8 rounded-md shadow-lg w-full max-w-md">
