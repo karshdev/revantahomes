@@ -1,10 +1,28 @@
+"use client"
 import AdminNavbar from '../../../components/AdminNavbar'
-import React from 'react'
-import dummyData from '../../../dummy/dummy'
+import React, { useEffect, useState } from 'react'
 
 import TableRow from '../../../components/TableRow'
 import Link from 'next/link'
 const Leads = () => {
+  const[data,setData]=useState([])
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`/api/leads/`, {
+        cache: "no-cache",
+      })
+      const res = await response.json()
+      setData(res)
+      return true
+    } catch (err) {
+    }
+  }
+
+
+  useEffect(()=>{
+    fetchData();
+  },[])
   return (
     <>
       <AdminNavbar />
@@ -27,15 +45,15 @@ const Leads = () => {
             <th className="py-2 px-4 border-b">Email</th>
             <th className="py-2 px-4 border-b">Phone</th>
             <th className="py-2 px-4 border-b">Address</th>
-            <th className="py-2 px-4 border-b">Status</th>
+            <th className="py-2 px-4 border-b">Type</th>
             <th className="py-2 px-4 border-b">Actions</th>
             
           </tr>
         </thead>
         <tbody>
          
-          {dummyData.map((value, i)=>(
-             <TableRow key={i} value={value} />
+          {data?.map((value, i)=>(
+             <TableRow key={i} value={value}  index={i+1}/>
           ))
          }
          

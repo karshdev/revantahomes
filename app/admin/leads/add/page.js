@@ -37,8 +37,8 @@ const AddLeads = () => {
       <AdminNavbar />
 
       <div className="flex items-center justify-center mt-10  ">
-        <div className="bg-white p-8 rounded-md shadow-md w-full max-w-md">
-          <h2 className="text-2xl font-semibold mb-4">Add Users</h2>
+        <div className="bg-white p-8 rounded-md shadow-lg w-full max-w-md">
+          <h2 className="text-2xl font-semibold mb-4 text-center">Add Users</h2>
 
           <form onSubmit={e => e.preventDefault()}>
             <div className="flex flex-wrap -mx-4 mb-4">
