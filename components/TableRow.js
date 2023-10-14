@@ -1,25 +1,9 @@
 "use client"
 import React, { useState } from 'react';
-
+import EditTable from '../components/EditTable'
 const TableRow = ({ value ,index}) => {
-
-    // const [editedValue, setEditedValue] = useState(value);
-    const [isEdit, setIsEdit] = useState(true);
-    // const [selectedOption, setSelectedOption] = useState(editedValue.option);
-
-// const handleInputChange = (e) => {
-//     const { name, value } = e.target;
-//     if (name === 'option') {
-//         const selectedOption = e.target.value;
-//         setSelectedOption(selectedOption);
-//       }
-//     setEditedValue({ ...editedValue, [name]: value });
-// };
-
-// const handleSave = () => {
-//    //api call
-//    setIsEdit(!isEdit)
-// };
+    const [isEdit, setIsEdit] = useState(false);
+  
 const handleDelete = () => {
 //api call
 }
@@ -40,7 +24,7 @@ return (
           {value.address}
         </td>
         <td className="py-2 px-4 border-b text-center w-12">
-       {value.type}
+       {value.createdAt.substring(0,10)}
             </td>
         {/* Repeat the same pattern for other columns... */}
        
@@ -55,7 +39,7 @@ return (
                         Delete
                     </button>
                     </div>
-
+                    {isEdit && <EditTable value={value} />}
         
         </td>
     </tr>
