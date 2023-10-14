@@ -1,4 +1,4 @@
-import AdminNavbar from '@/components/AdminNavbar'
+import AdminNavbar from '../../../../components/AdminNavbar'
 import React from 'react'
 
 const AddLeads = () => {
