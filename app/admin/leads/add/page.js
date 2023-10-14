@@ -15,8 +15,7 @@ const AddLeads = () => {
   const [message, setMessage] = useState('')
  
 
-  
-  console.log(fullName,email,address,status,type,message);
+
   const handleSubmit = async () => {
     try {
       const response = await fetch('/api/leads/add', {
@@ -45,7 +44,7 @@ const AddLeads = () => {
         });
       }
     } catch (err) {
-      console.log(err.message);
+      
     }
 
   }

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 const Section2Images = () => {
     const[src,setSrc]=useState("/1.png")
-    console.log("src",src);
+  
   return (
     <div className='h-[50%] w-[40%] flex flex-col gap-3'>
         <img src={`${src}`} className='w-[100%] h-[100%] object-cover'  /> 

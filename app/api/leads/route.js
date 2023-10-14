@@ -23,7 +23,7 @@ export async function PUT(req) {
     try {
         const {id,fullName,email,phone,address,type,status,message}=await req.json()
 
-        console.log(id,fullName,email,phone,address,type,status,message);
+       
       
       
         const updatedLead = await LeadsModel.findOneAndUpdate(
@@ -52,7 +52,7 @@ export async function PUT(req) {
     const{searchParams}=new URL(req.url)
 
     const id=searchParams.get("id")
-    console.log(id);
+  
     try {
       const handleDelete=await LeadsModel.findByIdAndDelete({_id:id})
         return NextResponse.json({ message: "Deleted" }, { status: 200 })
