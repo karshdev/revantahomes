@@ -153,6 +153,7 @@ const EditTable = ({value,setIsEdit}) => {
             </button>
           </form>
              </div>
+             <img src="/cross.png" className="w-[50px] h-[50px] right-0 cursor-pointer absolute top-0" alt="cross icon" onClick={()=> setIsEdit(false)}/>
              </div>
              
          
