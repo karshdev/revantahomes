@@ -21,7 +21,7 @@ const Leads = () => {
         return true;
       }
     } catch (err) {
-      console.error('Error fetching data:', err);
+
     }
   };
 
@@ -31,6 +31,7 @@ const Leads = () => {
 
   const handleSearch = (event) => {
     const term = event.target.value.toLowerCase();
+    console.log(term);
     setSearchTerm(term);
 
     const filtered = originalData.filter((item) =>
@@ -59,13 +60,14 @@ const Leads = () => {
           <div className='flex gap-4 items-center justify-center'>
             <input
               type='text'
-              value={searchTerm}
+           
               onChange={handleSearch}
               className='p-4 border-gray-300 border-2 focus:outline-none rounded-lg'
               placeholder='Search'
             />
             <input
               type='date'
+              onChange={handleSearch}
               className='p-4 border-gray-300 border-2 focus:outline-none rounded-lg'
               placeholder='write'
             />

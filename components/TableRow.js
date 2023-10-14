@@ -46,7 +46,7 @@ return (
         <td className="py-2 px-4 border-b text-center w-12">
        {value.createdAt.substring(0,10)}
             </td>
-        {/* Repeat the same pattern for other columns... */}
+      
        
         <td className="py-2 px-4 border-b text-center w-12">
             
