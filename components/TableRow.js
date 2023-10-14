@@ -1,8 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import EditTable from '../components/EditTable'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 const TableRow = ({ value ,index}) => {
     const [isEdit, setIsEdit] = useState(false);
   
@@ -21,7 +20,7 @@ const handleDelete =async  (id) => {
          return true
         } else {
            return false
-       return false
+     
         }
       } catch (error) {
 

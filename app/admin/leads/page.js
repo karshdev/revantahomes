@@ -29,9 +29,9 @@ const Leads = () => {
   return (
     <>
       <AdminNavbar />
-     x
+     
       <div className='flex flex-col items-center justify-center gap-20 p-10'>
-      <div className='w-[100%] flex items-center justify-evenly'>
+      <div className='w-[100%] flex items-center justify-between'>
       <Link href='/admin/leads/add'  className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition">
             Add Users
           </Link>

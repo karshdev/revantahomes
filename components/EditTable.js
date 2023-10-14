@@ -36,8 +36,8 @@ const EditTable = ({value,setIsEdit}) => {
       }
    }
   return (
-    <div className=" fixed backdrop w-full h-full top-0 m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000] ">
-    <div className="shadow-lg  rounded-md px-8 pt-6 pb-8 mb-4 mt-[100px] ml-[20px] bg-white  max-w-md sm:ml-[500px]">
+    <div className=" fixed  flex items-center justify-center backdrop w-full h-full top-0 m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000] ">
+    <div className="shadow-lg  rounded-md px-8 pt-6 pb-8 bg-white  max-w-md">
              <h2 className="text-2xl font-bold mb-4 text-center">Edit User</h2>
              <form onSubmit={e => e.preventDefault()}>
             <div className="flex flex-wrap -mx-4 mb-4">
@@ -153,7 +153,7 @@ const EditTable = ({value,setIsEdit}) => {
             </button>
           </form>
              </div>
-             <img src="/cross.png" className="w-[50px] h-[50px] right-0 cursor-pointer absolute top-0" alt="cross icon" onClick={()=> setIsEdit(false)}/>
+             <img src="/cross.png" className="w-[50px] h-[50px] right-0 cursor-pointer absolute top-0" alt="cross icon" onClick={()=>setIsEdit(false)}/>
              </div>
              
          
