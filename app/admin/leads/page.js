@@ -7,21 +7,23 @@ import Link from 'next/link';
 const Leads = () => {
   const [originalData, setOriginalData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const[loading,setLoading]=useState(false)
 
   const fetchData = async () => {
+    setLoading(true)
     try {
       const response = await fetch(`/api/leads/`, {
         cache: 'no-cache',
       });
       const res = await response.json();
       if (res) {
+        setLoading(false)
         setOriginalData(res);
         setFilteredData(res);
         return true;
       }
     } catch (err) {
-
+      setLoading(false)
     }
   };
 
@@ -31,8 +33,7 @@ const Leads = () => {
 
   const handleSearch = (event) => {
     const term = event.target.value.toLowerCase();
-    console.log(term);
-    setSearchTerm(term);
+   
 
     const filtered = originalData.filter((item) =>
       Object.values(item).some(
@@ -60,7 +61,6 @@ const Leads = () => {
           <div className='flex gap-4 items-center justify-center'>
             <input
               type='text'
-           
               onChange={handleSearch}
               className='p-4 border-gray-300 border-2 focus:outline-none rounded-lg'
               placeholder='Search'
@@ -96,6 +96,11 @@ const Leads = () => {
             )}
           </tbody>
         </table>
+      {loading && (
+      <div className='w-[100%] flex items-center justify-center'> 
+      <img src='https://media4.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=ecf05e477j2za21j8ojm8eehd698tbjr1qk79lfe87wd17o1&ep=v1_gifs_search&rid=giphy.gif&ct=g' className='w-[150px] h-[150px]' />
+      </div>
+      )}  
       </div>
     </>
   );

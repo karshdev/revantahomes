@@ -1,23 +1,40 @@
 
 "use client"
-import { useState } from 'react';
-import { signIn } from 'next-auth/react';
+import { useEffect, useState } from 'react';
+import {  signIn,  } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+
 
 const LoginPage = () => {
+  const router=useRouter()
+  const[error,showError]=useState(false)
   const [credentials, setCredentials] = useState({ email: '', password: '' });
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-     await signIn('credentials', {
-        redirect: true,
+    try{
+      const loginRes= await signIn('credentials', {
+        redirect: false,
         email: credentials.email,
         password: credentials.password,
-        callbackUrl: '/'
+        
     })
-
+    if (loginRes?.error) {
+      showError(true);
+      setTimeout(()=>{
+        showError(false);
+      },2000)
+    } else {
+      router.push('/admin');
+    }
+  } catch (err) {
+   showError(true)
+  }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-100 via-blue-300 to-blue-400">
+
     <div className="bg-white p-8 rounded shadow-md w-96">
       <h1 className="text-3xl font-bold mb-4 text-center text-gray-800">Login Page</h1>
       <form onSubmit={handleSubmit}>
@@ -39,12 +56,16 @@ const LoginPage = () => {
             onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
           />
         </label>
+
+        <div className='flex gap-4  items-center justify-between'>
         <button
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
         >
           Sign In
         </button>
+        {error && <span className="text-sm font-bold text-center text-red-400">Incorrect Email/Password.</span>}
+        </div>
       </form>
     </div>
   </div>
