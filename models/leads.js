@@ -16,16 +16,16 @@ const leads = new Schema(
     },
     address: {
         type: String,
-        required:true
+       optional:true
       },
       status: {
         type: String,
-        default:"new"
+        default:"new",
+        required:false
       },
       type: {
         type: String,
         required:true
-        
       },
       message: {
         type: String,

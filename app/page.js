@@ -6,6 +6,7 @@ import Spesification from '../components/Spesification';
 import Location from '../components/Location';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Navbar from '@/components/Navbar';
 
 export default function Home() {
   const images = [
