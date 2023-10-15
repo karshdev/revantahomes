@@ -45,7 +45,6 @@ const Leads = () => {
 
     setFilteredData(filtered);
   };
-
   return (
     <>
       <AdminNavbar />
