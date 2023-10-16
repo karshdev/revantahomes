@@ -11,7 +11,6 @@ export async function POST(req) {
             fullName,
             email,
             phone,
-           address:"",
             type,
         })
         return NextResponse.json({ message: "House Selected" }, { status: 200 })

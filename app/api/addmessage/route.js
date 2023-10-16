@@ -11,7 +11,7 @@ export async function POST(req) {
             fullName,
             email,
             phone,
-           address:"",
+         
             type:"Contact",
             message
         })
