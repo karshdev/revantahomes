@@ -50,38 +50,38 @@ const Leads = () => {
       <AdminNavbar />
 
       <div className='flex flex-col items-center justify-center gap-20 p-10'>
-        <div className='w-[100%] flex items-center justify-between'>
+        <div className='flex flex-col gap-4 items-center justify-center sm:flex sm:flex-row sm:items-center sm:justify-between sm:w-[100%]'>
           <Link
             href='/admin/leads/add'
             className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
           >
             Add Users
           </Link>
-          <div className='flex gap-4 items-center justify-center'>
+          <div className='flex gap-2 items-center justify-center sm:gap-4' >
             <input
               type='text'
               onChange={handleSearch}
-              className='p-4 border-gray-300 border-2 focus:outline-none rounded-lg'
+              className='p-1 border-gray-300 border-2 focus:outline-none rounded-lg sm:p-4'
               placeholder='Search'
             />
             <input
               type='date'
               onChange={handleSearch}
-              className='p-4 border-gray-300 border-2 focus:outline-none rounded-lg'
+              className='p-1 border-gray-300 border-2 focus:outline-none rounded-lg sm:p-4'
               placeholder='write'
             />
           </div>
         </div>
 
-        <table className='min-w-full bg-white border border-gray-300 shadow-md'>
+        <table className='w-[100vw] bg-white border border-gray-300 shadow-md overflow-hidden'>
           <thead>
             <tr>
-              <th className='py-2 px-4 border-b'>ID</th>
-              <th className='py-2 px-4 border-b'>Full Name</th>
-              <th className='py-2 px-4 border-b'>Email</th>
-              <th className='py-2 px-4 border-b'>Phone</th>
-              <th className='py-2 px-4 border-b'>Created At</th>
-              <th className='py-2 px-4 border-b'>Actions</th>
+              <th className=' text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>ID</th>
+              <th className=' text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Full Name</th>
+              <th className='  text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Email</th>
+              <th className='  hidden sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Phone</th>
+              <th className='  hidden sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Created At</th>
+              <th className=' text-[12px]  py-1 px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Actions</th>
             </tr>
           </thead>
           <tbody>

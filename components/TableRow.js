@@ -30,18 +30,18 @@ const handleDelete =async  (id) => {
 return (
     <>
     <tr className="hover:bg-gray-100" key={value._id}>
-        <td className="py-2 px-4 border-b text-center  w-12">{index}</td>
-        <td className="py-2 px-4  w-12 border-b text-center ">
+        <td className=" text-[12px] py-2 px-4 border-b text-center  w-12 sm:text-[20px]">{index}</td>
+        <td className=" text-[12px] py-2 px-4  w-12 border-b text-center sm:text-[20px] ">
         {value.fullName}
         </td>
-        <td className="py-2 px-4 w-12 border-b text-center">
+        <td className=" text-[12px] py-2 px-4 w-12 border-b text-center sm:text-[20px]">
            {value.email}
         </td>
-        <td className="py-2 px-4 border-b text-center w-12">
+        <td className="  hidden sm:py-2 sm:px-4 sm:border-b sm:text-center sm:w-12">
             {value.phone}
         </td>
        
-        <td className="py-2 px-4 border-b text-center w-12">
+        <td className="  hidden sm:py-2 sm:px-4 sm:border-b sm:text-center sm:w-12">
        {value.createdAt.substring(0,10)}
             </td>
       
@@ -49,11 +49,11 @@ return (
         <td className="py-2 px-4 border-b text-center w-12">
             
             
-                <div className='flex gap-2 items-center justify-center '>
-                    <button onClick={() => setIsEdit(!isEdit)} className='underline text-blue-400'>
+                <div className=' flex gap-1 items-center justify-center  sm:flex sm:gap-2 sm:items-center sm:justify-center '>
+                    <button onClick={() => setIsEdit(!isEdit)} className=' text-[12px] underline sm:underline text-blue-400 sm:text-[20px]'>
                         Edit
                     </button>
-                    <button onClick={()=>handleDelete(value._id)} className='underline text-blue-400'>
+                    <button onClick={()=>handleDelete(value._id)} className=' text-[12px] underline sm:underline text-blue-400 sm:text-[20px]'>
                         Delete
                     </button>
                     </div>
