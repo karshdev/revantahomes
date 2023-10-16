@@ -16,19 +16,19 @@ const Contact= ({}) => {
  const[email,setEmail]=useState('')
  const[phone,setPhone]=useState('')
  const[message,setMessage]=useState('')
-
+   const type="Contact"
  const handleSubmit=async ()=>{
 try{
-  const response=await fetch('api/addmessage',{
+  const response=await fetch('api/leads/add',{
   method:"POST",
   headers: {
     'Content-Type': 'application/json',
   },
-  body:JSON.stringify({fullName,email,phone,message})
+  body:JSON.stringify({fullName,email,phone,message,type})
 })
 const res=await response.json()
-if(res.message=="Message Created"){
-  toast.success("Form Submitted",{
+if(res.message=="Leads Created"){
+  toast.success("Success",{
     position: "top-right",
     autoClose: 1000,
     hideProgressBar: false,
