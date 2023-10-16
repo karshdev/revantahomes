@@ -13,6 +13,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 const Explore = () => {
   const [state, SetState] = useState('/BG.png')
   const[btn,setBtn]=useState(false)
+  let val=''
   return (
     <div className="min-h-screen relative bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply py-12">
       <div className="w-full max-w-screen-xl mx-auto flex  flex-col items-center space-y-12 p-2">
@@ -25,7 +26,7 @@ const Explore = () => {
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/BG.png" && "bg-[#fff]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            className={` ${state === "/BG.png" && "bg-[#C1D6C3]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
             onClick={() => SetState('/BG.png')}
           >
             ORCHID
@@ -33,7 +34,7 @@ const Explore = () => {
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/BG2.png" && "bg-[#fff]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            className={` ${state === "/BG2.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
             onClick={() => SetState('/BG2.png')}
           >
             TULIP
@@ -41,7 +42,7 @@ const Explore = () => {
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/BG3.png" && "bg-[#fff]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            className={` ${state === "/BG3.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
             onClick={() => SetState('/BG3.png')}
           >
             IRIS
@@ -79,7 +80,8 @@ const Explore = () => {
           <div className="w-full h-full col-span-5 lg:col-span-3 relative">
             <div className="flex flex-col text-white ">
               <h3 className={`text-2xl lg:text-4xl text-center lg:text-start mb-4 ${tenor.className}`}>
-                {state === "/BG.png" ? "ORCHID" : state === "/BG2.png" ? "TULIP" : "IRIS"}
+                {state === "/BG.png" ? val='Orchid' : state === "/BG2.png" ?  val='Tulip' : val='Iris'}
+                
               </h3>
               {state === "/BG.png" ?
                 (
@@ -115,11 +117,11 @@ const Explore = () => {
 
               }
 
-              <Button variant="default" size={"default"} className="w-[150px] mt-[10px]" onClick={()=>setBtn(true)} >
+              <Button  variant={"brand"} size={"lg"}  className="w-[150px] mt-[10px] bg-[#C1D6C3] rounded-none px-6 lg:px-10 text-primary hover:bg-green-100" onClick={()=>setBtn(true)} >
                 View Price
               </Button>
               {
-                btn && <PopUpLanding setBtn={setBtn} />
+                btn && <PopUpLanding setBtn={setBtn}  val={val}/>
               }
             </div>
           </div>
