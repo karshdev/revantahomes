@@ -1,7 +1,7 @@
 "use client"
-import AdminNavbar from '../../../components/AdminNavbar';
+import AdminNavbar from '../../../../components/AdminNavbar';
 import React, { useEffect, useState } from 'react';
-import TableRow from '../../../components/TableRow';
+import TableRow from '../../../../components/TableRow';
 import Link from 'next/link';
 
 const Leads = () => {
@@ -53,7 +53,7 @@ const Leads = () => {
         <div className='flex flex-col gap-4 items-center justify-center sm:flex sm:flex-row sm:items-center sm:justify-between sm:w-[100%]'>
           <Link
             href='/admin/leads/add'
-            className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+            className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2  outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
           >
             Add Users
           </Link>
@@ -73,7 +73,7 @@ const Leads = () => {
           </div>
         </div>
 
-        <table className='w-[100vw] bg-white border border-gray-300 shadow-md overflow-hidden'>
+        <table className='w-[100%] bg-white border border-gray-300 shadow-md overflow-hidden'>
           <thead>
             <tr>
               <th className=' text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>ID</th>

@@ -1,11 +1,11 @@
-import Amenities from '../components/Amenities';
-import Explore from '../components/Explore';
-import Features from '../components/Features';
-import Hero from '../components/Hero';
-import Spesification from '../components/Spesification';
-import Location from '../components/Location';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+import Amenities from '../../components/Amenities';
+import Explore from '../../components/Explore';
+import Features from '../../components/Features';
+import Hero from '../../components/Hero';
+import Spesification from '../../components/Spesification';
+import Location from '../../components/Location';
+import Contact from '../../components/Contact';
+import Footer from '../../components/Footer';
 import Navbar from '@/components/Navbar';
 
 export default function Home() {

@@ -39,7 +39,7 @@ const EditTable = ({value,setIsEdit}) => {
     <div className=" fixed  flex items-center justify-center backdrop w-full h-full top-0 m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000] ">
     <div className="shadow-lg  rounded-md px-8 pt-6 pb-8 bg-white  max-w-md">
              <h2 className="text-2xl font-bold mb-4 text-center">Edit User</h2>
-             <form onSubmit={e => e.preventDefault()}>
+             <form onSubmit={e => e.preventDefault()} className='position relative'>
             <div className="flex flex-wrap -mx-4 mb-4">
 
               <div className="w-1/2 md:w-1/2 px-4 mb-4">
@@ -48,7 +48,7 @@ const EditTable = ({value,setIsEdit}) => {
                   type="text"
                   id="fullName"
                   name="fullName"
-                  className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
+                  className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={fullName}
                   onChange={(e)=>setfullName(e.target.value)}
                 />
@@ -61,7 +61,7 @@ const EditTable = ({value,setIsEdit}) => {
                   type="email"
                   id="email"
                   name="email"
-                  className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
+                  className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={email}
                   onChange={(e)=>setemail(e.target.value)}
                 />
@@ -74,7 +74,7 @@ const EditTable = ({value,setIsEdit}) => {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
+                  className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={phone}
                   onChange={(e)=>setPhone(e.target.value)}
                 />
@@ -87,7 +87,7 @@ const EditTable = ({value,setIsEdit}) => {
                   type="text"
                   id="address"
                   name="address"
-                  className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
+                  className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={address}
                   onChange={(e)=>setaddress(e.target.value)}
                 />
@@ -99,7 +99,7 @@ const EditTable = ({value,setIsEdit}) => {
                 <select
                   id="type"
                   name="type"
-                  className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                  className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={type}
                   onChange={(e)=>settype(e.target.value)}
                 >
@@ -116,7 +116,7 @@ const EditTable = ({value,setIsEdit}) => {
                 <select
                   id="status"
                   name="status"
-                  className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                  className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={status}
                   onChange={(e)=>setstatus(e.target.value)}
                 >
@@ -133,7 +133,7 @@ const EditTable = ({value,setIsEdit}) => {
                   <textarea
                     id="message"
                     name="message"
-                    className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
+                    className=" h-20 flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                     value={message}
                     onChange={(e)=>setMessage(e.target.value)}
                   ></textarea>
@@ -146,14 +146,18 @@ const EditTable = ({value,setIsEdit}) => {
 
             <button
               type="button"
-              className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+              className="hover:underline w-[100%] h-7 px-[8px] py-[8px] bg-gray-600 border border-white justify-center text-white items-center gap-[10px] inline-flex sm:hover:underline sm:w-[max-content] sm:h-10 sm:px-[20px] sm:py-[17px] sm:bg-gray-600 sm:border sm:border-white sm:justify-center sm:items-center sm:gap-[10px] sm:inline-flex" 
           onClick={handleSubmit}
             >
               Submit
             </button>
-          </form>
+            <div className='position absolute cursor-pointer h-[40px] w-[40px] rounded-[50%] bg-white hover:bg-gray-100 flex items-center justify-center top-[-75px] right-[-30px]'>
+              <img src='/cross.png' alt='exit'  className='w-[35px] h-[35px]' onClick={()=>setIsEdit(false)}/>
              </div>
-             <img src="/cross.png" className="w-[50px] h-[50px] right-0 cursor-pointer absolute top-0" alt="cross icon" onClick={()=>setIsEdit(false)}/>
+          </form>
+
+             </div>
+            
              </div>
              
          

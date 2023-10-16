@@ -9,7 +9,7 @@ const AdminNavbar = () => {
   };
 
   return (
-    <nav className="p-6 text-white bg-gradient-to-tr from-blue-100 to-blue-100 ">
+    <nav className="p-6 text-white bg-gradient-to-tr ">
       <div className=" flex items-center justify-between ">
         <div className="flex items-center">
           <img src="/logo.png" alt="Logo" className="w-[50px] h-[50px]  sm:w-[70px] sm:h-[70px] sm:mr-2" />
