@@ -79,8 +79,8 @@ const Leads = () => {
               <th className=' text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>ID</th>
               <th className=' text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Full Name</th>
               <th className='  text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Email</th>
-              <th className='  hidden sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Phone</th>
-              <th className='  hidden sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Created At</th>
+              <th className='  hidden sm:py-2 sm:px-4 sm:table-cell sm:border-b sm:text-[20px]'>Phone</th>
+              <th className='  hidden sm:py-2 sm:px-4  sm:table-cell sm:border-b sm:text-[20px]'>Created At</th>
               <th className=' text-[12px]  py-1 px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Actions</th>
             </tr>
           </thead>

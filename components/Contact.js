@@ -35,13 +35,13 @@ if(res.message=="Message Created"){
     closeOnClick: true,
     pauseOnHover: false,
   })
-  window.location.reload()
+  
   return true
 }else{
   return false
 }
 }catch(err){
-  console.log(err);
+
 }
  }
   return (

@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from 'react';
 import AdminNavbar from '../../../../components/AdminNavbar';
 import { ToastContainer, toast } from 'react-toastify';
@@ -60,7 +59,7 @@ const AddLeads = () => {
           <form onSubmit={e => e.preventDefault()}>
             <div className="flex flex-wrap -mx-4 mb-4">
 
-              <div className="w-full md:w-1/2 px-4 mb-4">
+              <div className="w-1/2 md:w-1/2 px-4 mb-4">
                 <label htmlFor="fullName" className="block text-gray-700">Full Name</label>
                 <input
                   type="text"
@@ -73,7 +72,7 @@ const AddLeads = () => {
               </div>
 
 
-              <div className="w-full md:w-1/2 px-4 mb-4">
+              <div className="w-1/2 md:w-1/2 px-4 mb-4">
                 <label htmlFor="email" className="block text-gray-700">Email</label>
                 <input
                   type="email"
@@ -86,7 +85,7 @@ const AddLeads = () => {
               </div>
 
 
-              <div className="w-full md:w-1/2 px-4 mb-4">
+              <div className="w-1/2 md:w-1/2 px-4 mb-4">
                 <label htmlFor="phone" className="block text-gray-700">Phone</label>
                 <input
                   type="tel"
@@ -99,7 +98,7 @@ const AddLeads = () => {
               </div>
 
 
-              <div className="w-full md:w-1/2 px-4 mb-4">
+              <div className="w-1/2 md:w-1/2 px-4 mb-4">
                 <label htmlFor="address" className="block text-gray-700">Address</label>
                 <input
                   type="text"
@@ -112,12 +111,12 @@ const AddLeads = () => {
               </div>
 
 
-              <div className="w-full md:w-1/2 px-4 mb-4">
+              <div className=" position relative w-1/2 md:w-1/2 px-4 mb-4">
                 <label htmlFor="type" className="block text-gray-700">Type</label>
                 <select
                   id="type"
                   name="type"
-                  className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
+                  className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
                   value={type}
                   onChange={(e)=>settype(e.target.value)}
                 >
@@ -129,12 +128,12 @@ const AddLeads = () => {
               </div>
 
 
-              <div className="w-full md:w-1/2 px-4 mb-4">
+              <div className="w-1/2 md:w-1/2 px-4 mb-4">
                 <label htmlFor="status" className="block text-gray-700">Status</label>
                 <select
                   id="status"
                   name="status"
-                  className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
+                  className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
                   value={status}
                   onChange={(e)=>setstatus(e.target.value)}
                 >
