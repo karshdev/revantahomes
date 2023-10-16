@@ -80,7 +80,6 @@ const Leads = () => {
               <th className='py-2 px-4 border-b'>Full Name</th>
               <th className='py-2 px-4 border-b'>Email</th>
               <th className='py-2 px-4 border-b'>Phone</th>
-              <th className='py-2 px-4 border-b'>Address</th>
               <th className='py-2 px-4 border-b'>Created At</th>
               <th className='py-2 px-4 border-b'>Actions</th>
             </tr>

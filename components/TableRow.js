@@ -40,9 +40,7 @@ return (
         <td className="py-2 px-4 border-b text-center w-12">
             {value.phone}
         </td>
-        <td className="py-2 px-4 border-b text-center w-12">
-          {value.address}
-        </td>
+       
         <td className="py-2 px-4 border-b text-center w-12">
        {value.createdAt.substring(0,10)}
             </td>
