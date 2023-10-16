@@ -1,5 +1,6 @@
+"use client"
 import { Tenor_Sans } from "next/font/google";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { AspectRatio } from "./ui/aspect-ratio";
@@ -9,6 +10,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 const Explore = () => {
+  const[state,SetState]=useState('/BG.png')
   return (
     <div className="min-h-screen relative bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply py-12">
       <div className="w-full max-w-screen-xl mx-auto flex  flex-col items-center space-y-12 p-2">
@@ -21,21 +23,24 @@ const Explore = () => {
           <Button
             variant={"brand"}
             size={"lg"}
-            className="bg-[#C1D6C3] rounded-none px-6 lg:px-10 text-primary hover:bg-green-100"
+            className={` ${state==="/BG.png" && "bg-[#fff]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={()=>SetState('/BG.png')}
           >
             ORCHID
           </Button>
           <Button
             variant={"brand"}
             size={"lg"}
-            className="bg-secondary rounded-none px-6 lg:px-10 text-primary hover:bg-green-100"
+           className={` ${state==="/BG2.png" && "bg-[#fff]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={()=>SetState('/BG2.png')}
           >
             TULIP
           </Button>
           <Button
             variant={"brand"}
             size={"lg"}
-            className="bg-secondary rounded-none px-6 lg:px-10 text-primary hover:bg-green-100"
+            className={` ${state==="/BG3.png" && "bg-[#fff]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={()=>SetState('/BG3.png')}
           >
             IRIS
           </Button>
@@ -44,7 +49,7 @@ const Explore = () => {
           <div className="w-full h-full col-span-3 relative">
             <AspectRatio ratio={3 / 2}>
               <Image
-                src={"/explore_images/orchid_main.png"}
+                src={state}
                 alt="Orchid"
                 fill
                 className="object-cover"
@@ -72,12 +77,43 @@ const Explore = () => {
           <div className="w-full h-full col-span-5 lg:col-span-3 relative">
             <div className="flex flex-col text-white ">
               <h3 className={`text-2xl lg:text-4xl text-center lg:text-start mb-4 ${tenor.className}`}>
-                ORCHID
+               { state==="/BG.png" ? "ORCHID" : state==="/BG2.png" ? "TULIP" :"IRIS"}
               </h3>
-              <p className="font-light">25x50 PLOT AREA (WEST)</p>
+             { state==="/BG.png" ?
+             (
+             <>
+             <p className="font-light">25x50 PLOT AREA (WEST)</p>
               <p className="font-bold">1250 sqft</p>
               <p className="font-bold">Super Builtup Area</p>
               <p className="font-bold">2,097 Sqft</p>
+              
+              </>
+              )
+              :
+              state==="/BG2.png" ?
+              (
+                <>
+             <p className="font-light">25x50 PLOT AREA (EAST)</p>
+              <p className="font-bold">1250 sqft of Tulip</p>
+              <p className="font-bold">Super Builtup Area</p>
+              <p className="font-bold">2,097 Sqft</p>
+              
+              </>
+              )
+              :
+              (
+                <>
+                <p className="font-light">25x50 PLOT AREA (NORTH)</p>
+                 <p className="font-bold">1250 sqft of IRIS</p>
+                 <p className="font-bold">Super Builtup Area</p>
+                 <p className="font-bold">2,097 Sqft</p>
+                 
+                 </>
+              )
+              
+              }
+
+            
             </div>
           </div>
           <div className="w-full h-full relative col-span-2 lg:col-span-1">
