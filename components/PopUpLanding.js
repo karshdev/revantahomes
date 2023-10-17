@@ -48,7 +48,7 @@ const PopUpLanding = ({ setBtn,val }) => {
     return (
         <div className=" fixed  flex items-center justify-center backdrop w-full h-full top-0 m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000] ">
 
-            <motion.div className=" bg-[url('/explore_images/explore_bg.png')] bg-brand flex max-w-max items-center justify-center bg-blend-multiply  object-cover rounded-md px-8 pt-6 pb-8 sm:w-[50%] sm:h-[60%]"
+            <motion.div className=" bg-[url('/explore_images/explore_bg.png')] bg-brand flex max-w-max items-center justify-center bg-blend-multiply  object-cover rounded-md px-8 pt-6 pb-8 sm:w-[80%] sm:h-[60%] "
                 initial={{ opacity: 0, scale: 5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -120,7 +120,7 @@ const PopUpLanding = ({ setBtn,val }) => {
                     <Button  variant={"brand"} size={"lg"}  className="w-[100%] mt-[10px] bg-[#C1D6C3] rounded-none px-6 lg:px-10 text-primary hover:bg-green-100" onClick={handleSubmit} >
                 Submit
               </Button>
-             <div className='position absolute cursor-pointer h-[40px] w-[40px] rounded-[50%] bg-[#C1D6C3] hover:bg-green-100 flex items-center justify-center top-[-75px] right-[-30px]'>
+             <div className='position absolute cursor-pointer h-[40px] w-[40px] rounded-[50%] bg-[#C1D6C3] hover:bg-green-100 flex items-center justify-center top-[-25px] right-[-40px] sm:top-[-46px] sm:right-[-35px] md:top-[-70px] md:right-[-30px]'>
               <img src='/cross.png' alt='exit'  className='w-[35px] h-[35px]' onClick={()=>setBtn(false)}/>
              </div>
                 </form>
