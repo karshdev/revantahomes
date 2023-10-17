@@ -117,7 +117,7 @@ const Explore = () => {
 
               }
 
-              <Button  variant={"brand"} size={"lg"}  className="w-[150px] mt-[10px] bg-[#C1D6C3] rounded-none px-6 lg:px-10 text-primary hover:bg-green-100" onClick={()=>setBtn(true)} >
+              <Button  variant={"brand"} size={"lg"}  className="w-[160px] mt-[10px] bg-[#C1D6C3] rounded-none px-6 lg:px-10 text-primary hover:bg-green-100" onClick={()=>setBtn(true)} >
                 View Price
               </Button>
               {
