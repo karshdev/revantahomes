@@ -20,7 +20,7 @@ const Explore = () => {
         <h1
           className={`text-2xl lg:text-4xl text-center lg:text-left text-white ${tenor.className}`}
         >
-          Explore Homes
+          
         </h1>
         <div className="flex gap-4">
           <Button

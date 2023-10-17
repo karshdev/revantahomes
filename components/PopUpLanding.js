@@ -39,6 +39,7 @@ const PopUpLanding = ({ setBtn,val }) => {
                     closeOnClick: true,
                     pauseOnHover: false,
                 });
+                setBtn(false)
             }
         } catch (err) {
             setBtn(false)

@@ -28,17 +28,32 @@ try{
   body:JSON.stringify({fullName,email,phone,message,type})
 })
 const res=await response.json()
-if(res.message=="Sent"){
-  toast.success("Success",{
+if(res.message=="Leads and email Sent"){
+  toast.success("Successfully Sent",{
     position: "top-right",
     autoClose: 1000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: false,
   })
-  
   return true
+}else if(res.message==="Email Server down"){
+  toast.success("Error ",{
+    position: "top-right",
+    autoClose: 1000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: false,
+  })
+  return false
 }else{
+  toast.success("Error",{
+    position: "top-right",
+    autoClose: 1000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: false,
+  })
   return false
 }
 }catch(err){
