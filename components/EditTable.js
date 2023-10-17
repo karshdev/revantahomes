@@ -152,7 +152,7 @@ const EditTable = ({value,setIsEdit}) => {
               Submit
             </button>
             <div className='position absolute cursor-pointer h-[40px] w-[40px] rounded-[50%] bg-white hover:bg-gray-100 flex items-center justify-center top-[-75px] right-[-30px]'>
-              <img src='/cross.png' alt='exit'  className='w-[35px] h-[35px]' onClick={()=>setIsEdit(false)}/>
+              <img src='/assets/cross.png' alt='exit'  className='w-[35px] h-[35px]' onClick={()=>setIsEdit(false)}/>
              </div>
           </form>
 

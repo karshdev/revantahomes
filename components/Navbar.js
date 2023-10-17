@@ -40,11 +40,11 @@ const Navbar =  ({lang}) => {
         <div className="flex gap-2 lg:gap-28 items-center">
       {isMobile ? (
         <div className="w-full flex justify-center">
-          <Image src="/logo.png" alt="Reventa Logo" height={50} width={50} />
+          <Image src="/assets/logo.png" alt="Reventa Logo" height={50} width={50} />
         </div>
       ) : (
           <Image
-            src="/logo.png"
+            src="/assets/logo.png"
             alt="Reventa Logo"
             height={100}
             width={100}
@@ -64,42 +64,9 @@ const Navbar =  ({lang}) => {
             <ArrowDownIcon className="mr-4" /> {lang.Navbar.downloadBrochure}
           </Button>
 
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              {isMobile ? (
-                <Button variant="outline" size={"icon"} className="border-none">
-                  {" "}
-                  <GlobeIcon className="mr-4" />{" "}
-                </Button>
-              ) : (
-                <Button variant="outline" className="border-none">
-                  {" "}
-                  <GlobeIcon className="mr-4" /> English
-                </Button>
-              )}
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="lg:w-56">
-              <DropdownMenuLabel>Language</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuGroup>
-                <DropdownMenuItem>
-                  English
-                  <DropdownMenuShortcut>⇧⌘E</DropdownMenuShortcut>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  Indonesia
-                  <DropdownMenuShortcut>⌘I</DropdownMenuShortcut>
-                </DropdownMenuItem>
-              </DropdownMenuGroup>
-              <DropdownMenuSeparator />
-              <DropdownMenuGroup>
-                <DropdownMenuItem>Lang 2</DropdownMenuItem>
-                <DropdownMenuItem>
-                  Lang 2<DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-                </DropdownMenuItem>
-              </DropdownMenuGroup>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <button className=" h-[50px] w-[50px] rounded-full flex items-center justify-center">
+            <img src="/assets/language-switch.svg" className="w-[100%] h-[100%]" />
+          </button>
         </div>
       </nav>
     </div>

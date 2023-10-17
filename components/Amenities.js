@@ -25,7 +25,7 @@ const Amenities = ({lang}) => {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <div className="absolute top-0 left-0 bottom-0 right-0 items-center">
       <Image
-        src="features_element.svg"
+        src="/assets/features_element.svg"
         alt="Element Bg"
         fill
         className="mx-auto bg-cover"

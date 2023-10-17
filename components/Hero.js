@@ -38,42 +38,42 @@ const Hero= ({ images,lang }) => {
       <div className=" hidden md:block">
         <motion.img
           style={{ y }}
-          src="cloud.png"
+          src="/assets/cloud.png"
           alt="cloud"
           className="absolute top-20 left-0"
           width={600}
         />
         <motion.img
           style={{ y }}
-          src="cloud.png"
+          src="/assets/cloud.png"
           alt="cloud"
           className="absolute top-20 left-0"
           width={600}
         />
         <motion.img
           style={{ y }}
-          src="cloud.png"
+          src="/assets/cloud.png"
           alt="cloud"
           className="absolute top-20 left-0"
           width={600}
         />
         <motion.img
           style={{ y }}
-          src="cloud2.png"
+          src="/assets/cloud2.png"
           alt="cloud"
           className="absolute top-40 right-0"
           width={1000}
         />
         <motion.img
           style={{ y }}
-          src="cloud2.png"
+          src="/assets/cloud2.png"
           alt="cloud"
           className="absolute top-40 right-0"
           width={1000}
         />
         <motion.img
           style={{ y }}
-          src="cloud2.png"
+          src="/assets/cloud2.png"
           alt="cloud"
           className="absolute top-40 right-0"
           width={1000}
@@ -82,42 +82,42 @@ const Hero= ({ images,lang }) => {
       <div className="md:hidden">
         <motion.img
           style={{ y }}
-          src="cloud.png"
+          src="/assets/cloud.png"
           alt="cloud"
           className="absolute top-52 left-0"
           width={200}
         />
         <motion.img
           style={{ y }}
-          src="cloud.png"
+          src="/assets/cloud.png"
           alt="cloud"
           className="absolute top-52 left-0"
           width={200}
         />
         <motion.img
           style={{ y }}
-          src="cloud.png"
+          src="/assets/cloud.png"
           alt="cloud"
           className="absolute top-52 left-0"
           width={200}
         />
         <motion.img
           style={{ y }}
-          src="cloud2.png"
+          src="/assets/cloud2.png"
           alt="cloud"
           className="absolute top-1/2 right-2"
           width={400}
         />
         <motion.img
           style={{ y }}
-          src="cloud2.png"
+          src="/assets/cloud2.png"
           alt="cloud"
           className="absolute top-1/2 right-2"
           width={400}
         />
         <motion.img
           style={{ y }}
-          src="cloud2.png"
+          src="/assets/cloud2.png"
           alt="cloud"
           className="absolute top-1/2 right-2"
           width={400}

@@ -29,7 +29,7 @@ const Features= ({ featuresImage,lang }) => {
   return (
     <div className="min-h-screen relative w-full max-w-screen-xl mx-auto">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="features_element.svg" alt="Element Bg" className="mx-auto" />
+      <img src="/assets/features_element.svg" alt="Element Bg" className="mx-auto" />
       <div className="absolute top-0 left-0 right-0 bottom-0">
         <div className="w-full h-full flex flex-col lg:flex-row gap-4 justify-center items-center ">
           <div className="flex flex-col space-y-4 lg:space-y-8 p-2 w-full">

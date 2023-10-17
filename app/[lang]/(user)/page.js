@@ -13,9 +13,9 @@ export default async function Home({params}) {
 const lang=await getDictionary(params.lang)
 
   const images = [
-    { id: 1, thumbnail: '/BG.png', full: '/BG.png', title: lang.Hero.buttons.Tulip },
-    { id: 2, thumbnail: '/BG2.png', full: '/BG2.png', title: lang.Hero.buttons.Orchid },
-    { id: 3, thumbnail: '/BG3.png', full: '/BG3.png', title: lang.Hero.buttons.Iris },
+    { id: 1, thumbnail: '/assets/BG.png', full: '/assets/BG.png', title: lang.Hero.buttons.Tulip },
+    { id: 2, thumbnail: '/assets/BG2.png', full: '/assets/BG2.png', title: lang.Hero.buttons.Orchid },
+    { id: 3, thumbnail: '/assets/BG3.png', full: '/assets/BG3.png', title: lang.Hero.buttons.Iris },
     // ...
   ];
   const featuresImage = [
