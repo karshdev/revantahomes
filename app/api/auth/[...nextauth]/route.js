@@ -1,4 +1,4 @@
-import NextAuth from "next-auth"
+import NextAuth, { getServerSession } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 
 const USERS = [
@@ -48,5 +48,5 @@ export const authOptions = {
 };
 
 const handler = NextAuth(authOptions);
-
+export const getAuthSession=()=>getServerSession(authOptions)
 export { handler as GET, handler as POST };

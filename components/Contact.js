@@ -18,22 +18,7 @@ const Contact= ({}) => {
  const[message,setMessage]=useState('')
  
 const type="Contact"
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  try {
-   
-    await Promise.all([sendEmail(), storeInDatabase()]);
-    
-    
-    console.log('Both requests succeeded');
-  } catch (error) {
-    
-    console.error('At least one request failed', error);
-  }
-};
- const storeInDatabase=async ()=>{
+ const handleSubmit=async ()=>{
 try{
   const response=await fetch('api/leads/add',{
   method:"POST",
@@ -43,7 +28,7 @@ try{
   body:JSON.stringify({fullName,email,phone,message,type})
 })
 const res=await response.json()
-if(res.message=="Leads Created"){
+if(res.message=="Sent"){
   toast.success("Success",{
     position: "top-right",
     autoClose: 1000,
@@ -59,32 +44,6 @@ if(res.message=="Leads Created"){
 }catch(err){
 
 }
- }
- const sendEmail=async()=>{
-  try{
-    const response=await fetch('api/sendEmail',{
-      method:"POST",
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body:JSON.stringify({fullName,email,phone,message})
-    })
-    const res=await response.json()
-    if(res.message=="Email Sent Successfully"){
-      toast.success("Successfully sent your form",{
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-      })
-      return true
-    }else{
-      return false
-    }
-  }catch(err){
-  
-  }
  }
   return (
     <div className="py-14 relative w-full bg-[url('/spesification/element_bg.png')] bg-right bg-contain bg-no-repeat flex items-center overflow-hidden">
