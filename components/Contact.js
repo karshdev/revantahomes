@@ -7,11 +7,13 @@ import { Checkbox } from "./ui/checkbox";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 
 const Contact= ({}) => {
+ 
  const[fullName,setName]=useState('')
  const[email,setEmail]=useState('')
  const[phone,setPhone]=useState('')
@@ -19,6 +21,7 @@ const Contact= ({}) => {
  
 const type="Contact"
  const handleSubmit=async ()=>{
+  
 try{
   const response=await fetch('api/leads/add',{
   method:"POST",

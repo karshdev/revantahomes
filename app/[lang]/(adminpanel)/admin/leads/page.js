@@ -1,7 +1,7 @@
 "use client"
-import AdminNavbar from '../../../../components/AdminNavbar';
+import AdminNavbar from '../../../../../components/AdminNavbar';
 import React, { useEffect, useState } from 'react';
-import TableRow from '../../../../components/TableRow';
+import TableRow from '../../../../../components/TableRow';
 import Link from 'next/link';
 
 const Leads = () => {

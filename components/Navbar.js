@@ -18,13 +18,18 @@ import {
 
 import useScroll from "../lib/hooks/use-scroll";
 import useWindowSize from "../lib/hooks/use-window-size";
+import {getDictionary} from'../getDictionary'
 
 
 
-const Navbar = () => {
+const Navbar =  ({lang}) => {
+  
+  
   const scrolled = useScroll(20);
   const { isMobile } = useWindowSize();
-
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng);
+  // };
   return (
     <div
       className={`fixed top-0 w-full z-50 ${
@@ -47,16 +52,16 @@ const Navbar = () => {
       )}
           <ul className="hidden lg:flex gap-2 lg:gap-10 text-brand">
             <li>
-              <Link href={"/"}>Home</Link>
+              <Link href={"/"}>{lang.Navbar.home}</Link>
             </li>
             <li>
-              <Link href={"/"}> About </Link>
+              <Link href={"/"}> {lang.Navbar.about} </Link>
             </li>
           </ul>
         </div>
         <div className="flex gap-4">
           <Button variant={"brand"} size={"sm"} className=" rounded-none">
-            <ArrowDownIcon className="mr-4" /> Download Brochure
+            <ArrowDownIcon className="mr-4" /> {lang.Navbar.downloadBrochure}
           </Button>
 
           <DropdownMenu>

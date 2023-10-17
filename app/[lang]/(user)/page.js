@@ -1,14 +1,17 @@
-import Amenities from '../../components/Amenities';
-import Explore from '../../components/Explore';
-import Features from '../../components/Features';
-import Hero from '../../components/Hero';
-import Spesification from '../../components/Spesification';
-import Location from '../../components/Location';
-import Contact from '../../components/Contact';
-import Footer from '../../components/Footer';
+import Amenities from '../../../components/Amenities';
+import Explore from '../../../components/Explore';
+import Features from '../../../components/Features';
+import Hero from '../../../components/Hero';
+import Spesification from '../../../components/Spesification';
+import Location from '../../../components/Location';
+import Contact from '../../../components/Contact';
+import Footer from '../../../components/Footer';
 import Navbar from '@/components/Navbar';
+import { getDictionary } from '../../../getDictionary';
 
-export default function Home() {
+export default async function Home({params}) {
+const lang=await getDictionary(params.lang)
+
   const images = [
     { id: 1, thumbnail: '/BG.png', full: '/BG.png', title: 'TULIP' },
     { id: 2, thumbnail: '/BG2.png', full: '/BG2.png', title: 'ORCHID' },
@@ -30,7 +33,7 @@ export default function Home() {
   ];
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
-      <Navbar />
+      <Navbar lang={lang}/>
       <Hero images={images} />
       <Features featuresImage={featuresImage} />
       <Explore />

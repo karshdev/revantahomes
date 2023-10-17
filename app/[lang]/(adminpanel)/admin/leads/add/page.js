@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import AdminNavbar from '../../../../../components/AdminNavbar';
+import AdminNavbar from '../../../../../../components/AdminNavbar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,7 +12,7 @@ const AddLeads = () => {
   const [type, settype] = useState('Orchird')
   const [status, setstatus] = useState('New')
   const [message, setMessage] = useState('')
- 
+
 
 
   const handleSubmit = async () => {
@@ -22,19 +22,19 @@ const AddLeads = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({fullName,email,phone,address,type,status,message}),
+        body: JSON.stringify({ fullName, email, phone, address, type, status, message }),
       })
       const res = await response.json()
-      if(res.message==="Leads Created"){
-        toast.success("Successfully added",{
+      if (res.message === "Leads Created") {
+        toast.success("Successfully added", {
           position: "top-right",
           autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
         });
-      }else{
-        toast.error("Something went Wrong",{
+      } else {
+        toast.error("Something went Wrong", {
           position: "top-right",
           autoClose: 1000,
           hideProgressBar: false,
@@ -43,7 +43,7 @@ const AddLeads = () => {
         });
       }
     } catch (err) {
-      
+
     }
 
   }
@@ -67,7 +67,7 @@ const AddLeads = () => {
                   name="fullName"
                   className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={fullName}
-                  onChange={(e)=>setfullName(e.target.value)}
+                  onChange={(e) => setfullName(e.target.value)}
                 />
               </div>
 
@@ -80,7 +80,7 @@ const AddLeads = () => {
                   name="email"
                   className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={email}
-                  onChange={(e)=>setemail(e.target.value)}
+                  onChange={(e) => setemail(e.target.value)}
                 />
               </div>
 
@@ -92,7 +92,7 @@ const AddLeads = () => {
                   id="phone"
                   name="phone"
                   className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
-                  onChange={(e)=>setPhone(e.target.value)}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
 
@@ -105,7 +105,7 @@ const AddLeads = () => {
                   name="address"
                   className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={address}
-                  onChange={(e)=>setaddress(e.target.value)}
+                  onChange={(e) => setaddress(e.target.value)}
                 />
               </div>
 
@@ -117,7 +117,7 @@ const AddLeads = () => {
                   name="type"
                   className="flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={type}
-                  onChange={(e)=>settype(e.target.value)}
+                  onChange={(e) => settype(e.target.value)}
                 >
                   <option value="Orchird">Orchird</option>
                   <option value="Tulip">Tulip</option>
@@ -134,7 +134,7 @@ const AddLeads = () => {
                   name="status"
                   className=" flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                   value={status}
-                  onChange={(e)=>setstatus(e.target.value)}
+                  onChange={(e) => setstatus(e.target.value)}
                 >
                   <option value="new">New</option>
                   <option value="pending">Pending</option>
@@ -143,7 +143,7 @@ const AddLeads = () => {
               </div>
 
 
-              {type=="Contact" && (
+              {type == "Contact" && (
                 <div className="w-full px-4 mb-4">
                   <label htmlFor="message" className="block text-gray-700">Message</label>
                   <textarea
@@ -151,7 +151,7 @@ const AddLeads = () => {
                     name="message"
                     className="h-20 flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
                     value={message}
-                    onChange={(e)=>setMessage(e.target.value)}
+                    onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
                 </div>
               )
@@ -162,7 +162,7 @@ const AddLeads = () => {
 
             <button
               type="button"
-              className="hover:underline w-[100%] h-7 px-[8px] py-[8px] bg-gray-600 border border-white justify-center text-white items-center gap-[10px] inline-flex sm:hover:underline sm:w-[max-content] sm:h-10 sm:px-[20px] sm:py-[17px] sm:bg-gray-600 sm:border sm:border-white sm:justify-center sm:items-center sm:gap-[10px] sm:inline-flex" 
+              className="hover:underline w-[100%] h-7 px-[8px] py-[8px] bg-gray-600 border border-white justify-center text-white items-center gap-[10px] inline-flex sm:hover:underline sm:w-[max-content] sm:h-10 sm:px-[20px] sm:py-[17px] sm:bg-gray-600 sm:border sm:border-white sm:justify-center sm:items-center sm:gap-[10px] sm:inline-flex"
               onClick={handleSubmit}
             >
               Submit
