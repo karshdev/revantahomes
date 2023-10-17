@@ -6,7 +6,6 @@ export async function POST(req) {
     
     try {
         const { fullName,email,phone,address='',type,status,message='' } = await req.json()
-      console.log(fullName,email,phone,message,address,type);
         const leads=await LeadsModel.create({
             fullName,
             email,
@@ -16,6 +15,7 @@ export async function POST(req) {
             status,
             message:message,
         })
+        
 
         return NextResponse.json({ message: "Leads Created" }, { status: 200 })
     } catch (err) {

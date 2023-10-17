@@ -36,7 +36,7 @@ const LoginPage = () => {
 
   return (
    
-    <div className=" h-[100vh] sm:w-[100vw] sm:position sm:relative sm:left-[-80px] bg-[url('/explore_images/explore_bg.png')] bg-brand bg-blend-multiply  bg-no-repeat flex items-center justify-center ">
+    <div className=" h-[100vh] bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply  bg-no-repeat flex items-center justify-center ">
     <div className="w-full p-6 bg-white rounded-md shadow-md lg:max-w-xl">
       <h1 className="text-3xl font-bold text-center text-gray-700">LOGIN</h1>
       <form className="mt-6" onSubmit={handleSubmit}>
@@ -94,7 +94,7 @@ const LoginPage = () => {
 
     </div>
   </div>
-
+  
   );
 };
 
