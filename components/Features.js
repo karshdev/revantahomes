@@ -12,7 +12,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 
-const Features= ({ featuresImage }) => {
+const Features= ({ featuresImage,lang }) => {
   const [selectedTab, setSelectedTab] = useState(featuresImage[0]);
   const [index, setIndex] = useState(0);
 
@@ -36,17 +36,14 @@ const Features= ({ featuresImage }) => {
             <h1
               className={`text-3xl lg:text-5xl text-center lg:text-left ${tenor.className}`}
             >
-              Complete Facilities
+           {lang.Features.title}
             </h1>
             <p className="text-md lg:text-xl max-w-xl">
-              These homes contain all basic amenities and are of latest
-              technology. Our home plans are original and are designed as per a
-              resident&apos;s view. We build all our homes like our own. We aim
-              to create homes that give a living experience that you deserve.
+            {lang.Features.description}
             </p>
             <div className="mx-auto lg:m-0">
               <Button variant={"outline"} size={"lg"} className="">
-                See More
+              {lang.Features.SeeMore}
               </Button>
             </div>
           </div>

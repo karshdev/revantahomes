@@ -16,7 +16,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 
-const Hero= ({ images }) => {
+const Hero= ({ images,lang }) => {
   const [selectedTab, setSelectedTab] = useState(images[0]);
   const [index, setIndex] = useState(0);
   let { scrollYProgress } = useScroll();
@@ -149,12 +149,10 @@ const Hero= ({ images }) => {
           <h1
             className={`text-3xl lg:text-5xl text-center lg:text-left ${tenor.className}`}
           >
-            Our Home Defines Us
+            {lang.Hero.title}
           </h1>
           <p className="text-md lg:text-xl max-w-xl">
-            Revanta Homes is a project by Rishabhdeo Builders & Developers. They
-            build homes with timeless designs. Thet build homes which are beyond
-            your dreams.
+          {lang.Hero.description}
           </p>
         </div>
         <nav className="w-2/4 min-w-[380px] max-w-md md:mt-0 p-2">

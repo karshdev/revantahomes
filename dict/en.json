@@ -3,5 +3,119 @@
         "home":"Home ",
         "about":"About",
         "downloadBrochure":"Download Brochure"
+    },
+    "Hero":{
+        "title":"Our Home Defines Us",
+        "description":"Revanta Homes is a project by Rishabhdeo Builders & Developers. They build homes with timeless designs. Thet build homes which are beyond your dreams.",
+        "buttons":{
+            "Orchid":"Orchid",
+            "Tulip":"Tulip",
+            "Iris":"Iris"
+        }
+    },
+    "Features":{
+        "title":"Complete Facilities",
+        "description":"These homes contain all basic amenities and are of latest technology. Our home plans are original and are designed as per a resident's view. We build all our homes like our own. We aim to create homes that give a living experience that you deserve.",
+        "SeeMore":"See More",
+        "Park":{
+            "Park1":"Park1  ",
+            "Park2":"Park1 ",
+            "Park3":"Park1 ",
+            "park4":"Park1"
+        }
+    },
+    "Explore":{
+        "Buttons":{
+            "Orchid":"Orhchid",
+            "Tulip":"Tulip",
+            "Iris":"Iris",
+            "viewPrice":"ViewP rice"
+        },
+        "Orchid":{
+              "direction":"25x50 PLOT AREA (WEST)",
+              "size":"1250 sqft",
+              "area":"Super Builtup Area",
+              "sqft":"2,097 Sqft"
+        },
+        "Tulip":{
+            "direction":"25x50 PLOT AREA (WEST)",
+            "size":"1250 sqft",
+            "area":"Super Builtup Area",
+            "sqft":"2,097 Sqft"
+        },
+        "Iris":{
+            "direction":"25x50 PLOT AREA (WEST)",
+              "size":"1250 sqft",
+              "area":"Super Builtup Area",
+              "sqft":"2,097 Sqft"
     }
+
+    },
+
+    "Footer":{
+        "title":"CLOSER TO NATURE",
+        "address":"Revanta Homes, Ranipur Road, Gouthana, Betul (Madhya Pradesh)",
+        "Contact":"Contact Us",
+        "links":"Our Social Media"
+    },
+    "Contact":{
+        "title":"Get in touch",
+        "address":"Please kindly fill out the form below, we will get back to you soon.",
+        "placeholders":{
+            "name":"name ",
+            "email":"email",
+            "phone":"phone ",
+            "message":"message"
+        },
+        "checkbox":"I agree that my submitted data is being collected and stored.",
+        "button":"Send Message "
+    },
+    "Location":{
+        "title":"Strategic Location",
+        "address":"Presents an exceptional residential experience, make your experience of life a positive one."
+    },
+    "Amenties":{
+        "title":"Amenities",
+        "description":"We Consider every aspect of aeshthtic appeal and functionality. while designing and constructing the buildings",
+        "Buttons":{
+            "btn1":"Children play area",
+            "btn2":"Indoor & Outdoor Games",
+            "btn3":"Gymnasium",
+            "btn4":"Badminton Court",
+            "btn5":"Community Space",
+            "btn6":"Landscapd Garden",
+            "btn7":"24x7 Security",
+            "btn8":"Security Guard",
+            "btn9":"Rainwater Harvesting",
+            "btn10":"वर्षा जल संग्रहण "
+           
+            
+        }
+    },
+    "Specification":{
+        "title":"Specification",
+        "description":"We assure you that you'll get our best, as that's what we expect of ourselves.",
+        "Buttons":{
+           "image1":{
+            "title":"Structure",
+            "description":"Earthquake Resistant Structure with attractive elevation as per Architecture's Design"
+           },
+           "image2":{
+            "title":"Wall Finish",
+            "description":"Inside Wall Plaster with Double Coat Putty Finish. Double Coat Plaster with Texture and Acrylic Paint on Exterior Walls"
+           },
+           "image3":{
+            "title":"Doors & Windows",
+            "description":"Main Door Designer Flush Door with Wooden Frame & Natural Veneer. Motorized Main Door Lock. All Internal Door Locks, Stoppers and Hinges (Godrej or Equivalent Brand) . Internal Laminated Flush Doors. Premium Quality UPVC Windows."
+           },
+           "image4":{
+            "title":"Doors & Windows",
+            "description":"Main Door Designer Flush Door with Wooden Frame & Natural Veneer. Motorized Main Door Lock. All Internal Door Locks, Stoppers and Hinges (Godrej or Equivalent Brand) . Internal Laminated Flush Doors. Premium Quality UPVC Windows."
+           }
+
+        }
+    }
+
+
 }
+    

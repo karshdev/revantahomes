@@ -10,7 +10,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 
-const Explore = () => {
+const Explore = ({lang}) => {
   const [state, SetState] = useState('/BG.png')
   const[btn,setBtn]=useState(false)
   let val=''
@@ -29,7 +29,7 @@ const Explore = () => {
             className={` ${state === "/BG.png" && "bg-[#C1D6C3]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
             onClick={() => SetState('/BG.png')}
           >
-            ORCHID
+            {lang.Explore.Buttons.Orchid}
           </Button>
           <Button
             variant={"brand"}
@@ -37,7 +37,7 @@ const Explore = () => {
             className={` ${state === "/BG2.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
             onClick={() => SetState('/BG2.png')}
           >
-            TULIP
+              {lang.Explore.Buttons.Tulip}
           </Button>
           <Button
             variant={"brand"}
@@ -45,7 +45,7 @@ const Explore = () => {
             className={` ${state === "/BG3.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
             onClick={() => SetState('/BG3.png')}
           >
-            IRIS
+             {lang.Explore.Buttons.Iris}
           </Button>
         </div>
         <div className="grid grid-cols-5 w-full gap-4">
@@ -80,16 +80,16 @@ const Explore = () => {
           <div className="w-full h-full col-span-5 lg:col-span-3 relative">
             <div className="flex flex-col text-white ">
               <h3 className={`text-2xl lg:text-4xl text-center lg:text-start mb-4 ${tenor.className}`}>
-                {state === "/BG.png" ? val='Orchid' : state === "/BG2.png" ?  val='Tulip' : val='Iris'}
+                {state === "/BG.png" ? val=lang.Explore.Buttons.Orchid : state === "/BG2.png" ?  val=lang.Explore.Buttons.Tulip : val=lang.Explore.Buttons.Iris}
                 
               </h3>
               {state === "/BG.png" ?
                 (
                   <>
-                    <p className="font-light">25x50 PLOT AREA (WEST)</p>
-                    <p className="font-bold">1250 sqft</p>
-                    <p className="font-bold">Super Builtup Area</p>
-                    <p className="font-bold">2,097 Sqft</p>
+                    <p className="font-light">{lang.Explore.Orchid.direction}</p>
+                    <p className="font-bold">{lang.Explore.Orchid.size}</p>
+                    <p className="font-bold">{lang.Explore.Orchid.area}</p>
+                    <p className="font-bold">{lang.Explore.Orchid.sqft}</p>
 
                   </>
                 )
@@ -97,20 +97,20 @@ const Explore = () => {
                 state === "/BG2.png" ?
                   (
                     <>
-                      <p className="font-light">25x50 PLOT AREA (EAST)</p>
-                      <p className="font-bold">1250 sqft of Tulip</p>
-                      <p className="font-bold">Super Builtup Area</p>
-                      <p className="font-bold">2,097 Sqft</p>
+                      <p className="font-light">{lang.Explore.Tulip.direction}</p>
+                      <p className="font-bold">{lang.Explore.Tulip.size}</p>
+                      <p className="font-bold">{lang.Explore.Tulip.area}</p>
+                      <p className="font-bold">{lang.Explore.Tulip.sqft}</p>
 
                     </>
                   )
                   :
                   (
                     <>
-                      <p className="font-light">25x50 PLOT AREA (NORTH)</p>
-                      <p className="font-bold">1250 sqft of IRIS</p>
-                      <p className="font-bold">Super Builtup Area</p>
-                      <p className="font-bold">2,097 Sqft</p>
+                      <p className="font-light">{lang.Explore.Iris.direction}</p>
+                      <p className="font-bold">{lang.Explore.Iris.size}</p>
+                      <p className="font-bold">{lang.Explore.Iris.area}</p>
+                      <p className="font-bold">{lang.Explore.Iris.sqft}</p>
 
                     </>
                   )
@@ -118,10 +118,10 @@ const Explore = () => {
               }
 
               <Button  variant={"brand"} size={"lg"}  className="w-[160px] mt-[10px] bg-[#C1D6C3] rounded-none px-6 lg:px-10 text-primary hover:bg-green-100" onClick={()=>setBtn(true)} >
-                View Price
+              {lang.Explore.Buttons.viewPrice}
               </Button>
               {
-                btn && <PopUpLanding setBtn={setBtn}  val={val}/>
+                btn && <PopUpLanding setBtn={setBtn}  val={val} />
               }
             </div>
           </div>

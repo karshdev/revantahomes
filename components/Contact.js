@@ -12,7 +12,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 
-const Contact= ({}) => {
+const Contact= ({lang}) => {
  
  const[fullName,setName]=useState('')
  const[email,setEmail]=useState('')
@@ -70,18 +70,18 @@ if(res.message=="Leads and email Sent"){
         <h1
           className={`text-2xl lg:text-4xl text-center lg:text-left ${tenor.className}`}
         >
-          Get in touch
+         {lang.Contact.title}
         </h1>
         <p className="text-center lg:text-left">
-          Please kindly fill out the form below, we will get back to you soon.
+        {lang.Contact.address}
         </p>
         <div className=" flex gap-6 max-w-xl">
-          <Input type="text" name="name" placeholder="Name" className=" rounded-none" onChange={(e)=>setName(e.target.value)}/>
-          <Input type="email" name="email" placeholder="Email" className=" rounded-none" onChange={(e)=>setEmail(e.target.value)}/>
+          <Input type="text" name="name" placeholder={lang.Contact.placeholders.name} className=" rounded-none" onChange={(e)=>setName(e.target.value)}/>
+          <Input type="email" name="email" placeholder={lang.Contact.placeholders.email} className=" rounded-none" onChange={(e)=>setEmail(e.target.value)}/>
         </div>
         <div className="max-w-xl flex flex-col gap-3">
-          <Input type="number" name="phone" placeholder="Phone Number" className=" rounded-none" onChange={(e)=>setPhone(e.target.value)}/>
-          <textarea type="text" name="message" placeholder="Message" className="h-20 flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"  onChange={(e)=>setMessage(e.target.value)}/>
+          <Input type="number" name="phone" placeholder={lang.Contact.placeholders.phone} className=" rounded-none" onChange={(e)=>setPhone(e.target.value)}/>
+          <textarea type="text" name="message" placeholder={lang.Contact.placeholders.message} className="h-20 flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"  onChange={(e)=>setMessage(e.target.value)}/>
         </div>
        
         <div className="flex items-center space-x-2">
@@ -90,7 +90,7 @@ if(res.message=="Leads and email Sent"){
             htmlFor="terms"
             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
-            I agree that my submitted data is being collected and stored.
+          {lang.Contact.checkbox}
           </label>
         </div>
         <Button
@@ -99,7 +99,7 @@ if(res.message=="Leads and email Sent"){
           className="lg:max-w-sm rounded-none bg-gray-500"
           onClick={handleSubmit}
         >
-          Send Message
+         {lang.Contact.button}
         </Button>
       </div>
     </div>

@@ -7,17 +7,17 @@ import { FC } from "react";
 const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
-const Footer = () => {
+const Footer = ({lang}) => {
   return (
     <div className="relative bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply py-12">
       <div className="w-full max-w-screen-xl mx-auto grid grid-cols-3 gap-y-12 p-2">
         <div className="flex col-span-3 lg:col-span-1 flex-col gap-4 items-center justify-center">
           <Image src={"/logo.png"} alt="logo" width={100} height={100} />
-          <p className="text-white font-bold text-sm">CLOSER TO NATURE</p>
+          <p className="text-white font-bold text-sm">{lang.Footer.title}</p>
         </div>
         <div className="flex col-span-3 lg:col-span-1 items-center justify-center md:items-start md:justify-start">
           <div className="w-full h-full text-white space-y-6">
-            <h3 className={`text-lg text-center md:text-start ${tenor.className}`}>Contact Us</h3>
+            <h3 className={`text-lg text-center md:text-start ${tenor.className}`}>{lang.Footer.Contact}</h3>
             <div className="gap-2 flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start">
               <div className="flex-none bg-white w-8 h-8 rounded-full flex justify-center items-center">
                 <svg
@@ -35,7 +35,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-center md:text-left">
-                  Revanta Homes, Ranipur Road,&nbsp;Gouthana,&nbsp;Betul&nbsp;(Madhya&nbsp;Pradesh)
+                {lang.Footer.address}
                 </p>
               </div>
             </div>
@@ -61,7 +61,7 @@ const Footer = () => {
         <div className="flex col-span-3 lg:col-span-1 items-center justify-center">
           <div className="flex flex-col justify-between h-full  gap-y-4">
             <h3 className={`text-lg text-white ${tenor.className} text-center w-fit`}>
-              Our Social Media
+            {lang.Footer.links}
             </h3>
             <div className="gap-4 flex">
               <Link

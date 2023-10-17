@@ -19,7 +19,7 @@ import Image from "next/image";
 const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
-const Spesification = ({ cards }) => {
+const Spesification = ({ cards ,lang}) => {
   const swiperRef = useRef();
   const[activeSlide, setActiveSlide] = useState(0);
   const[slideEnd, setSlideEnd] = useState(false);
@@ -32,11 +32,10 @@ const Spesification = ({ cards }) => {
           <h3
             className={`text-2xl lg:text-4xl text-center lg:text-left ${tenor.className}`}
           >
-            Specification
+           {lang.Specification.title}
           </h3>
           <p>
-            We assure you that you&apos;ll get our best, as that&apos;s what we
-            expect of ourselves.
+          {lang.Specification.description}
           </p>
           <div className=" space-x-4 w-full flex justify-center lg:justify-start">
             <Button onClick={() => swiperRef.current?.slidePrev()} variant={"default"} size={"icon"} className="rounded-none">
