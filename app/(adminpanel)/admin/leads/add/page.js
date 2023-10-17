@@ -17,7 +17,7 @@ const AddLeads = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('/api/leads/add', {
+      const response = await fetch(`/api/leads/add?noEmail=true`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

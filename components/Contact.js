@@ -38,7 +38,7 @@ if(res.message=="Leads and email Sent"){
   })
   return true
 }else if(res.message==="Email Server down"){
-  toast.success("Error ",{
+  toast.error("Error ",{
     position: "top-right",
     autoClose: 1000,
     hideProgressBar: false,
@@ -47,7 +47,7 @@ if(res.message=="Leads and email Sent"){
   })
   return false
 }else{
-  toast.success("Error",{
+  toast.error("Error",{
     position: "top-right",
     autoClose: 1000,
     hideProgressBar: false,
