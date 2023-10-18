@@ -94,6 +94,18 @@ const Amenities = ({lang}) => {
                   </span>
                   <p className="font-bold text-lg text-center">{lang.Amenties.Buttons.btn5}</p>
                 </div>
+                <div className="flex flex-col lg:flex-row items-center gap-4">
+                  <span className="p-2 bg-brand w-20 h-20 flex justify-center items-center">
+                    <GardenIcon />
+                  </span>
+                  <p className="font-bold text-lg text-center">{lang.Amenties.Buttons.btn6}</p>
+                </div>
+                <div className="flex flex-col lg:flex-row items-center gap-4">
+                  <span className="p-2 bg-brand w-20 h-20 flex justify-center items-center">
+                    <CctvIcon />
+                  </span>
+                  <p className="font-bold text-lg text-center">{lang.Amenties.Buttons.btn7}</p>
+                </div>
               </div>
               <div className="w-1/2 flex flex-col gap-12">
                 <div className="flex flex-col lg:flex-row items-center gap-4">
@@ -126,6 +138,20 @@ const Amenities = ({lang}) => {
                   </span>
                   <p className="font-bold text-lg text-center">{lang.Amenties.Buttons.btn10}</p>
                 </div>
+                <div className="flex flex-col lg:flex-row items-center gap-4">
+                  <span className="p-2 bg-brand w-20 h-20 flex justify-center items-center">
+                    <DrainageIcon />
+                  </span>
+                  <p className="font-bold text-lg text-center">{lang.Amenties.Buttons.btn11}</p>
+                </div>
+                <div className="flex flex-col lg:flex-row items-center gap-4">
+                  <span className="p-2 bg-brand w-20 h-20 flex justify-center items-center">
+                    <DrainageIcon />
+                  </span>
+                  <p className="font-bold text-lg text-center">{lang.Amenties.Buttons.btn12}</p>
+                </div>
+               
+
               </div>
             </div>
           </div>

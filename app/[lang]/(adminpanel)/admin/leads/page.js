@@ -52,7 +52,7 @@ const Leads = () => {
       <div className='flex flex-col items-center justify-center gap-20 p-10'>
         <div className='flex flex-col gap-4 items-center justify-center sm:flex sm:flex-row sm:items-center sm:justify-between sm:w-[100%]'>
           <Link
-            href='/admin/leads/add'
+            href='/en/admin/leads/add'
             className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2  outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
           >
             Add Users

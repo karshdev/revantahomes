@@ -11,7 +11,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 const Explore = ({lang}) => {
-  const [state, SetState] = useState('/BG.png')
+  const [state, SetState] = useState('/assets/BG.png')
   const[btn,setBtn]=useState(false)
   let val=''
   return (
@@ -20,30 +20,30 @@ const Explore = ({lang}) => {
         <h1
           className={`text-2xl lg:text-4xl text-center lg:text-left text-white ${tenor.className}`}
         >
-          
+          {lang.Explore.title}
         </h1>
         <div className="flex gap-4">
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/BG.png" && "bg-[#C1D6C3]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
-            onClick={() => SetState('/BG.png')}
+            className={` ${state === "/assets/BG.png" && "bg-[#C1D6C3]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={() => SetState('/assets/BG.png')}
           >
             {lang.Explore.Buttons.Orchid}
           </Button>
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/BG2.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
-            onClick={() => SetState('/BG2.png')}
+            className={` ${state === "/assets/BG2.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={() => SetState('/assets/BG2.png')}
           >
               {lang.Explore.Buttons.Tulip}
           </Button>
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/BG3.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
-            onClick={() => SetState('/BG3.png')}
+            className={` ${state === "/assets/BG3.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={() => SetState('/assets/BG3.png')}
           >
              {lang.Explore.Buttons.Iris}
           </Button>
@@ -121,7 +121,7 @@ const Explore = ({lang}) => {
               {lang.Explore.Buttons.viewPrice}
               </Button>
               {
-                btn && <PopUpLanding setBtn={setBtn}  val={val} />
+                btn && <PopUpLanding setBtn={setBtn}  val={val==="ओर्चिद" ? "Orchid" :val==="Orhchid" ? "Orchid" : val==="आइरिस" ? "Iris" : val==="Iris" ? "Iris" :val==="टूलिप" ? "Tulip" : val==="Tulip" ? "Tulip" : ""} />
               }
             </div>
           </div>

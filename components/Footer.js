@@ -12,7 +12,7 @@ const Footer = ({lang}) => {
     <div className="relative bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply py-12">
       <div className="w-full max-w-screen-xl mx-auto grid grid-cols-3 gap-y-12 p-2">
         <div className="flex col-span-3 lg:col-span-1 flex-col gap-4 items-center justify-center">
-          <Image src={"/logo.png"} alt="logo" width={100} height={100} />
+          <Image src={"/assets/logo.png"} alt="logo" width={100} height={100} />
           <p className="text-white font-bold text-sm">{lang.Footer.title}</p>
         </div>
         <div className="flex col-span-3 lg:col-span-1 items-center justify-center md:items-start md:justify-start">

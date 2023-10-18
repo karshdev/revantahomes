@@ -29,6 +29,13 @@ console.log(lang);
     {id: 1, image : '/spesification/structure.png', title: lang.Specification.Buttons.image1.title, description : lang.Specification.Buttons.image1.description},
     {id: 1, image : '/spesification/wall_finish.png', title: lang.Specification.Buttons.image2.title, description :  lang.Specification.Buttons.image2.description},
     {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image3.title, description :  lang.Specification.Buttons.image3.description},
+    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image4.title, description :  lang.Specification.Buttons.image4.description},
+    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image5.title, description :  lang.Specification.Buttons.image5.description},
+    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image6.title, description :  lang.Specification.Buttons.image6.description},
+    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image7.title, description :  lang.Specification.Buttons.image7.description},
+    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image8.title, description :  lang.Specification.Buttons.image8.description},
+    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image9.title, description :  lang.Specification.Buttons.image9.description},
+    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image10.title, description :  lang.Specification.Buttons.image10.description},
   ];
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">

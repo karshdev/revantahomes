@@ -5,8 +5,8 @@
         "downloadBrochure":"Download Brochure"
     },
     "Hero":{
-        "title":"Our Home Defines Us",
-        "description":"Revanta Homes is a project by Rishabhdeo Builders & Developers. They build homes with timeless designs. Thet build homes which are beyond your dreams.",
+        "title":"Discover Dream Living Here",
+        "description":"Revanta Homes: Timeless Designs, Beyond Dreams. By Rishabhdeo Builders & Developers, crafting luxury residences with exceptional quality and architectural sophistication, harmonizing seamlessly with their surroundings.",
         "buttons":{
             "Orchid":"Orchid",
             "Tulip":"Tulip",
@@ -25,11 +25,12 @@
         }
     },
     "Explore":{
+        "title":"Discover Residences Anew",
         "Buttons":{
             "Orchid":"Orhchid",
             "Tulip":"Tulip",
             "Iris":"Iris",
-            "viewPrice":"ViewP rice"
+            "viewPrice":"View Price"
         },
         "Orchid":{
               "direction":"25x50 PLOT AREA (WEST)",
@@ -60,7 +61,7 @@
     },
     "Contact":{
         "title":"Get in touch",
-        "address":"Please kindly fill out the form below, we will get back to you soon.",
+        "address":"Please kindly fill out the form below, we will get back to you soon.: Kindly complete the form below, and we'll be in touch shortly.",
         "placeholders":{
             "name":"name ",
             "email":"email",
@@ -72,11 +73,11 @@
     },
     "Location":{
         "title":"Strategic Location",
-        "address":"Presents an exceptional residential experience, make your experience of life a positive one."
+        "address":"Enhance your living experience with unparalleled residential living, turning life into a positive and enriching journey"
     },
     "Amenties":{
-        "title":"Amenities",
-        "description":"We Consider every aspect of aeshthtic appeal and functionality. while designing and constructing the buildings",
+        "title":"Comprehensive Amenities ",
+        "description":" Indulge in an array of luxurious amenities tailored to elevate your lifestyle. From state-of-the-art fitness centers to serene outdoor spaces, our amenities are meticulously curated to offer you comfort, convenience, and a sense of community. ",
         "Buttons":{
             "btn1":"Children play area",
             "btn2":"Indoor & Outdoor Games",
@@ -87,9 +88,11 @@
             "btn7":"24x7 Security",
             "btn8":"Security Guard",
             "btn9":"Rainwater Harvesting",
-            "btn10":"वर्षा जल संग्रहण "
-           
-            
+            "btn10":"Underground Drainage ",
+            "btn11":"Internal Concrete Road",
+            "btn12":"Grand Entrance Great",
+            "btn13":"Under Ground Cables",
+            "btn14":"Decorative street lights" 
         }
     },
     "Specification":{
@@ -98,19 +101,48 @@
         "Buttons":{
            "image1":{
             "title":"Structure",
-            "description":"Earthquake Resistant Structure with attractive elevation as per Architecture's Design"
+            "description":"Earthquake-resistant design with an appealing architectural elevation."
+            
            },
            "image2":{
             "title":"Wall Finish",
-            "description":"Inside Wall Plaster with Double Coat Putty Finish. Double Coat Plaster with Texture and Acrylic Paint on Exterior Walls"
+            "description":"Interior walls boast a polished double coat putty finish, while exterior walls showcase a blend of double coat plaster, textured detailing, and a resilient acrylic paint application, enhancing both aesthetics and durability"
            },
            "image3":{
             "title":"Doors & Windows",
-            "description":"Main Door Designer Flush Door with Wooden Frame & Natural Veneer. Motorized Main Door Lock. All Internal Door Locks, Stoppers and Hinges (Godrej or Equivalent Brand) . Internal Laminated Flush Doors. Premium Quality UPVC Windows."
+            "description":"The main door exudes sophistication with a designer flush door featuring a wooden frame and natural veneer. Security is paramount with a motorized main door lock. Internally, laminated flush doors provide a premium touch, complemented by high-quality UPVC windows, ensuring a harmonious blend of style, security, and functionality."
            },
            "image4":{
-            "title":"Doors & Windows",
-            "description":"Main Door Designer Flush Door with Wooden Frame & Natural Veneer. Motorized Main Door Lock. All Internal Door Locks, Stoppers and Hinges (Godrej or Equivalent Brand) . Internal Laminated Flush Doors. Premium Quality UPVC Windows."
+            "title":"Flooring",
+            "description":"Large-sized premium quality vitrified flooring throughout."
+
+           },
+           "image5":{
+            "title":"Kitchen",
+            "description":"A semi-modular kitchen showcases a refined aesthetic with a polished granite/quartz platform. The architect's discerning choice extends to a premium-quality, stain-proof stainless steel sink. Enhancing the kitchen's allure, decorative tile dado aligns seamlessly with the architectural design, creating a space that marries functionality with timeless elegance."
+
+           },
+           "image6":{
+            "title":"Bathrooms & Plumbing",
+            "description":"Separate wet and dry areas in bathrooms, Premium large-sized tiles in all bathrooms, CPVC-UPVC pipes and branded plumbing accessories with company warranty, Premium quality CP fittings as per architectural selection, Provision for central water heating system and exhaust fan points"
+           },
+           "image7":{
+            "title":"Wash Area",
+            "description":"Anti-skid flooring enhances safety in the wash area, complemented by glazed tiles for a sleek aesthetic. The combination creates a stylish and secure space, blending functionality with contemporary design."
+
+           },
+           "image8":{
+            "title":"Electrification",
+            "description":"Electric and plumbing points facilitate washing machines. Three-phase concealed copper wiring with modular switches ensures efficiency. ELCB/MCB with an internal distribution board enhances safety. Bedrooms feature AC points with concealed copper piping. MDU-based TV connection and cabling accommodate inverter setups."
+
+           },
+           "image9":{
+            "title":"Home Garden",
+            "description":"A well-developed home garden provides a serene touch of nature and tranquility, creating a peaceful haven that enhances the overall beauty and ambiance of the living space."
+           },
+           "image10":{
+            "title":"Pest Control",
+            "description":"A pre-anti-termite control treatment, backed by a 6-year company warranty, guarantees a pest-free environment, offering long-term protection and peace of mind against termite infestations."
            }
 
         }

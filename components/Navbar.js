@@ -23,11 +23,11 @@ const Navbar =  ({lang}) => {
   // };
   
   const handleToggle=()=>{
-    setToggle((prev) => !prev);
-    router.push(toggle ? '/en' : '/hi');
-  }
+    setToggle((prev)=>!prev)
+    router.push(toggle ? "/en" : "/hi")
+}
+
  
-useMemo(()=>toggle,[toggle])
  
   return (
     <div
