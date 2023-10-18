@@ -11,7 +11,7 @@ import { getDictionary } from '../../../getDictionary';
 
 export default async function Home({params}) {
 const lang=await getDictionary(params.lang)
-
+console.log(lang);
   const images = [
     { id: 1, thumbnail: '/assets/BG.png', full: '/assets/BG.png', title: lang.Hero.buttons.Tulip },
     { id: 2, thumbnail: '/assets/BG2.png', full: '/assets/BG2.png', title: lang.Hero.buttons.Orchid },

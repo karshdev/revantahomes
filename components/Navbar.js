@@ -18,7 +18,7 @@ import {
 
 import useScroll from "../lib/hooks/use-scroll";
 import useWindowSize from "../lib/hooks/use-window-size";
-import {getDictionary} from'../getDictionary'
+
 
 
 
