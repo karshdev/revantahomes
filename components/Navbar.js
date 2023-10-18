@@ -5,31 +5,30 @@ import Link from "next/link";
 
 import { Button } from "./ui/button";
 import { ArrowDownIcon, GlobeIcon } from "@radix-ui/react-icons";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuTrigger,
-} from "../components/ui/dropdown-menu";
-
 import useScroll from "../lib/hooks/use-scroll";
 import useWindowSize from "../lib/hooks/use-window-size";
+import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 
 
 
 
 const Navbar =  ({lang}) => {
-  
-  
+  const router=useRouter()
+   const[toggle,setToggle]=useState(false)
   const scrolled = useScroll(20);
   const { isMobile } = useWindowSize();
   // const changeLanguage = (lng) => {
   //   i18n.changeLanguage(lng);
   // };
+  
+  const handleToggle=()=>{
+    setToggle((prev) => !prev);
+    router.push(toggle ? '/en' : '/hi');
+  }
+ 
+useMemo(()=>toggle,[toggle])
+ 
   return (
     <div
       className={`fixed top-0 w-full z-50 ${
@@ -59,12 +58,12 @@ const Navbar =  ({lang}) => {
             </li>
           </ul>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center justify-center" >
           <Button variant={"brand"} size={"sm"} className=" rounded-none">
             <ArrowDownIcon className="mr-4" /> {lang.Navbar.downloadBrochure}
           </Button>
 
-          <button className=" h-[50px] w-[50px] rounded-full flex items-center justify-center">
+          <button className=" h-[50px] w-[50px] rounded-full flex items-center justify-center" onClick={handleToggle}>
             <img src="/assets/language-switch.svg" className="w-[100%] h-[100%]" />
           </button>
         </div>
