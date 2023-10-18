@@ -1,31 +1,12 @@
 "use client"
 import React, { useState } from 'react';
 import EditTable from '../components/EditTable'
+import DeleteTab from './DeleteTab';
 
 const TableRow = ({ value ,index}) => {
     const [isEdit, setIsEdit] = useState(false);
-  
-const handleDelete =async  (id) => {
-   
-    try {
-        const response = await fetch(`/api/leads?id=${id}`,{
-            method:"DELETE",
-            headers: {
-              'Content-Type': 'application/json',
-            },
-        })
-        const res= await response.json()
-        if (res.message==="Deleted") {
-            window.location.reload()
-         return true
-        } else {
-           return false
-     
-        }
-      } catch (error) {
+    const[del,setdel] =useState(false)
 
-      }
-}
 
 return (
     <>
@@ -53,10 +34,12 @@ return (
                     <button onClick={() => setIsEdit(!isEdit)} className=' text-[12px] underline sm:underline text-blue-400 sm:text-[17px]'>
                         Edit
                     </button>
-                    <button onClick={()=>handleDelete(value._id)} className=' text-[12px] underline sm:underline text-blue-400 sm:text-[17px]'>
+                    <button onClick={() => setdel(!del)} className=' text-[12px] underline sm:underline text-blue-400 sm:text-[17px]'>
                         Delete
                     </button>
+                    
                     </div>
+                    {del && <DeleteTab value={value} setdel={setdel} />}
                     {isEdit && <EditTable value={value} setIsEdit={setIsEdit}/>}
         
         </td>

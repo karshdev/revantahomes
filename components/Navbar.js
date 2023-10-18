@@ -49,14 +49,7 @@ const Navbar =  ({lang}) => {
             width={100}
           />
       )}
-          <ul className="hidden lg:flex gap-2 lg:gap-10 text-brand">
-            <li>
-              <Link href={"/"}>{lang.Navbar.home}</Link>
-            </li>
-            <li>
-              <Link href={"/"}> {lang.Navbar.about} </Link>
-            </li>
-          </ul>
+         
         </div>
         <div className="flex gap-4 items-center justify-center" >
           <Button variant={"brand"} size={"sm"} className=" rounded-none">

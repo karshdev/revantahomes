@@ -1,6 +1,6 @@
 "use client"
 import { useState } from 'react';
-import AdminNavbar from '../../../../../../components/AdminNavbar';
+import AdminNavbar from '../../../../../components/AdminNavbar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

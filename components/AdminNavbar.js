@@ -15,10 +15,10 @@ const AdminNavbar = () => {
           <img src="/assets/logo.png" alt="Logo" className="w-[50px] h-[50px]  sm:w-[70px] sm:h-[70px] sm:mr-2" />
         </div>
         <div className="space-x-4">
-          <a href="/en/admin/leads" className="hover:underline text-[14px] text-black font-semibold sm:hover:underline sm:text-[20px] sm:text-black sm:font-semibold">
+          <a href="/admin/leads" className="hover:underline text-[14px] text-black font-semibold sm:hover:underline sm:text-[20px] sm:text-black sm:font-semibold">
             Leads
           </a>
-          <a href="en/admin" className="hover:underline text-[14px] text-black font-semibold sm:hover:underline sm:text-[20px] sm:text-black sm:font-semibold">
+          <a href="/admin" className="hover:underline text-[14px] text-black font-semibold sm:hover:underline sm:text-[20px] sm:text-black sm:font-semibold">
             Dashboard
           </a>
         </div>
