@@ -1,6 +1,6 @@
 import AuthProvider from '../../../components/AuthProvider'
 
-import '../../../../revantahomes/globals.css'
+import '../../../globals.css'
 import { Inter } from 'next/font/google'
 
 
