@@ -15,7 +15,7 @@ const sendEmail=async (fullName,email,phone,message,address)=>{
       // Create the email content
       const mailOptions = {
         from: process.env.GMAIL_FROM,
-        to: "virtuarchitects7@gmail.com",
+        to: process.env.GMAIL_FROM,
         subject: `New Lead (${fullName}) from Revanta`,
         text: `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nMessage: ${message}`,
       };
