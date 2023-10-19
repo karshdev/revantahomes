@@ -72,19 +72,20 @@ const Leads = () => {
             />
           </div>
         </div>
-
-        <table className='w-[100%] bg-white border border-gray-300 shadow-md overflow-hidden'>
-          <thead>
-            <tr>
-              <th className=' text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>ID</th>
-              <th className=' text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Full Name</th>
-              <th className='  text-[12px] px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Email</th>
-              <th className='  hidden sm:py-2 sm:px-4 sm:table-cell sm:border-b sm:text-[20px]'>Phone</th>
-              <th className='  hidden sm:py-2 sm:px-4  sm:table-cell sm:border-b sm:text-[20px]'>Created At</th>
-              <th className=' text-[12px]  py-1 px-2 border-b sm:py-2 sm:px-4 sm:border-b sm:text-[20px]'>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
+       
+        <div className="max-h-[400px] w-[100%] overflow-y-auto">
+          <table className="w-[100%]  bg-white border border-gray-300">
+            <thead className="sticky top-0 bg-gray-100">
+              <tr>
+                <th className=" border-b">Id</th>
+                <th className="border-b">Name</th>
+                <th className=" border-b">Email</th>
+                <th className="hidden  sm:table-cell px-4 py-2 border-b">Phone</th>
+                <th className="hidden  sm:table-cell px-4 py-2 border-b">CreatedAt</th>
+                <th className=" border-b">Buttons</th>
+              </tr>
+            </thead>
+            <tbody>
             {filteredData.length >= 1 ? (
               filteredData.map((value, i) => (
                 <TableRow key={i} value={value} index={i + 1} />
@@ -92,16 +93,20 @@ const Leads = () => {
             ) : (
              null
             )}
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
+
+        </div>
       {loading && (
       <div className='w-[100%] flex items-center justify-center'> 
       <img src='https://media4.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=ecf05e477j2za21j8ojm8eehd698tbjr1qk79lfe87wd17o1&ep=v1_gifs_search&rid=giphy.gif&ct=g' className='w-[150px] h-[150px]' />
       </div>
       )}  
-      </div>
+
     </>
   );
 };
 
 export default Leads;
+
