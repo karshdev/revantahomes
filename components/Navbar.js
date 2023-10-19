@@ -15,7 +15,6 @@ import { useEffect, useMemo, useState } from "react";
 
 const Navbar =  ({lang}) => {
   const router=useRouter()
-   const[toggle,setToggle]=useState(false)
   const scrolled = useScroll(20);
   const { isMobile } = useWindowSize();
   // const changeLanguage = (lng) => {
@@ -23,8 +22,7 @@ const Navbar =  ({lang}) => {
   // };
   
   const handleToggle=()=>{
-    setToggle((prev)=>!prev)
-    router.push(toggle ? "/en" : "/hi")
+    router.push(lang.Language==='english' ? "/hi" : "/en")
 }
 
  
