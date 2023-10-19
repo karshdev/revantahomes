@@ -1,8 +1,8 @@
 import nodemailer from 'nodemailer'
-const sendEmail=async (fullName,email,phone,message)=>{
+const sendEmail=async (fullName,email,phone,message,address)=>{
     try {
     // Create a Nodemailer transporter
-    console.log(fullName,email,phone,message);
+    console.log(fullName,email,phone,message,address);
     const transporter = nodemailer.createTransport({
         // Specify your email service and credentials
         service: 'gmail',
@@ -15,9 +15,9 @@ const sendEmail=async (fullName,email,phone,message)=>{
       // Create the email content
       const mailOptions = {
         from: process.env.GMAIL_FROM,
-        to: email,
-        subject: 'New Contact Form Submission',
-        text: `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+        to: "virtuarchitects7@gmail.com",
+        subject: `New Lead (${fullName}) from Revanta`,
+        text: `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nMessage: ${message}`,
       };
   
       try {

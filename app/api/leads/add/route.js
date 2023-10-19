@@ -21,8 +21,8 @@ export async function POST(req) {
       message: message,
     })
 
-    if (!noEmail && message) {
-      const res = await sendEmail(leads.fullName, leads.email, leads.phone, leads.message)
+    if (!noEmail) {
+      const res = await sendEmail(leads.fullName, leads.email, leads.phone, leads.message, leads.address)
       console.log(res);
       if (res && leads) {
         return NextResponse.json({ message: "Leads and email Sent" }, { status: 200 })

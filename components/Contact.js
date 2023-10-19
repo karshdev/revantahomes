@@ -32,7 +32,7 @@ try{
 })
 const res=await response.json()
 if(res.message=="Leads and email Sent"){
-  toast.success("Successfully Sent",{
+  toast.success("Thank You!",{
     position: "top-right",
     autoClose: 1000,
     hideProgressBar: false,
@@ -41,7 +41,7 @@ if(res.message=="Leads and email Sent"){
   })
   return true
 }else if(res.message==="Email Server down"){
-  toast.error("Error ",{
+  toast.error(res.message,{
     position: "top-right",
     autoClose: 1000,
     hideProgressBar: false,
@@ -50,7 +50,7 @@ if(res.message=="Leads and email Sent"){
   })
   return false
 }else{
-  toast.error("Error",{
+  toast.error("Something went wrong!",{
     position: "top-right",
     autoClose: 1000,
     hideProgressBar: false,

@@ -3,8 +3,11 @@ import { useState } from 'react';
 import AdminNavbar from '../../../../../components/AdminNavbar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/navigation';
+import { ArrowLeftIcon } from '@radix-ui/react-icons';
 
 const AddLeads = () => {
+  const router = useRouter();
   const [fullName, setfullName] = useState('')
   const [email, setemail] = useState('')
   const [phone, setPhone] = useState('')
@@ -33,6 +36,9 @@ const AddLeads = () => {
           closeOnClick: true,
           pauseOnHover: false,
         });
+        setTimeout(()=>{
+          router.push('/admin/leads')
+        },1000)
       } else {
         toast.error("Something went Wrong", {
           position: "top-right",
@@ -54,7 +60,10 @@ const AddLeads = () => {
 
       <div className="flex items-center justify-center">
         <div className="bg-white p-8 rounded-md shadow-lg w-full max-w-md ">
-          <h2 className="text-2xl font-semibold mb-4 text-center">Add Users</h2>
+          <div className="flex flex-row gap-4 justify-center items-center mb-4">
+            <div className="cursor-pointer scale-150" onClick={()=>router.back()}><ArrowLeftIcon/></div>
+            <h2 className="text-2xl font-semibold text-center">Add Users</h2>
+          </div>
 
           <form onSubmit={e => e.preventDefault()}>
             <div className="flex flex-wrap -mx-4 mb-4">

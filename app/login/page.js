@@ -36,7 +36,7 @@ const LoginPage = () => {
 
   return (
    
-    <div className=" h-[100vh] bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply  bg-no-repeat flex items-center justify-center ">
+    <div className=" h-[100vh] w-full bg-blend-multiply  bg-no-repeat flex items-center justify-center">
     <div className="w-full p-6 bg-white rounded-md shadow-md lg:max-w-xl">
       <h1 className="text-3xl font-bold text-center text-gray-700">LOGIN</h1>
       <form className="mt-6" onSubmit={handleSubmit}>
@@ -69,26 +69,11 @@ const LoginPage = () => {
             onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
           />
         </div>
-        <Link
-            href=""
-            className="text-xs text-blue-600 hover:underline"
-          >
-            Forget Password?
-          </Link>
         <div className="mt-2">
           <button type='submit' className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
             Login
           </button>
         </div>
-        <p className="mt-4 text-sm text-center text-gray-700">
-          Don't have an account?{" "}
-          <Link
-            href=""
-            className="font-medium text-blue-600 hover:underline"
-          >
-            Sign up
-          </Link>
-        </p>
       </form>
       {error &&  <span className=" text-red-500 w-[100%] text-center  px-4 py-2 rounded-md inline-block">Wrong Email/Paswword</span>}
 

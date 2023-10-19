@@ -15,15 +15,15 @@ const AdminNavbar = () => {
           <img src="/assets/logo.png" alt="Logo" className="w-[50px] h-[50px]  sm:w-[70px] sm:h-[70px] sm:mr-2" />
         </div>
         <div className="space-x-4">
-          <a href="/admin/leads" className="hover:underline text-[14px] text-black font-semibold sm:hover:underline sm:text-[20px] sm:text-black sm:font-semibold">
+          <a href="/admin/leads" className="hidden hover:underline text-[14px] text-black font-semibold sm:hover:underline sm:text-[20px] sm:text-black sm:font-semibold">
             Leads
           </a>
-          <a href="/admin" className="hover:underline text-[14px] text-black font-semibold sm:hover:underline sm:text-[20px] sm:text-black sm:font-semibold">
+          <a href="/admin" className="hidden hover:underline text-[14px] text-black font-semibold sm:hover:underline sm:text-[20px] sm:text-black sm:font-semibold">
             Dashboard
           </a>
         </div>
            
-          <button  className="hover:underline w-[max-content] h-7 px-[8px] py-[8px] bg-gray-600 border border-white justify-center items-center gap-[10px] inline-flex sm:hover:underline sm:w-[max-content] sm:h-10 sm:px-[20px] sm:py-[17px] sm:bg-gray-600 sm:border sm:border-white sm:justify-center sm:items-center sm:gap-[10px] sm:inline-flex" onClick={handleSignOut}>
+          <button  className="hover:underline w-[max-content] h-7 px-[8px] py-[8px] bg-red-600 border border-white justify-center items-center gap-[10px] inline-flex sm:hover:underline sm:w-[max-content] sm:h-10 sm:px-[20px] sm:py-[17px] sm:bg-red-600 sm:border sm:border-white sm:justify-center sm:items-center sm:gap-[10px] sm:inline-flex" onClick={handleSignOut}>
             Logout
           </button>
          

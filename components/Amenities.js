@@ -58,7 +58,7 @@ const Amenities = ({lang}) => {
               </Button>
             </div>
             <p className="text-center lg:text-start">
-              1<span className="text-brandSecodary">/4</span>
+              1<span className="text-brandSecodary">/8</span>
             </p>
           </div>
           <div className="col-span-4 lg:col-span-3 py-12 px-6">

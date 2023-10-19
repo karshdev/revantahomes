@@ -22,8 +22,8 @@ const PopUpLanding = ({ setBtn,val }) => {
                 body: JSON.stringify({ fullName, email, phone, type,address})
             })
             const res = await response.json()
-            if (res.message == "Leads Created") {
-                toast.success("Quote Sent", {
+            if (res.message == "Leads and email Sent") {
+                toast.success("Thank You!", {
                     position: "top-right",
                     autoClose: 1000,
                     hideProgressBar: false,
@@ -33,7 +33,7 @@ const PopUpLanding = ({ setBtn,val }) => {
                 setBtn(false)
                 return true
             } else {
-                toast.success("Something went wrong", {
+                toast.error("Something went wrong", {
                     position: "top-right",
                     autoClose: 1000,
                     hideProgressBar: false,

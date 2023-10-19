@@ -46,7 +46,7 @@ const Spesification = ({ cards ,lang}) => {
             </Button>
           </div>
           <p className="text-center lg:text-start">
-            {activeSlide + 1}<span className=" text-brandSecodary">/4</span>
+            {activeSlide + 1}<span className=" text-brandSecodary">/8</span>
           </p>
         </div>
         <div className="xl:mx-auto max-w-6xl mx-[1.5rem]">

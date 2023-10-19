@@ -5,17 +5,10 @@ const USERS = [
   {
     id: "1",
     name: "admin",
-    email: "admin@gmail.com",
-    password: "admin@123",
+    email: process.env.ADMIN_USER,
+    password: process.env.ADMIN_PASS,
     
-  },
-  {
-    id: "2",
-    name: "user",
-    email: "user@gmail.com",
-    password: "user@123",
- 
-  },
+  }
 ];
 
 export const authOptions = {

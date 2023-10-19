@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <AuthProvider>
           <div className='min-h-[100vh]'>
-            <div className='max-w-[600px] ml-auto mr-auto  sm:max-w-[640px] md:max-w-[768px] md:pl-[40px] md:pr-[40px] lg:max-w-[1024px] xl:max-w-[1366px]  '>
+            <div className=" bg-[url('/explore_images/explore_bg.png')] bg-brand  ml-auto mr-auto   md:pr-[40px] px-4 bg-blend-multiply">
             {children}
             </div>
           </div>
