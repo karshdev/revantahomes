@@ -132,7 +132,7 @@ const PopUpLanding = ({ setBtn,val }) => {
                     <Button  variant={"brand"} size={"lg"}  className="w-[100%] mt-[10px] bg-[#C1D6C3] rounded-none px-6 lg:px-10 text-primary hover:bg-green-100" onClick={handleSubmit} >
                Request Price
               </Button>
-              <div className='position absolute cursor-pointer h-[40px] w-[40px] rounded-[50%] bg-[#C1D6C3] hover:bg-green-100 flex items-center justify-center top-[-25px] right-[-40px] sm:top-[-40px] sm:right-[-35px] md:top-[-70px] md:right-[-50px]'>
+              <div className='position absolute cursor-pointer h-[40px] w-[40px] rounded-[50%] bg-[#C1D6C3] hover:bg-green-100 flex items-center justify-center top-[-25px] right-[-40px] sm:top-[-40px] sm:right-[-35px] md:top-[-80px] md:right-[-50px]'>
               <img src='assets/cross.png' alt='exit'  className='w-[35px] h-[35px]' onClick={()=>setBtn(false)}/>
              </div>
                 </form>

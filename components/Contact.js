@@ -21,6 +21,10 @@ const Contact= ({lang}) => {
  
 const type="Contact"
  const handleSubmit=async ()=>{
+  if(!fullName && !email && !phone && !message){
+    alert("Fields marked with * are required")
+    return
+  }
   
 try{
   const response=await fetch('api/leads/add',{
@@ -76,12 +80,12 @@ if(res.message=="Leads and email Sent"){
         {lang.Contact.address}
         </p>
         <div className=" flex gap-6 max-w-xl">
-          <Input type="text" name="name" placeholder={lang.Contact.placeholders.name} className=" rounded-none" onChange={(e)=>setName(e.target.value)}/>
-          <Input type="email" name="email" placeholder={lang.Contact.placeholders.email} className=" rounded-none" onChange={(e)=>setEmail(e.target.value)}/>
+          <Input type="text" name="name" placeholder={`${lang.Contact.placeholders.name}*`} className="position relative rounded-none" onChange={(e)=>setName(e.target.value)}/>
+          <Input type="email" name="email" placeholder={`${lang.Contact.placeholders.email}*`} className=" position relative rounded-none" onChange={(e)=>setEmail(e.target.value)}/>
         </div>
         <div className="max-w-xl flex flex-col gap-3">
-          <Input type="number" name="phone" placeholder={lang.Contact.placeholders.phone} className=" rounded-none" onChange={(e)=>setPhone(e.target.value)}/>
-          <textarea type="text" name="message" placeholder={lang.Contact.placeholders.message} className="h-20 flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"  onChange={(e)=>setMessage(e.target.value)}/>
+          <Input type="number" name="phone" placeholder={`${lang.Contact.placeholders.phone}*`}className="position relative rounded-none" onChange={(e)=>setPhone(e.target.value)}/>
+          <textarea type="text" name="message" placeholder={`${lang.Contact.placeholders.message}*`} className="position relative h-20 flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"  onChange={(e)=>setMessage(e.target.value)}/>
         </div>
        
         
