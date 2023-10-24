@@ -16,7 +16,7 @@ const Location = ({lang}) => {
                 </div>
             </div>
             <div className="w-full lg:w-1/2 ">
-                <iframe className="w-full h-full min-h-[50vh]" src="https://www.google.com/maps/dir/30.8982624,77.0909804/Revanta+Homes,+Ranipur+Road,+Gouthana,+Betul+(Madhya+Pradesh)/@25.8584183,73.267013,6.74z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bd609cb25d3040d:0x20738ea55bf2707c!2m2!1d77.9085642!2d21.9315709?entry=ttu" width="600" height="450" style={{border: 0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className="w-full h-full min-h-[50vh]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.07739662955!2d77.9059892755896!3d21.93157585615884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd609cb25d3040d%3A0x20738ea55bf2707c!2sRevanta%20Homes!5e0!3m2!1sen!2sin!4v1698162092604!5m2!1sen!2sin" width="600" height="450" style={{border: 0}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
      );
