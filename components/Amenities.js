@@ -1,4 +1,4 @@
-import { FC } from "react";
+
 import { Button } from "./ui/button";
 import { Tenor_Sans } from "next/font/google";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
@@ -21,7 +21,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 const Amenities = ({lang}) => {
   return (
-    <div className="bg-[#F7F4EB] relative w-full min-h-[80vh]">
+    <div className="bg-[#F7F4EB] relative w-full min-h-[80vh]" id="amenitiesSection">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <div className="absolute top-0 left-0 bottom-0 right-0 items-center">
       <Image
@@ -32,36 +32,18 @@ const Amenities = ({lang}) => {
       />
       </div>
         <div className="grid grid-cols-4 w-full max-w-screen-xl mx-auto p-2 ">
-          <div className="col-span-4 lg:col-span-1 flex flex-col gap-6 pl-2 justify-center text-center lg:text-start">
+          <div className="col-span-4 lg:col-span-1 p-4 flex flex-col gap-6 pl-2 justify-center text-center lg:text-start">
             <h3
               className={`text-2xl lg:text-4xl text-center lg:text-left ${tenor.className}`}
             >
               {lang.Amenties.title}
             </h3>
             <p>
-            {lang.Amenties.address}
+            {lang.Amenties.description}
             </p>
-            <div className="space-x-4 w-full flex justify-center lg:justify-start">
-              <Button
-                variant={"default"}
-                size={"icon"}
-                className="rounded-none"
-              >
-                <ChevronLeftIcon />
-              </Button>
-              <Button
-                variant={"default"}
-                size={"icon"}
-                className="rounded-none"
-              >
-                <ChevronRightIcon />
-              </Button>
-            </div>
-            <p className="text-center lg:text-start">
-              1<span className="text-brandSecodary">/8</span>
-            </p>
+          
           </div>
-          <div className="col-span-4 lg:col-span-3 py-12 px-6">
+          <div className="col-span-4 lg:col-span-3 py-12 px-6 z-[100]">
             <div className="h-full flex gap-6">
               <div className="w-1/2 flex flex-col gap-12">
                 <div className="flex flex-col lg:flex-row items-center gap-4">

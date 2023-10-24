@@ -11,7 +11,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 const Explore = ({lang}) => {
-  const [state, SetState] = useState('/assets/BG.png')
+  const [state, SetState] = useState('/explore_images/Orchid.png')
   const[btn,setBtn]=useState(false)
   let val=''
   return (
@@ -26,24 +26,24 @@ const Explore = ({lang}) => {
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/assets/BG.png" && "bg-[#C1D6C3]"}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
-            onClick={() => SetState('/assets/BG.png')}
+            className={` ${state === "/explore_images/Orchid.png" ? "bg-[#C1D6C3]" : "bg-secondary"} rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={() => SetState('/explore_images/Orchid.png')}
           >
             {lang.Explore.Buttons.Orchid}
           </Button>
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/assets/BG2.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
-            onClick={() => SetState('/assets/BG2.png')}
+            className={` ${state === "/explore_images/Tulip.jpg" ? "bg-[#C1D6C3]" : "bg-secondary"} rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={() => SetState('/explore_images/Tulip.jpg')}
           >
               {lang.Explore.Buttons.Tulip}
           </Button>
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/assets/BG3.png" && "bg-[#C1D6C3] "}  rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
-            onClick={() => SetState('/assets/BG3.png')}
+            className={` ${state === "/explore_images/Iris.jpg" ? "bg-[#C1D6C3]" : "bg-secondary"} rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={() => SetState('/explore_images/Iris.jpg')}
           >
              {lang.Explore.Buttons.Iris}
           </Button>
@@ -61,7 +61,7 @@ const Explore = ({lang}) => {
           </div>
           <div className="w-full h-full relative">
             <Image
-              src={"/explore_images/orchid_floor_plan.png"}
+              src= {state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan1.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_floor_plan1.jpg" :  "/explore_images/Iris_floor_plan1.jpg"}
               alt="Orchid"
               fill
               className="object-cover"
@@ -69,7 +69,7 @@ const Explore = ({lang}) => {
           </div>
           <div className="w-full h-full relative">
             <Image
-              src={"/explore_images/orchid_floor_plan2.png"}
+              src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan2.jpg" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_floor_plan2.png" :  "/explore_images/Iris_floor_plan2.jpg"}
               alt="Orchid"
               fill
               className="object-cover"
@@ -78,12 +78,12 @@ const Explore = ({lang}) => {
         </div>
         <div className="grid grid-cols-5 w-full gap-4">
           <div className="w-full h-full col-span-5 lg:col-span-3 relative">
-            <div className="flex flex-col text-white ">
+            <div className="flex flex-col text-white items-center justify-center lg:items-start ">
               <h3 className={`text-2xl lg:text-4xl text-center lg:text-start mb-4 ${tenor.className}`}>
-                {state === "/BG.png" ? val=lang.Explore.Buttons.Orchid : state === "/BG2.png" ?  val=lang.Explore.Buttons.Tulip : val=lang.Explore.Buttons.Iris}
+                {state === "/explore_images/Orchid.png" ? val=lang.Explore.Buttons.Orchid : state === "/explore_images/Tulip.jpg" ?  val=lang.Explore.Buttons.Tulip : val=lang.Explore.Buttons.Iris}
                 
               </h3>
-              {state === "/BG.png" ?
+              {state === "/explore_images/Orchid.png" ?
                 (
                   <>
                     <p className="font-light">{lang.Explore.Orchid.direction}</p>
@@ -94,7 +94,7 @@ const Explore = ({lang}) => {
                   </>
                 )
                 :
-                state === "/BG2.png" ?
+                state === "/explore_images/Tulip.jpg" ?
                   (
                     <>
                       <p className="font-light">{lang.Explore.Tulip.direction}</p>
@@ -121,24 +121,24 @@ const Explore = ({lang}) => {
               {lang.Explore.Buttons.viewPrice}
               </Button>
               {
-                btn && <PopUpLanding setBtn={setBtn}  val={val==="ओर्चिद" ? "Orchid" :val==="Orhchid" ? "Orchid" : val==="आइरिस" ? "Iris" : val==="Iris" ? "Iris" :val==="टूलिप" ? "Tulip" : val==="Tulip" ? "Tulip" : ""} />
+                btn && <PopUpLanding setBtn={setBtn}  val={state === "/explore_images/Orchid.png" ?  "ORCHID" :  state === "/explore_images/Tulip.jpg" ? "TULIP" : "IRIS" } lang={lang} />
               }
             </div>
           </div>
-          <div className="w-full h-full relative col-span-2 lg:col-span-1">
+          <div className="w-full h-full relative col-span-2 order-first md:mt-10  lg:order-last lg:col-span-1">
             <AspectRatio ratio={4 / 3} className="h-24 lg:h-full">
               <Image
-                src={"/explore_images/orchid_isometri1.png"}
+                src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric1.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_isometric1.png" :  "/explore_images/Iris_isometric1.png"}
                 alt="Orchid"
                 fill
                 className="object-cover overflow-visible"
               />
             </AspectRatio>
           </div>
-          <div className="w-full h-full relative col-span-2 lg:col-span-1">
+          <div className="w-full h-full relative order-first col-span-2 md:mt-10  lg:order-last lg:col-span-1">
             <AspectRatio ratio={4 / 3} className="h-24 lg:h-full">
               <Image
-                src={"/explore_images/orchid_isometri2.png"}
+                src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric2.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_isometric2.png" :  "/explore_images/Iris_isometric2.png"}
                 alt="Orchid"
                 fill
                 className="object-cover overflow-visible"

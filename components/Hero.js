@@ -138,13 +138,14 @@ const Hero= ({ images,lang }) => {
               draggable={false}
               alt={"image"}
               width={"100%"}
+              
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className="mt-32 h-full min-h-[80vh] lg:mt-60 z-10 lg:min-h-screen max-w-screen-xl mx-auto relative flex flex-col lg:flex-row justify-between">
+      <div className="mt-40 h-full min-h-[80vh] lg:mt-60 z-10 lg:min-h-screen max-w-screen-xl mx-auto relative flex flex-col lg:flex-row justify-between">
         <div className="space-y-4 lg:space-y-8 p-2">
           <h1
             className={`text-3xl lg:text-5xl text-center lg:text-left ${tenor.className}`}
@@ -166,7 +167,7 @@ const Hero= ({ images,lang }) => {
                 key={index}
                 className={`${
                   item === selectedTab ? "relative" : ""
-                } w-full h-full`}
+                } w-full h-full cursor-pointer`}
                 onClick={() => (setSelectedTab(item), setIndex(index))}
               >
                 <AspectRatio

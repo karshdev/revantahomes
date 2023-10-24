@@ -19,10 +19,10 @@
         "description":"These homes contain all basic amenities and are of latest technology. Our home plans are original and are designed as per a resident's view. We build all our homes like our own. We aim to create homes that give a living experience that you deserve.",
         "SeeMore":"See More",
         "Park":{
-            "Park1":"Park1  ",
-            "Park2":"Park1 ",
-            "Park3":"Park1 ",
-            "park4":"Park1"
+            "Park1":"Park  ",
+            "Park2":"Temple ",
+            "Park3":"Club",
+            "Park4":"Garden"
         }
     },
     "Explore":{
@@ -40,16 +40,16 @@
               "sqft":"2,097 Sqft"
         },
         "Tulip":{
-            "direction":"25x50 PLOT AREA (WEST)",
+            "direction":"22x50 PLOT AREA (WEST)",
             "size":"1250 sqft",
             "area":"Super Builtup Area",
-            "sqft":"2,097 Sqft"
+            "sqft":"1948.22 Sqft"
         },
         "Iris":{
-            "direction":"25x50 PLOT AREA (WEST)",
-              "size":"1250 sqft",
+            "direction":"25x40 PLOT AREA (WEST)",
+              "size":"1000 sqft",
               "area":"Super Builtup Area",
-              "sqft":"2,097 Sqft"
+              "sqft":"1,874.20 Sqft"
     }
 
     },
@@ -64,10 +64,10 @@
         "title":"Get in touch",
         "address":"Please kindly fill out the form below, we will get back to you soon",
         "placeholders":{
-            "name":"name ",
-            "email":"email",
-            "phone":"phone ",
-            "message":"message"
+            "name":"Name ",
+            "email":"Email",
+            "phone":"Phone ",
+            "message":"Message"
         },
         "checkbox":"I agree that my submitted data is being collected and stored.",
         "button":"Send Message "
@@ -102,7 +102,7 @@
         "Buttons":{
            "image1":{
             "title":"Structure",
-            "description":"Earthquake-resistant design with an appealing architectural elevation."
+            "description":"Indulge in safety and aesthetics with an earthquake-resistant design that seamlessly blends with an appealing architectural elevation. Experience tranquility and style, knowing your space is crafted for both resilience and visual allure."
             
            },
            "image2":{
@@ -115,7 +115,7 @@
            },
            "image4":{
             "title":"Flooring",
-            "description":"Large-sized premium quality vitrified flooring throughout."
+            "description":"Experience opulence with large-sized premium quality vitrified flooring that graces every corner. Elevate your living space with timeless elegance and durability, making every step a luxurious journey."
 
            },
            "image5":{
@@ -147,8 +147,9 @@
            }
 
         }
+    },
+    "PopUpLanding":{
+        "name":"Request Price"
     }
-
-
 }
     

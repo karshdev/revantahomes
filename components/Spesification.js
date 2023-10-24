@@ -15,11 +15,17 @@ import "swiper/css/grid";
 
 import { AspectRatio } from "./ui/aspect-ratio";
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 const Spesification = ({ cards ,lang}) => {
+  const isSmallScreen = useMediaQuery({ maxWidth: 768 });
+  const isMediumScreen = useMediaQuery({ minWidth: 769, maxWidth: 1023 });
+  const isLargeScreen = useMediaQuery({ minWidth: 1024 });
+  const totalSlides = isSmallScreen ? "10" : isMediumScreen ? "9" : isLargeScreen ? "8" : "8";
+
   const swiperRef = useRef();
   const[activeSlide, setActiveSlide] = useState(0);
   const[slideEnd, setSlideEnd] = useState(false);
@@ -27,14 +33,14 @@ const Spesification = ({ cards ,lang}) => {
 
   return (
     <div className="py-14 relative w-full bg-[url('/spesification/element_bg.png')] bg-right bg-contain bg-no-repeat flex items-center overflow-hidden">
-      <div className="flex flex-col lg:flex-row w-full max-w-screen-xl mx-auto p-2">
-        <div className="lg:flex-none max-w-sm lg:col-span-1 flex flex-col gap-6 pl-2 justify-center">
+      <div className="flex flex-col  lg:flex-row w-full max-w-screen-xl mx-auto p-2">
+        <div className=" ml-10 sm:ml-0 lg:flex-none max-w-sm lg:col-span-1 flex flex-col gap-6 pl-2 justify-center">
           <h3
             className={`text-2xl lg:text-4xl text-center lg:text-left ${tenor.className}`}
           >
            {lang.Specification.title}
           </h3>
-          <p>
+          <p className="text-center  sm:text-start">
           {lang.Specification.description}
           </p>
           <div className=" space-x-4 w-full flex justify-center lg:justify-start">
@@ -46,7 +52,7 @@ const Spesification = ({ cards ,lang}) => {
             </Button>
           </div>
           <p className="text-center lg:text-start">
-            {activeSlide + 1}<span className=" text-brandSecodary">/8</span>
+            {activeSlide + 1}<span className=" text-brandSecodary">/{totalSlides} </span>
           </p>
         </div>
         <div className="xl:mx-auto max-w-6xl mx-[1.5rem]">
@@ -97,7 +103,7 @@ const Spesification = ({ cards ,lang}) => {
                           />
                         </AspectRatio>
                         <h3 className="font-bold text-lg">{p.title}</h3>
-                        <p className="">{p.description}</p>
+                        <p className="text-center">{p.description}</p>
                       </div>
                     </div>
                   </SwiperSlide>

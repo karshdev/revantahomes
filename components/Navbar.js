@@ -50,9 +50,9 @@ const Navbar =  ({lang}) => {
          
         </div>
         <div className="flex gap-4 items-center justify-center" >
-          <Button variant={"brand"} size={"sm"} className=" rounded-none">
+          <a  href="/main_brochure.pdf" download className="inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-brand text-primary-foreground shadow hover:bg-brand/90 h-8 px-3 text-xs rounded-none cursor-pointer" >
             <ArrowDownIcon className="mr-4" /> {lang.Navbar.downloadBrochure}
-          </Button>
+          </a>
 
           <button className=" h-[50px] w-[50px] rounded-full flex items-center justify-center" onClick={handleToggle}>
             <img src="/assets/language-switch.svg" className="w-[100%] h-[100%]" />
