@@ -1,12 +1,13 @@
 "use client";
 
-import { FC } from "react";
+
 import { Tenor_Sans } from "next/font/google";
 import { Button } from "./ui/button";
 import { AspectRatio } from "../components/ui/aspect-ratio";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
@@ -42,9 +43,11 @@ const Features= ({ featuresImage,lang}) => {
             {lang.Features.description}
             </p>
             <div className="mx-auto lg:m-0">
+            <Link to="amenitiesSection" smooth duration={500}>
               <Button variant={"outline"} size={"lg"} className="rounded-none" >
               {lang.Features.SeeMore}
               </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full">
