@@ -1,12 +1,13 @@
 "use client";
 
-import { FC } from "react";
+
 import { Tenor_Sans } from "next/font/google";
 import { Button } from "./ui/button";
 import { AspectRatio } from "../components/ui/aspect-ratio";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
@@ -34,7 +35,7 @@ const Features= ({ featuresImage,lang}) => {
         <div className="w-full h-full flex flex-col lg:flex-row gap-4 justify-center items-center ">
           <div className="flex flex-col space-y-4 lg:space-y-8 p-2 w-full">
             <h1
-              className={`text-3xl lg:text-5xl text-center lg:text-left ${tenor.className}`}
+              className={`text-3xl lg:text-5xl text-center sm:text-start lg:text-left ${tenor.className}`}
             >
            {lang.Features.title}
             </h1>
@@ -42,9 +43,11 @@ const Features= ({ featuresImage,lang}) => {
             {lang.Features.description}
             </p>
             <div className="mx-auto lg:m-0">
+            <Link to="amenitiesSection" smooth duration={500}>
               <Button variant={"outline"} size={"lg"} className="rounded-none" >
               {lang.Features.SeeMore}
               </Button>
+              </Link>
             </div>
           </div>
           <div className="w-full">

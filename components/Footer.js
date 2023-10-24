@@ -59,7 +59,7 @@ const Footer = ({lang}) => {
           </div>
         </div>
         <div className="flex col-span-3 lg:col-span-1 items-center justify-center sm:justify-end">
-          <div className="flex flex-col justify-between h-full gap-y-4">
+          <div className="flex flex-col justify-center h-full gap-y-4">
             <h3 className={`text-lg text-white ${tenor.className} text-center w-fit`}>
             {lang.Footer.links}
             </h3>
