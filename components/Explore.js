@@ -121,7 +121,7 @@ const Explore = ({lang}) => {
               {lang.Explore.Buttons.viewPrice}
               </Button>
               {
-                btn && <PopUpLanding setBtn={setBtn}  val={state === "/explore_images/Orchid.png" ?  "ORCHID" :  state === "/explore_images/Tulip.jpg" ? "TULIP" : "IRIS" } />
+                btn && <PopUpLanding setBtn={setBtn}  val={state === "/explore_images/Orchid.png" ?  "ORCHID" :  state === "/explore_images/Tulip.jpg" ? "TULIP" : "IRIS" } lang={lang} />
               }
             </div>
           </div>
