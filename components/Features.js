@@ -12,7 +12,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 
-const Features= ({ featuresImage,lang }) => {
+const Features= ({ featuresImage,lang}) => {
   const [selectedTab, setSelectedTab] = useState(featuresImage[0]);
   const [index, setIndex] = useState(0);
 
@@ -38,11 +38,11 @@ const Features= ({ featuresImage,lang }) => {
             >
            {lang.Features.title}
             </h1>
-            <p className="text-md lg:text-xl max-w-xl">
+            <p className="text-md lg:text-xl max-w-xl text-center">
             {lang.Features.description}
             </p>
             <div className="mx-auto lg:m-0">
-              <Button variant={"outline"} size={"lg"} className="">
+              <Button variant={"outline"} size={"lg"} className="rounded-none" >
               {lang.Features.SeeMore}
               </Button>
             </div>

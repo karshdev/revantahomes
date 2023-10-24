@@ -1,3 +1,4 @@
+"use server"
 import Amenities from '../../../components/Amenities';
 import Explore from '../../../components/Explore';
 import Features from '../../../components/Features';
@@ -20,31 +21,31 @@ console.log(lang);
   ];
   const featuresImage = [
     { id: 1, thumbnail: '/features/features_1.png', full: '/features/features_1.png', title: lang.Features.Park.Park1 },
-    { id: 2, thumbnail: '/features/features_2.png', full: '/features/features_2.png', title:  lang.Features.Park.Park2 },
-    { id: 3, thumbnail: '/features/features_3.png', full: '/features/features_3.png', title:  lang.Features.Park.Park3 },
-    { id: 3, thumbnail: '/features/features_4.png', full: '/features/features_4.png', title:  lang.Features.Park.Park4 },
+    { id: 2, thumbnail: '/features/features_2.jpg', full: '/features/features_2.jpg', title:  lang.Features.Park.Park2 },
+    { id: 3, thumbnail: '/features/features_3.jpg', full: '/features/features_3.jpg', title:  lang.Features.Park.Park3 },
+    { id: 3, thumbnail: '/features/features_4.jpg', full: '/features/features_4.jpg', title:  lang.Features.Park.Park4 },
     // ...
   ];
   const cards = [
     {id: 1, image : '/spesification/structure.png', title: lang.Specification.Buttons.image1.title, description : lang.Specification.Buttons.image1.description},
     {id: 1, image : '/spesification/wall_finish.png', title: lang.Specification.Buttons.image2.title, description :  lang.Specification.Buttons.image2.description},
-    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image3.title, description :  lang.Specification.Buttons.image3.description},
-    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image4.title, description :  lang.Specification.Buttons.image4.description},
-    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image5.title, description :  lang.Specification.Buttons.image5.description},
-    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image6.title, description :  lang.Specification.Buttons.image6.description},
-    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image7.title, description :  lang.Specification.Buttons.image7.description},
-    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image8.title, description :  lang.Specification.Buttons.image8.description},
-    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image9.title, description :  lang.Specification.Buttons.image9.description},
-    {id: 1, image : '/spesification/door_windows.png', title: lang.Specification.Buttons.image10.title, description :  lang.Specification.Buttons.image10.description},
+    {id: 1, image : '/spesification/door_windows.jpg', title: lang.Specification.Buttons.image3.title, description :  lang.Specification.Buttons.image3.description},
+    {id: 1, image : '/spesification/flooring.jpg', title: lang.Specification.Buttons.image4.title, description :  lang.Specification.Buttons.image4.description},
+    {id: 1, image : '/spesification/kitchen.jpg', title: lang.Specification.Buttons.image5.title, description :  lang.Specification.Buttons.image5.description},
+    {id: 1, image : '/spesification/bathrooms_plumbing.jpg', title: lang.Specification.Buttons.image6.title, description :  lang.Specification.Buttons.image6.description},
+    {id: 1, image : '/spesification/washarea.jpeg', title: lang.Specification.Buttons.image7.title, description :  lang.Specification.Buttons.image7.description},
+    {id: 1, image : '/spesification/electrification.webp', title: lang.Specification.Buttons.image8.title, description :  lang.Specification.Buttons.image8.description},
+    {id: 1, image : '/spesification/homegarden.jpg', title: lang.Specification.Buttons.image9.title, description :  lang.Specification.Buttons.image9.description},
+    {id: 1, image : '/spesification/pestControl.jpg', title: lang.Specification.Buttons.image10.title, description :  lang.Specification.Buttons.image10.description},
   ];
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
       <Navbar lang={lang}/>
       <Hero images={images}  lang={lang} />
-      <Features featuresImage={featuresImage} lang={lang} />
+      <Features featuresImage={featuresImage} lang={lang}  />
       <Explore lang={lang}/>
       <Spesification cards={cards} lang={lang}/>
-      <Amenities  lang={lang}/>
+      <Amenities  lang={lang} />
       <Location  lang={lang}/>
       <Contact  lang={lang}/>
       <Footer lang={lang}/>

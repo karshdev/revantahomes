@@ -11,7 +11,7 @@ const Footer = ({lang}) => {
   return (
     <div className="relative bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply py-12">
       <div className="w-full max-w-screen-xl mx-auto grid grid-cols-3 gap-y-12 p-2">
-        <div className="flex col-span-3 lg:col-span-1 flex-col gap-4 items-center justify-center">
+        <div className="flex col-span-3 lg:col-span-1 flex-col gap-4 items-center justify-center sm:items-start">
           <Image src={"/assets/logo.png"} alt="logo" width={100} height={100} />
           <p className="text-white font-bold text-sm">{lang.Footer.title}</p>
         </div>
@@ -58,12 +58,12 @@ const Footer = ({lang}) => {
             </div>
           </div>
         </div>
-        <div className="flex col-span-3 lg:col-span-1 items-center justify-center">
-          <div className="flex flex-col justify-between h-full  gap-y-4">
+        <div className="flex col-span-3 lg:col-span-1 items-center justify-center sm:justify-end">
+          <div className="flex flex-col justify-between h-full gap-y-4">
             <h3 className={`text-lg text-white ${tenor.className} text-center w-fit`}>
             {lang.Footer.links}
             </h3>
-            <div className="gap-4 flex">
+            <div className="gap-4 flex ">
               <Link
                 prefetch={false}
                 target="_blank"

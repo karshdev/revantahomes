@@ -84,15 +84,7 @@ if(res.message=="Leads and email Sent"){
           <textarea type="text" name="message" placeholder={lang.Contact.placeholders.message} className="h-20 flex  w-full  border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"  onChange={(e)=>setMessage(e.target.value)}/>
         </div>
        
-        <div className="flex items-center space-x-2">
-          <Checkbox id="terms" />
-          <label
-            htmlFor="terms"
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-          >
-          {lang.Contact.checkbox}
-          </label>
-        </div>
+        
         <Button
           variant="default"
           size={"lg"}
