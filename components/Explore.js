@@ -13,6 +13,17 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 const Explore = ({lang}) => {
   const [state, SetState] = useState('/explore_images/Orchid.png')
   const[btn,setBtn]=useState(false)
+  const [showImage, setShowImage] = useState(false);
+ const[selectedImage,setSelectedImage]=useState('')
+
+ const handleClick = (imagePath) => {
+  setSelectedImage(imagePath);
+  setShowImage(true);
+};
+
+const handleCloseImage = () => {
+  setShowImage(false);
+};
   let val=''
   return (
     <div className="min-h-screen relative bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply py-12">
@@ -50,10 +61,11 @@ const Explore = ({lang}) => {
         </div>
         <div className="grid grid-cols-5 w-full gap-4">
           <div className="w-full h-full col-span-3 relative">
-            <AspectRatio ratio={3 / 2}>
+            <AspectRatio ratio={3 / 2}  style={{ cursor: "pointer" }}>
               <Image
                 src={state}
                 alt="Orchid"
+                onClick={() => handleClick(state)}
                 fill
                 className="object-cover"
               />
@@ -63,8 +75,10 @@ const Explore = ({lang}) => {
             <Image
               src= {state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan1.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_floor_plan1.jpg" :  "/explore_images/Iris_floor_plan1.jpg"}
               alt="Orchid"
+              onClick={() => handleClick(state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan1.png" : state === "/explore_images/Tulip.jpg" ? "/explore_images/Tulip_floor_plan1.jpg" : "/explore_images/Iris_floor_plan1.jpg")} 
+              
               fill
-              className="object-cover"
+              className="object-cover cursor-pointer"
             />
           </div>
           <div className="w-full h-full relative">
@@ -72,7 +86,8 @@ const Explore = ({lang}) => {
               src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan2.jpg" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_floor_plan2.png" :  "/explore_images/Iris_floor_plan2.jpg"}
               alt="Orchid"
               fill
-              className="object-cover"
+              onClick={() => handleClick(state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan2.jpg" : state === "/explore_images/Tulip.jpg" ? "/explore_images/Tulip_floor_plan2.png" : "/explore_images/Iris_floor_plan2.jpg")}
+              className="object-cover cursor-pointer"
             />
           </div>
         </div>
@@ -126,25 +141,46 @@ const Explore = ({lang}) => {
             </div>
           </div>
           <div className="w-full h-full relative col-span-2 order-first md:mt-10  lg:order-last lg:col-span-1">
-            <AspectRatio ratio={4 / 3} className="h-24 lg:h-full">
+            <AspectRatio ratio={4 / 3}   className="cursor-pointer h-24 lg:h-full">
               <Image
                 src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric1.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_isometric1.png" :  "/explore_images/Iris_isometric1.png"}
                 alt="Orchid"
                 fill
+                onClick={() => handleClick(state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric1.png" : state === "/explore_images/Tulip.jpg" ? "/explore_images/Tulip_isometric1.png" : "/explore_images/Iris_isometric1.png")}
                 className="object-cover overflow-visible"
               />
             </AspectRatio>
           </div>
           <div className="w-full h-full relative order-first col-span-2 md:mt-10  lg:order-last lg:col-span-1">
-            <AspectRatio ratio={4 / 3} className="h-24 lg:h-full">
+            <AspectRatio ratio={4 / 3} className="cursor-pointer h-24 lg:h-full">
               <Image
                 src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric2.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_isometric2.png" :  "/explore_images/Iris_isometric2.png"}
                 alt="Orchid"
                 fill
+                onClick={() => handleClick(state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric2.png" : state === "/explore_images/Tulip.jpg" ? "/explore_images/Tulip_isometric2.png" : "/explore_images/Iris_isometric2.png")}
                 className="object-cover overflow-visible"
               />
             </AspectRatio>
           </div>
+          {showImage && (
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 z-50">
+          <div className="bg-white h-[500px] w-[500px] relative max-w-3xl mx-auto">
+            <button
+              onClick={handleCloseImage}
+              className="absolute top-4 right-4 text-black text-3xl"
+            >
+              &times;
+            </button>
+            <img
+              src={selectedImage}
+              alt="Clicked Image"
+             
+            
+              className=" object-contain w-[500px] h-[500px]"
+            />
+          </div>
+        </div>
+      )}
         </div>
       </div>
     </div>
