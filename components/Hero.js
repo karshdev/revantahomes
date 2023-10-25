@@ -123,7 +123,7 @@ const Hero= ({ images,lang }) => {
           width={400}
         />
       </div>
-      <div className="mt-45 lg:mt-60 absolute left-0 lg:top-0 right-0 bottom-40 md:bottom-0 max-h-screen">
+      <div className="mt-[100px] lg:mt-60 absolute left-0 lg:top-0 right-0 bottom-40 md:bottom-0 max-h-screen">
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedTab ? selectedTab.id : "empty"}
@@ -131,14 +131,13 @@ const Hero= ({ images,lang }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative w-full h-full"
+            className="relative w-full "
           >
             <motion.img
               src={selectedTab ? selectedTab.full : ""}
               draggable={false}
               alt={"image"}
               width={"100%"}
-              
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
