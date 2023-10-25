@@ -8,20 +8,72 @@ import {
   motion,
   useTransform,
   useScroll,
+  useAnimation,
 } from "framer-motion";
 import { Tenor_Sans } from "next/font/google";
+
 const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
-
-
-
-
 
 const Hero= ({ images,lang }) => {
   const [selectedTab, setSelectedTab] = useState(images[0]);
   const [index, setIndex] = useState(0);
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+ 
+ 
 
+  const cloudAnimationControls = useAnimation();
+
+ useEffect(() => {
+  const animateClouds = async () => {
+    while (true) {
+        await cloudAnimationControls.start({
+          x: "100%",
+          opacity: 0,
+          rotate: 45,
+          scale: 0.8,
+          transition: {
+            duration: 15,
+            ease: "linear",
+          },
+        });
+
+        cloudAnimationControls.set({
+          x: "-100%",
+          opacity: 1,
+          rotate: -45,
+          scale: 1,
+        });
+
+        await cloudAnimationControls.start({
+          x: "50%",
+          opacity: 1,
+          rotate: 0,
+          scale: 1,
+          transition: {
+            duration: 10,
+            ease: "linear",
+          },
+        });
+
+        cloudAnimationControls.set({
+          x: "0%",
+          opacity: 1,
+          rotate: 0,
+          scale: 1,
+        });
+        cloudAnimationControls.set({
+          x: "0%",
+          opacity: 1,
+          rotate: 0,
+          scale: 1,
+        });
+      
+    }
+  };
+
+  animateClouds();
+}, [cloudAnimationControls]);
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedTab(images[index]);
@@ -37,45 +89,91 @@ const Hero= ({ images,lang }) => {
     <div className="w-full relative bg-[url('/paralax-bg.jpg')] bg-no-repeat bg-cover min-h-screen">
       <div className=" hidden md:block">
         <motion.img
+         animate={cloudAnimationControls}
           style={{ y }}
           src="/assets/cloud.png"
           alt="cloud"
-          className="absolute top-20 left-0"
+          className="absolute top-1 left-[10px] opacity-[0.5]"
+          width={600}
+        />
+         <motion.img
+         animate={cloudAnimationControls}
+          style={{ y }}
+          src="/assets/cloud.png"
+          alt="cloud"
+          className="absolute top-5 left-[20px] opacity-[1]"
+          width={600}
+        />
+         <motion.img
+         animate={cloudAnimationControls}
+          style={{ y }}
+          src="/assets/cloud.png"
+          alt="cloud"
+          className="absolute top-10 left-[30px] opacity-[0.8]"
           width={600}
         />
         <motion.img
           style={{ y }}
+          animate={cloudAnimationControls}
           src="/assets/cloud.png"
           alt="cloud"
-          className="absolute top-20 left-0"
+          className="absolute top-20 left-[50px] opacity-[1]"
           width={600}
         />
         <motion.img
           style={{ y }}
+          animate={cloudAnimationControls}
           src="/assets/cloud.png"
           alt="cloud"
-          className="absolute top-20 left-0"
+          className="absolute top-30 left-[150px] opacity-[0.5]"
           width={600}
         />
         <motion.img
+         animate={cloudAnimationControls}
+          style={{ y }}
+          src="/assets/cloud.png"
+          alt="cloud"
+          className="absolute top-40 left-[200px] opacity-[1]"
+          width={600}
+        />
+        <motion.img
+         animate={cloudAnimationControls}
           style={{ y }}
           src="/assets/cloud2.png"
           alt="cloud"
-          className="absolute top-40 right-0"
+          className="absolute top-50 right-[50px] opacity-[0.8]"
+          width={1000}
+        />
+        <motion.img
+         animate={cloudAnimationControls}
+          style={{ y }}
+          src="/assets/cloud2.png"
+          alt="cloud"
+          className="absolute top-10 right-[30px] opacity-[0.9]"
+          width={1000}
+        />
+         <motion.img
+         animate={cloudAnimationControls}
+          style={{ y }}
+          src="/assets/cloud2.png"
+          alt="cloud"
+          className="absolute top-1 right-[20px] opacity-[0.9]"
+          width={1000}
+        />
+         <motion.img
+         animate={cloudAnimationControls}
+          style={{ y }}
+          src="/assets/cloud2.png"
+          alt="cloud"
+          className="absolute top-5 right-[100px] opacity-[0.9]"
           width={1000}
         />
         <motion.img
           style={{ y }}
+          animate={cloudAnimationControls}
           src="/assets/cloud2.png"
           alt="cloud"
-          className="absolute top-40 right-0"
-          width={1000}
-        />
-        <motion.img
-          style={{ y }}
-          src="/assets/cloud2.png"
-          alt="cloud"
-          className="absolute top-40 right-0"
+          className="absolute top-10 right-[150px] opacity-[1]"
           width={1000}
         />
       </div>
@@ -84,42 +182,42 @@ const Hero= ({ images,lang }) => {
           style={{ y }}
           src="/assets/cloud.png"
           alt="cloud"
-          className="absolute top-52 left-0"
+          className="absolute top-52 left-[200px] opacity-[1]"
           width={200}
         />
         <motion.img
           style={{ y }}
           src="/assets/cloud.png"
           alt="cloud"
-          className="absolute top-52 left-0"
+          className="absolute top-30 left-[300px] opacity-[1]"
           width={200}
         />
         <motion.img
           style={{ y }}
           src="/assets/cloud.png"
           alt="cloud"
-          className="absolute top-52 left-0"
+          className="absolute top-40 left-[350px] opacity-[0.6]"
           width={200}
         />
         <motion.img
           style={{ y }}
           src="/assets/cloud2.png"
           alt="cloud"
-          className="absolute top-1/2 right-2"
+          className="absolute top-1/4 right-[400px] opacity-[0.8]"
           width={400}
         />
         <motion.img
           style={{ y }}
           src="/assets/cloud2.png"
           alt="cloud"
-          className="absolute top-1/2 right-2"
+          className="absolute top-1/2 right-[500px] opacity-[0.7]"
           width={400}
         />
         <motion.img
           style={{ y }}
           src="/assets/cloud2.png"
           alt="cloud"
-          className="absolute top-1/2 right-2"
+          className="absolute top-1 right-[600px] opacity-[0.5] "
           width={400}
         />
       </div>

@@ -78,7 +78,6 @@ setShowImage(false)
               src= {state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan1.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_floor_plan1.jpg" :  "/explore_images/Iris_floor_plan1.jpg"}
               alt="Orchid"
               onClick={() => handleClick(state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan1.png" : state === "/explore_images/Tulip.jpg" ? "/explore_images/Tulip_floor_plan1.jpg" : "/explore_images/Iris_floor_plan1.jpg")} 
-              
               fill
               className="object-cover cursor-pointer"
             />
