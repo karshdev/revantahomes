@@ -67,7 +67,7 @@ const Footer = ({lang}) => {
               <Link
                 prefetch={false}
                 target="_blank"
-                href={"mailto:reventa@email.com"}
+                href={"revantahomesmp@gmail.com"}
                 className="flex-none bg-white rounded-full flex justify-center items-center"
               >
                 <svg
@@ -101,7 +101,7 @@ const Footer = ({lang}) => {
               <Link
                 prefetch={false}
                 target="_blank"
-                href={"https://www.instagram.com"}
+                href={"https://www.instagram.com/revantabetul/"}
                 className="flex-none bg-white rounded-full flex justify-center items-center"
               >
                 <svg
@@ -139,7 +139,7 @@ const Footer = ({lang}) => {
               <Link
                 prefetch={false}
                 target="_blank"
-                href={"https://www.facebook.com"}
+                href={"https://www.facebook.com/revantabetul"}
                 className="flex-none bg-white rounded-full flex justify-center items-center"
               >
                 <svg
