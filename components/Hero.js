@@ -177,9 +177,10 @@ const Hero= ({ images,lang }) => {
           width={1000}
         />
       </div>
-      <div className="md:hidden">
+      <div className="hidden md:block">
         <motion.img
           style={{ y }}
+          animate={cloudAnimationControls}
           src="/assets/cloud.png"
           alt="cloud"
           className="absolute top-52 left-[200px] opacity-[1]"
@@ -187,6 +188,7 @@ const Hero= ({ images,lang }) => {
         />
         <motion.img
           style={{ y }}
+          animate={cloudAnimationControls}
           src="/assets/cloud.png"
           alt="cloud"
           className="absolute top-30 left-[300px] opacity-[1]"
@@ -194,6 +196,7 @@ const Hero= ({ images,lang }) => {
         />
         <motion.img
           style={{ y }}
+          animate={cloudAnimationControls}
           src="/assets/cloud.png"
           alt="cloud"
           className="absolute top-40 left-[350px] opacity-[0.6]"
@@ -201,6 +204,7 @@ const Hero= ({ images,lang }) => {
         />
         <motion.img
           style={{ y }}
+          animate={cloudAnimationControls}
           src="/assets/cloud2.png"
           alt="cloud"
           className="absolute top-1/4 right-[400px] opacity-[0.8]"
@@ -210,6 +214,7 @@ const Hero= ({ images,lang }) => {
           style={{ y }}
           src="/assets/cloud2.png"
           alt="cloud"
+          animate={cloudAnimationControls}
           className="absolute top-1/2 right-[500px] opacity-[0.7]"
           width={400}
         />
@@ -217,6 +222,7 @@ const Hero= ({ images,lang }) => {
           style={{ y }}
           src="/assets/cloud2.png"
           alt="cloud"
+          animate={cloudAnimationControls}
           className="absolute top-1 right-[600px] opacity-[0.5] "
           width={400}
         />

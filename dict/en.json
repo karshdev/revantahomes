@@ -7,7 +7,7 @@
     },
     "Hero":{
         "title":"Discover Dream Living Here",
-        "description":"Revanta Homes: Timeless Designs, Beyond Dreams. By Rishabhdeo Builders & Developers, crafting luxury residences with exceptional quality and architectural sophistication, harmonizing seamlessly with their surroundings.",
+        "description":"Revanta: Timeless Designs, Beyond Dreams. By Rishabhdeo Builders & Developers, crafting luxury residences with exceptional quality and architectural sophistication, harmonizing seamlessly with their surroundings.",
         "buttons":{
             "Orchid":"Orchid",
             "Tulip":"Tulip",
@@ -16,7 +16,7 @@
     },
     "Features":{
         "title":"Complete Facilities",
-        "description":"These homes contain all basic amenities and are of latest technology. Our home plans are original and are designed as per a resident's view. We build all our homes like our own. We aim to create homes that give a living experience that you deserve.",
+        "description":"Reventa contains all basic amenities and are of latest technology. Our home plans are original and are designed as per a resident's view. We build all our homes like our own. We aim to create homes that give a living experience that you deserve.",
         "SeeMore":"See More",
         "Park":{
             "Park1":"Park  ",
@@ -56,7 +56,7 @@
 
     "Footer":{
         "title":"CLOSER TO NATURE",
-        "address":"Revanta Homes, Ranipur Road, Gouthana, Betul (Madhya Pradesh)",
+        "address":"Revanta, Ranipur Road, Gouthana, Betul (Madhya Pradesh)",
         "Contact":"Contact Us",
         "links":"Our Social Media"
     },

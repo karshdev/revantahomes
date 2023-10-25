@@ -62,7 +62,7 @@ setShowImage(false)
           </Button>
         </div>
         <div className="grid grid-cols-5 w-full gap-4">
-          <div className="w-full h-full col-span-3 relative">
+          <div className="w-full  col-span-3 relative">
             <AspectRatio ratio={3 / 2}  style={{ cursor: "pointer" }}>
               <Image
                 src={state}
@@ -73,7 +73,7 @@ setShowImage(false)
               />
             </AspectRatio>
           </div>
-          <div className="w-full h-full relative">
+          <div className="w-full  relative">
             <Image
               src= {state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan1.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_floor_plan1.jpg" :  "/explore_images/Iris_floor_plan1.jpg"}
               alt="Orchid"
@@ -82,7 +82,7 @@ setShowImage(false)
               className="object-cover cursor-pointer"
             />
           </div>
-          <div className="w-full h-full relative">
+          <div className="w-full relative">
             <Image
               src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan2.jpg" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_floor_plan2.png" :  "/explore_images/Iris_floor_plan2.jpg"}
               alt="Orchid"
@@ -93,7 +93,7 @@ setShowImage(false)
           </div>
         </div>
         <div className="grid grid-cols-5 w-full gap-4">
-          <div className="w-full h-full col-span-5 lg:col-span-3 relative">
+          <div className="w-full col-span-5 lg:col-span-3 relative">
             <div className="flex flex-col text-white items-center justify-center lg:items-start ">
               <h3 className={`text-2xl lg:text-4xl text-center lg:text-start mb-4 ${tenor.className}`}>
                 {state === "/explore_images/Orchid.png" ? val=lang.Explore.Buttons.Orchid : state === "/explore_images/Tulip.jpg" ?  val=lang.Explore.Buttons.Tulip : val=lang.Explore.Buttons.Iris}
@@ -141,8 +141,8 @@ setShowImage(false)
               }
             </div>
           </div>
-          <div className="w-full h-full relative col-span-2 order-first md:mt-10  lg:order-last lg:col-span-1">
-            <AspectRatio ratio={4 / 3}   className="cursor-pointer h-24 lg:h-full">
+          <div className="w-full relative col-span-2 order-first md:mt-10  lg:order-last lg:col-span-1">
+            <AspectRatio ratio={4 / 3}   className="cursor-pointer h-24 ">
               <Image
                 src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric1.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_isometric1.png" :  "/explore_images/Iris_isometric1.png"}
                 alt="Orchid"

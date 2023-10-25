@@ -47,7 +47,7 @@ const Amenities = ({lang}) => {
             </p>
           
           </div>
-          <div className="col-span-4 lg:col-span-3 py-12 px-6 z-[100]">
+          <div className="col-span-4 flex items-center justify-center lg:col-span-3 py-12 px-6 z-[100]">
             <div className="h-full flex gap-6 lg:flex-row ">
               <div className="lg:w-1/2 flex flex-col gap-12">
                 <div className="flex flex-col lg:flex-row items-center gap-4">
