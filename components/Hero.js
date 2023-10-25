@@ -86,7 +86,7 @@ const Hero= ({ images,lang }) => {
   }, [index, images]);
 
   return (
-    <div className="w-full relative bg-[url('/paralax-bg.jpg')] bg-no-repeat bg-cover min-h-screen">
+    <div className="w-full relative bg-[url('/paralax-bg.jpg')] bg-no-repeat bg-cover min-h-screen overflow-x-hidden">
       <div className=" hidden md:block">
         <motion.img
          animate={cloudAnimationControls}
@@ -255,9 +255,16 @@ const Hero= ({ images,lang }) => {
           >
             {lang.Hero.title}
           </h1>
-          <p className="text-md lg:text-xl max-w-xl text-center sm:text-start">
-          {lang.Hero.description}
-          </p>
+          <p className="text-md lg:text-xl max-w-xl text-center lg:text-left">
+  <span style={{
+    color: 'black',
+    WebkitTextFillColor: 'white',
+    WebkitTextStrokeWidth: '2px',
+    WebkitTextStrokeColor: 'black',
+  }}>
+    {lang.Hero.description}
+  </span>
+</p>
         </div>
         <nav className="w-2/4 min-w-[380px] max-w-md md:mt-0 p-2">
           <motion.ul
