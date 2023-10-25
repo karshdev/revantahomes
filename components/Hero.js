@@ -255,12 +255,13 @@ const Hero= ({ images,lang }) => {
           >
             {lang.Hero.title}
           </h1>
-          <p className="text-md lg:text-xl max-w-xl text-center lg:text-left">
+          <p className="text-md lg:text-xl  sm:text-center lg:text-left">
   <span style={{
     color: 'black',
     WebkitTextFillColor: 'white',
     WebkitTextStrokeWidth: '2px',
     WebkitTextStrokeColor: 'black',
+ 
   }}>
     {lang.Hero.description}
   </span>
