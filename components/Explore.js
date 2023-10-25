@@ -152,8 +152,8 @@ setShowImage(false)
               />
             </AspectRatio>
           </div>
-          <div className="w-full h-full relative order-first col-span-2 md:mt-10  lg:order-last lg:col-span-1">
-            <AspectRatio ratio={4 / 3} className="cursor-pointer h-24 lg:h-full">
+          <div className="w-full  relative order-first col-span-2 md:mt-10  lg:order-last lg:col-span-1">
+            <AspectRatio ratio={4 / 3} className="cursor-pointer h-24 ">
               <Image
                 src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric2.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_isometric2.png" :  "/explore_images/Iris_isometric2.png"}
                 alt="Orchid"
@@ -164,7 +164,7 @@ setShowImage(false)
             </AspectRatio>
           </div>
           {showImage && (
-        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 z-50" onClick={handleCloseImage}>
+        <div className="fixed top-0 left-0 w-full  flex justify-center items-center bg-black bg-opacity-70 z-50" onClick={handleCloseImage}>
           <div className="bg-white h-[500px] w-[500px] relative max-w-3xl mx-auto">
             <button
               onClick={()=>setShowImage(false)}
