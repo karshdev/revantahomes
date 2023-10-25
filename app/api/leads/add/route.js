@@ -5,13 +5,12 @@ import connectMongoDB from "../../../../libs/mongodb";
 
 import sendEmail from "@/libs/sendMail";
 import { NextResponse } from "next/server";
-import { getAuthSession } from "../../auth/[...nextauth]/route";
+
 export async function POST(req) {
-  const session=await getAuthSession()
+ 
   const { searchParams } = new URL(req.url)
   const noEmail = searchParams.get("noEmail")
   await connectMongoDB()
-  if(session){
     try {
       const { fullName, email, phone, address = '', type, status, message ='' } = await req.json()
       const leads = await LeadsModel.create({
@@ -42,11 +41,7 @@ export async function POST(req) {
   }catch(err){
     return NextResponse.json({ message: "Server error" }, { status: 401 })
   }
- 
-  }
-  else{
-    return NextResponse.json({ message: "YOU ARE NOT AUTHENTICATED" }, { status: 401 })
-  }
 }
+
 
 

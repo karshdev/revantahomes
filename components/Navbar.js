@@ -29,7 +29,7 @@ const Navbar =  ({lang}) => {
  
   return (
     <div
-      className={`fixed top-0 w-full z-50 ${
+      className={`fixed top-0 w-full z-[100000] ${
         scrolled ? "bg-white bg-opacity-30 backdrop-blur-lg" : ""
       }`}
     >

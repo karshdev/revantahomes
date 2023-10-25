@@ -59,7 +59,7 @@ const Footer = ({lang}) => {
           </div>
         </div>
         <div className="flex col-span-3 lg:col-span-1 items-center justify-center sm:justify-end">
-          <div className="flex flex-col justify-center h-full gap-y-4">
+          <div className="flex flex-col items-center justify-center h-full gap-y-4">
             <h3 className={`text-lg text-white ${tenor.className} text-center w-fit`}>
             {lang.Footer.links}
             </h3>
@@ -67,7 +67,7 @@ const Footer = ({lang}) => {
               <Link
                 prefetch={false}
                 target="_blank"
-                href={"mailto:reventa@email.com"}
+                href={"revantahomesmp@gmail.com"}
                 className="flex-none bg-white rounded-full flex justify-center items-center"
               >
                 <svg
@@ -101,7 +101,7 @@ const Footer = ({lang}) => {
               <Link
                 prefetch={false}
                 target="_blank"
-                href={"https://www.instagram.com"}
+                href={"https://www.instagram.com/revantabetul/"}
                 className="flex-none bg-white rounded-full flex justify-center items-center"
               >
                 <svg
@@ -139,7 +139,7 @@ const Footer = ({lang}) => {
               <Link
                 prefetch={false}
                 target="_blank"
-                href={"https://www.facebook.com"}
+                href={"https://www.facebook.com/revantabetul"}
                 className="flex-none bg-white rounded-full flex justify-center items-center"
               >
                 <svg

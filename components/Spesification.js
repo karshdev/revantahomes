@@ -102,7 +102,7 @@ const Spesification = ({ cards ,lang}) => {
                             fill
                           />
                         </AspectRatio>
-                        <h3 className="font-bold text-lg">{p.title}</h3>
+                        <h3 className="font-bold text-lg text-center">{p.title}</h3>
                         <p className="text-center">{p.description}</p>
                       </div>
                     </div>

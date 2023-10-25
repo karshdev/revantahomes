@@ -123,7 +123,7 @@ const Hero= ({ images,lang }) => {
           width={400}
         />
       </div>
-      <div className="mt-52 lg:mt-60 absolute left-0 lg:top-0 right-0 bottom-32 md:bottom-0 max-h-screen">
+      <div className="mt-[100px] lg:mt-60 absolute left-0 lg:top-0 right-0 bottom-40 md:bottom-0 max-h-screen">
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedTab ? selectedTab.id : "empty"}
@@ -131,28 +131,27 @@ const Hero= ({ images,lang }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="relative w-full h-full"
+            className="relative w-full "
           >
             <motion.img
               src={selectedTab ? selectedTab.full : ""}
               draggable={false}
               alt={"image"}
               width={"100%"}
-              
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className="mt-40 h-full min-h-[80vh] lg:mt-60 z-10 lg:min-h-screen max-w-screen-xl mx-auto relative flex flex-col lg:flex-row justify-between">
+      <div className="mt-[105px] h-full min-h-[80vh] lg:mt-60 z-10 lg:min-h-screen max-w-screen-xl mx-auto relative flex flex-col lg:flex-row justify-between">
         <div className="space-y-4 lg:space-y-8 p-2">
           <h1
             className={`text-3xl lg:text-5xl text-center lg:text-left ${tenor.className}`}
           >
             {lang.Hero.title}
           </h1>
-          <p className="text-md lg:text-xl max-w-xl">
+          <p className="text-md lg:text-xl max-w-xl text-center sm:text-start">
           {lang.Hero.description}
           </p>
         </div>
