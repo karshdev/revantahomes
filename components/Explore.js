@@ -21,8 +21,10 @@ const Explore = ({lang}) => {
   setShowImage(true);
 };
 
-const handleCloseImage = () => {
-  setShowImage(false);
+const handleCloseImage = (event) => {
+   if (event.target.classList.contains('bg-black')) {
+setShowImage(false)
+  }
 };
   let val=''
   return (
@@ -163,10 +165,10 @@ const handleCloseImage = () => {
             </AspectRatio>
           </div>
           {showImage && (
-        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 z-50">
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-70 z-50" onClick={handleCloseImage}>
           <div className="bg-white h-[500px] w-[500px] relative max-w-3xl mx-auto">
             <button
-              onClick={handleCloseImage}
+              onClick={()=>setShowImage(false)}
               className="absolute top-4 right-4 text-black text-3xl"
             >
               &times;

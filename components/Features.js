@@ -39,7 +39,7 @@ const Features= ({ featuresImage,lang}) => {
             >
            {lang.Features.title}
             </h1>
-            <p className="text-md lg:text-xl max-w-xl text-center">
+            <p className="text-md lg:text-xl max-w-xl text-center sm:text-start">
             {lang.Features.description}
             </p>
             <div className="mx-auto lg:m-0">

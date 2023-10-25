@@ -53,9 +53,9 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
         }
     }
     return (
-        <div className=" fixed  flex items-center justify-center backdrop w-full h-full top-0 m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000] ">
+        <div className=" fixed  flex items-center justify-center backdrop w-full h-full top-0 m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000]  ">
 
-            <motion.div className=" bg-[url('/explore_images/explore_bg.png')]  border-[4px] border-white bg-brand flex max-w-max items-center justify-center bg-blend-multiply  object-cover rounded-md px-8 pt-6 pb-8 sm:w-[80%] sm:h-[60%] "
+            <motion.div className="position relative bg-[url('/explore_images/explore_bg.png')]  border-[4px] border-white bg-brand flex max-w-max items-center justify-center bg-blend-multiply  object-cover rounded-md px-8 pt-6 pb-8 w-[90vw] sm:w-[80%] sm:h-[60%] "
                 initial={{ opacity: 0, scale: 5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -70,7 +70,7 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
                     <div className="flex flex-wrap -mx-4 mb-4">
 
                         <div className="w-1/2 md:w-1/2 px-4 mb-4">
-                            <label htmlFor="fullName" className="position relative block text-white">Full Name<span className='position absolute'>*</span></label>
+                            <label htmlFor="fullName" className="position relative block text-white">  {lang.PopUpLanding.name}<span className='position absolute'>*</span></label>
                             <input
                                 type="text"
                                 id="fullName"
@@ -84,7 +84,7 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
 
 
                         <div className="w-1/2 md:w-1/2 px-4 mb-4">
-                            <label htmlFor="email" className="position relative block text-white">Email<span className='position absolute'>*</span></label>
+                            <label htmlFor="email" className="position relative block text-white">  {lang.PopUpLanding.email}<span className='position absolute'>*</span></label>
                             <input
                                 type="email"
                                 id="email"
@@ -98,7 +98,7 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
 
 
                         <div className="w-1/2 md:w-1/2 px-4 mb-4">
-                            <label htmlFor="phone" className=" position relative block text-white">Phone<span className='position absolute'>*</span></label>
+                            <label htmlFor="phone" className=" position relative block text-white">  {lang.PopUpLanding.phone}<span className='position absolute'>*</span></label>
                             <input
                                 type="tel"
                                 id="phone"
@@ -113,7 +113,7 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
 
 
                         <div className="w-1/2 md:w-1/2 px-4 mb-4 ">
-                            <label htmlFor="address" className="block text-white">Address</label>
+                            <label htmlFor="address" className="block text-white">  {lang.PopUpLanding.address}</label>
                             <input
                                 id="address"
                                 name="address"
@@ -130,12 +130,13 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
 
 
                     <Button  variant={"brand"} size={"lg"}  className="w-[100%] mt-[10px] bg-[#C1D6C3] rounded-none px-6 lg:px-10 text-primary hover:bg-green-100" onClick={handleSubmit} >
-               {lang.PopUpLanding.name}
+               {lang.PopUpLanding.btnName}
               </Button>
-              <div className='position absolute cursor-pointer h-[40px] w-[40px] rounded-[50%] bg-[#C1D6C3] hover:bg-green-100 flex items-center justify-center top-[-25px] right-[-40px] sm:top-[-40px] sm:right-[-35px] md:top-[-80px] md:right-[-50px]'>
+             
+                </form>
+                 <div className='position absolute cursor-pointer h-[40px] w-[40px] rounded-[50%] bg-[#C1D6C3] hover:bg-green-100 flex items-center justify-center  top-0 right-0 translate-x-[50%] translate-y-[-50%] '>
               <img src='assets/cross.png' alt='exit'  className='w-[35px] h-[35px]' onClick={()=>setBtn(false)}/>
              </div>
-                </form>
                 
             </motion.div>
             

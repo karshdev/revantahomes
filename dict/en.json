@@ -149,7 +149,11 @@
         }
     },
     "PopUpLanding":{
-        "name":"Request Price"
+        "btnName":"Request Price",
+        "name":"Name",
+        "email":"Email",
+        "phone":"Phone",
+        "address":"Address"
     }
 }
     
