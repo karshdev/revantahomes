@@ -87,7 +87,7 @@ const Hero= ({ images,lang }) => {
 
   return (
     <div className="w-full relative bg-[url('/paralax-bg.jpg')] bg-no-repeat bg-cover min-h-screen overflow-x-hidden">
-      <div className=" hidden md:block">
+      <div className="  md:block">
         <motion.img
          animate={cloudAnimationControls}
           style={{ y }}
@@ -177,7 +177,7 @@ const Hero= ({ images,lang }) => {
           width={1000}
         />
       </div>
-      <div className="hidden md:block">
+      <div className=" md:block">
         <motion.img
           style={{ y }}
           animate={cloudAnimationControls}
@@ -227,7 +227,7 @@ const Hero= ({ images,lang }) => {
           width={400}
         />
       </div>
-      <div className="mt-[100px] lg:mt-60 absolute left-0 lg:top-0 right-0 bottom-40 md:bottom-0 max-h-screen">
+      <div className="top-[50%] lg:mt-60 absolute left-0 lg:top-0 right-0 bottom-40 md:bottom-0 max-h-screen">
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedTab ? selectedTab.id : "empty"}
@@ -248,26 +248,18 @@ const Hero= ({ images,lang }) => {
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className="mt-[105px] h-full min-h-[80vh] lg:mt-60 z-10 lg:min-h-screen max-w-screen-xl mx-auto relative flex flex-col lg:flex-row justify-between">
+      <div className="mt-[150px] h-full min-h-[80vh] lg:mt-60 z-10 lg:min-h-screen max-w-screen-xl mx-auto relative flex flex-col lg:flex-row justify-between">
         <div className="space-y-4 lg:space-y-8 p-2">
           <h1
             className={`text-3xl lg:text-5xl text-center lg:text-left ${tenor.className}`}
           >
             {lang.Hero.title}
           </h1>
-          <p className="text-md lg:text-xl  sm:text-center lg:text-left">
-  <span style={{
-    color: 'black',
-    WebkitTextFillColor: 'white',
-    WebkitTextStrokeWidth: '2px',
-    WebkitTextStrokeColor: 'black',
- 
-  }}>
-    {lang.Hero.description}
-  </span>
+          <p className=" text-black text-center custom-heading text-md lg:text-xl  sm:text-center lg:text-left">    
+          {lang.Hero.description}
 </p>
         </div>
-        <nav className="w-2/4 min-w-[380px] max-w-md md:mt-0 p-2">
+        <nav className="  w-2/4 min-w-[380px] max-w-md md:mt-0 p-2">
           <motion.ul
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
