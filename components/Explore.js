@@ -164,7 +164,7 @@ setShowImage(false)
             </AspectRatio>
           </div>
           {showImage && (
-        <div className="fixed top-0 left-0 w-full h-full  flex justify-center items-center bg-black bg-opacity-70 z-50" onClick={handleCloseImage}>
+        <div className="fixed top-0 left-0 w-full h-full z-[1000000] flex justify-center items-center bg-black bg-opacity-70 " onClick={handleCloseImage}>
           <div className="bg-white h-[500px] w-[500px] relative max-w-3xl mx-auto">
             <button
               onClick={()=>setShowImage(false)}

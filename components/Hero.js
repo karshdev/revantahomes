@@ -24,7 +24,7 @@ const Hero= ({ images,lang }) => {
 
   const cloudAnimationControls = useAnimation();
 
-  useEffect(() => {
+    useEffect(() => {
     const animateClouds = async () => {
       cloudAnimationControls.set({
         x: "0%",
@@ -32,7 +32,7 @@ const Hero= ({ images,lang }) => {
         rotate: 0,
         scale: 1,
       });
-  
+
       while (true) {
         await cloudAnimationControls.start({
           x: "100%",
@@ -44,14 +44,14 @@ const Hero= ({ images,lang }) => {
             ease: "linear",
           },
         });
-  
+
         cloudAnimationControls.set({
           x: "-100%",
           opacity: 1,
           rotate: -45,
           scale: 1,
         });
-  
+
         await cloudAnimationControls.start({
           x: "50%",
           opacity: 1,
@@ -62,7 +62,7 @@ const Hero= ({ images,lang }) => {
             ease: "linear",
           },
         });
-  
+
         cloudAnimationControls.set({
           x: "0%",
           opacity: 1,
@@ -71,10 +71,9 @@ const Hero= ({ images,lang }) => {
         });
       }
     };
-  
+
     animateClouds();
   }, [cloudAnimationControls]);
-  
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedTab(images[index]);
@@ -88,7 +87,7 @@ const Hero= ({ images,lang }) => {
 
   return (
     <div className="w-full relative bg-no-repeat bg-cover min-h-screen overflow-x-hidden overflow-y-hidden">
-      <div className="  md:block">
+      <div className=" md:block">
         <motion.img
          animate={cloudAnimationControls}
           style={{ y }}
@@ -229,25 +228,26 @@ const Hero= ({ images,lang }) => {
         />
       </div>
       <div className="top-[50%] lg:mt-60 absolute left-0 lg:top-0 right-0 bottom-40 md:bottom-0 max-h-screen">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedTab ? selectedTab.id : "empty"}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="relative w-full "
-          >
-            <motion.img
-              src={selectedTab ? selectedTab.full : ""}
-              draggable={false}
-              alt={"image"}
-              width={"100%"}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover"
-            />
-          </motion.div>
-        </AnimatePresence>
+      <AnimatePresence mode='wait'>
+        <motion.div
+          key={selectedTab ? selectedTab.id : "empty"}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative w-full "
+        >
+          <motion.img
+            src={selectedTab ? selectedTab.full : ""}
+            draggable={false}
+            alt={"image"}
+            width={"100%"}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover"
+            initial={false} 
+          />
+        </motion.div>
+      </AnimatePresence>
       </div>
       <div className="mt-[150px] h-full min-h-[80vh] lg:mt-60 z-10 lg:min-h-screen max-w-screen-xl mx-auto relative flex flex-col lg:flex-row justify-between">
         <div className="space-y-4 lg:space-y-8 p-2">

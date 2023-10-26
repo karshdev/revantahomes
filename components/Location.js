@@ -7,7 +7,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 const Location = ({lang}) => {
     return ( 
         <div className="w-full min-h-[80vh] flex flex-col lg:flex-row">
-            <div className="bg-brand py-12 w-full lg:w-1/2 bg-[url('/explore_images/explore_bg.png')] bg-blend-multiply bg-no-repeat">
+            <div className="bg-brand py-12 w-full lg:w-1/2 bg-[url('/explore_images/explore-bg.webp')] bg-blend-multiply bg-no-repeat">
                 <div className="w-full h-full flex justify-center items-start">
                     <div className=" max-w-sm h-full flex flex-col gap-6 justify-center p-2">
                         <h1 className={`text-2xl lg:text-4xl text-center lg:text-left text-white ${tenor.className}`}>{lang.Location.title}</h1>

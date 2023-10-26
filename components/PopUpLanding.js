@@ -53,9 +53,9 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
         }
     }
     return (
-        <div className=" fixed  flex items-center justify-center backdrop w-full h-full top-[100px] m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000]  ">
+        <div className=" fixed  flex items-center justify-center backdrop w-full h-full m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000]  ">
 
-            <motion.div className="position relative bg-[url('/explore_images/explore_bg.png')]  border-[4px] border-white bg-brand flex max-w-max items-center justify-center bg-blend-multiply  object-cover rounded-md px-8 pt-6 pb-8 w-[90vw] sm:w-[80%] sm:h-[60%] "
+            <motion.div className="position relative bg-[url('/explore_images/explore-bg.webp')]  border-[4px] border-white bg-brand flex max-w-max items-center justify-center bg-blend-multiply  object-cover rounded-md px-8 pt-6 pb-8 w-[90vw] sm:w-[80%] sm:h-[60%] "
                 initial={{ opacity: 0, scale: 5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -135,7 +135,7 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
              
                 </form>
                  <div className='position absolute cursor-pointer h-[40px] w-[40px] rounded-[50%] bg-[#C1D6C3] hover:bg-green-100 flex items-center justify-center  top-0 right-0 translate-x-[50%] translate-y-[-50%] '>
-              <img src='assets/cross.png' alt='exit'  className='w-[35px] h-[35px]' onClick={()=>setBtn(false)}/>
+              <img src='assets/cross.' alt='exit'  className='w-[35px] h-[35px]' onClick={()=>setBtn(false)}/>
              </div>
                 
             </motion.div>
