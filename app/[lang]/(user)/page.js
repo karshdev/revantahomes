@@ -36,7 +36,7 @@ console.log(lang);
     {id: 7, image : '/spesification/washarea.webp', title: lang.Specification.Buttons.image7.title, description :  lang.Specification.Buttons.image7.description},
     {id: 8, image : '/spesification/electrification.webp', title: lang.Specification.Buttons.image8.title, description :  lang.Specification.Buttons.image8.description},
     {id: 9, image : '/spesification/homegarden.webp', title: lang.Specification.Buttons.image9.title, description :  lang.Specification.Buttons.image9.description},
-    {id: 10, image : '/spesification/pestControl.webp', title: lang.Specification.Buttons.image10.title, description :  lang.Specification.Buttons.image10.description},
+    {id: 10, image : '/spesification/pestcontrol.webp', title: lang.Specification.Buttons.image10.title, description :  lang.Specification.Buttons.image10.description},
   ];
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative">
