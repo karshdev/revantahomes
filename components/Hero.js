@@ -1,7 +1,6 @@
-"use client";
-
-import { AspectRatio } from "../components/ui/aspect-ratio";
+"use client"
 import Image from "next/image";
+import { AspectRatio } from "../components/ui/aspect-ratio";
 import React, { useEffect, useState } from "react";
 import {
   AnimatePresence,
@@ -11,9 +10,7 @@ import {
   useAnimation,
 } from "framer-motion";
 import { Tenor_Sans } from "next/font/google";
-
 const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
-
 const Hero= ({ images,lang }) => {
   const [selectedTab, setSelectedTab] = useState(images[0]);
   const [index, setIndex] = useState(0);
@@ -79,7 +76,6 @@ const Hero= ({ images,lang }) => {
       setSelectedTab(images[index]);
       setIndex((index + 1) % images.length);
     }, 5000);
-
     return () => {
       clearInterval(interval);
     };
@@ -287,7 +283,6 @@ const Hero= ({ images,lang }) => {
                     className="object-cover shadow-lg"
                   />
                 </AspectRatio>
-
                 {item === selectedTab ? (
                   <>
                     <motion.div
@@ -305,5 +300,4 @@ const Hero= ({ images,lang }) => {
     </div>
   );
 };
-
 export default Hero;

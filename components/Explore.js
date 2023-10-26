@@ -75,7 +75,7 @@ setShowImage(false)
           </div>
           <div className="w-full  relative">
             <Image
-              src= {state === "/explore_images/orchid.w" ? "/explore_images/orchid_floor_plan1.webp" : state === "/explore_images/tulip.webp" ?  "/explore_images/tulip_floor_plan1.webp" :  "/explore_images/iris_floor_plan1.webp"}
+              src= {state === "/explore_images/orchid.webp" ? "/explore_images/orchid_floor_plan1.webp" : state === "/explore_images/tulip.webp" ?  "/explore_images/tulip_floor_plan1.webp" :  "/explore_images/iris_floor_plan1.webp"}
               alt="Orchid"
               onClick={() => handleClick(state === "/explore_images/orchid.webp" ? "/explore_images/orchid_floor_plan1.webp" : state === "/explore_images/tulip.webp" ? "/explore_images/tulip_floor_plan1.webp" : "/explore_images/iris_floor_plan1.webp")} 
               fill
