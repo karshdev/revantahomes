@@ -32,7 +32,7 @@ const Spesification = ({ cards ,lang}) => {
   
 
   return (
-    <div className="py-14 relative w-full bg-[url('/spesification/element_bg.png')] bg-right bg-contain bg-no-repeat flex items-center overflow-hidden">
+    <div className="py-14 relative w-full bg-[url('/spesification/element-bg.webp')] bg-right bg-contain bg-no-repeat flex items-center overflow-hidden">
       <div className="flex flex-col  lg:flex-row  lg:gap-10 w-full max-w-screen-xl mx-auto p-2">
         <div className="w-[100%] flex felx-col justify-center items-center lg:lg:flex-row  max-w-screen-xl mx-auto p-2 ">
         <div className="  sm:ml-0 sm:items-center sm:justify-center  md:items-center md:justify-center lg:items-stretch lg:justify-center lg:flex-none max-w-sm lg:col-span-1 flex flex-col gap-6 pl-2 justify-center">

@@ -11,7 +11,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 
 const Explore = ({lang}) => {
-  const [state, SetState] = useState('/explore_images/Orchid.png')
+  const [state, SetState] = useState('/explore_images/orchid.webp')
   const[btn,setBtn]=useState(false)
   const [showImage, setShowImage] = useState(false);
  const[selectedImage,setSelectedImage]=useState('')
@@ -28,7 +28,7 @@ setShowImage(false)
 };
   let val=''
   return (
-    <div className="min-h-screen relative bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply py-12">
+    <div className="min-h-screen relative bg-[url('/explore_images/explore-bg.webp')] bg-brand w-full bg-blend-multiply py-12">
       <div className="w-full max-w-screen-xl mx-auto flex  flex-col items-center space-y-12 p-2">
         <h1
           className={`text-2xl lg:text-4xl text-center lg:text-left text-white ${tenor.className}`}
@@ -39,24 +39,24 @@ setShowImage(false)
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/explore_images/Orchid.png" ? "bg-[#C1D6C3]" : "bg-secondary"} rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
-            onClick={() => SetState('/explore_images/Orchid.png')}
+            className={` ${state === "/explore_images/orchid.webp" ? "bg-[#C1D6C3]" : "bg-secondary"} rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={() => SetState('/explore_images/orchid.webp')}
           >
             {lang.Explore.Buttons.Orchid}
           </Button>
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/explore_images/Tulip.jpg" ? "bg-[#C1D6C3]" : "bg-secondary"} rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
-            onClick={() => SetState('/explore_images/Tulip.jpg')}
+            className={` ${state === "/explore_images/tulip.webp" ? "bg-[#C1D6C3]" : "bg-secondary"} rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={() => SetState('/explore_images/tulip.webp')}
           >
               {lang.Explore.Buttons.Tulip}
           </Button>
           <Button
             variant={"brand"}
             size={"lg"}
-            className={` ${state === "/explore_images/Iris.jpg" ? "bg-[#C1D6C3]" : "bg-secondary"} rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
-            onClick={() => SetState('/explore_images/Iris.jpg')}
+            className={` ${state === "/explore_images/iris.webp" ? "bg-[#C1D6C3]" : "bg-secondary"} rounded-none px-6 lg:px-10 text-primary hover:bg-green-100`}
+            onClick={() => SetState('/explore_images/iris.webp')}
           >
              {lang.Explore.Buttons.Iris}
           </Button>
@@ -75,19 +75,19 @@ setShowImage(false)
           </div>
           <div className="w-full  relative">
             <Image
-              src= {state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan1.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_floor_plan1.jpg" :  "/explore_images/Iris_floor_plan1.jpg"}
+              src= {state === "/explore_images/orchid.webp" ? "/explore_images/orchid_floor_plan1.webp" : state === "/explore_images/tulip.webp" ?  "/explore_images/tulip_floor_plan1.webp" :  "/explore_images/iris_floor_plan1.webp"}
               alt="Orchid"
-              onClick={() => handleClick(state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan1.png" : state === "/explore_images/Tulip.jpg" ? "/explore_images/Tulip_floor_plan1.jpg" : "/explore_images/Iris_floor_plan1.jpg")} 
+              onClick={() => handleClick(state === "/explore_images/orchid.webp" ? "/explore_images/orchid_floor_plan1.webp" : state === "/explore_images/tulip.webp" ? "/explore_images/tulip_floor_plan1.webp" : "/explore_images/iris_floor_plan1.webp")} 
               fill
               className="object-cover cursor-pointer"
             />
           </div>
           <div className="w-full relative">
             <Image
-              src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan2.jpg" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_floor_plan2.png" :  "/explore_images/Iris_floor_plan2.jpg"}
+              src={state === "/explore_images/orchid.webp" ? "/explore_images/orchid_floor_plan2.webp" : state === "/explore_images/tulip.webp" ?  "/explore_images/tulip_floor_plan2.webp" :  "/explore_images/iris_floor_plan2.webp"}
               alt="Orchid"
               fill
-              onClick={() => handleClick(state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_floor_plan2.jpg" : state === "/explore_images/Tulip.jpg" ? "/explore_images/Tulip_floor_plan2.png" : "/explore_images/Iris_floor_plan2.jpg")}
+              onClick={() => handleClick(state === "/explore_images/orchid.webp" ? "/explore_images/orchid_floor_plan2.webp" : state === "/explore_images/tulip.webp" ? "/explore_images/tulip_floor_plan2.webp" : "/explore_images/iris_floor_plan2.webp")}
               className="object-cover cursor-pointer"
             />
           </div>
@@ -99,7 +99,7 @@ setShowImage(false)
                 {state === "/explore_images/Orchid.png" ? val=lang.Explore.Buttons.Orchid : state === "/explore_images/Tulip.jpg" ?  val=lang.Explore.Buttons.Tulip : val=lang.Explore.Buttons.Iris}
                 
               </h3>
-              {state === "/explore_images/Orchid.png" ?
+              {state === "/explore_images/orchid.webp" ?
                 (
                   <>
                     <p className="font-light">{lang.Explore.Orchid.direction}</p>
@@ -110,7 +110,7 @@ setShowImage(false)
                   </>
                 )
                 :
-                state === "/explore_images/Tulip.jpg" ?
+                state === "/explore_images/tulip.webp" ?
                   (
                     <>
                       <p className="font-light">{lang.Explore.Tulip.direction}</p>
@@ -137,17 +137,17 @@ setShowImage(false)
               {lang.Explore.Buttons.viewPrice}
               </Button>
               {
-                btn && <PopUpLanding setBtn={setBtn}  val={state === "/explore_images/Orchid.png" ? lang.Explore.Buttons.Orchid :  state === "/explore_images/Tulip.jpg" ? lang.Explore.Buttons.Tulip  : lang.Explore.Buttons.Iris  } lang={lang} />
+                btn && <PopUpLanding setBtn={setBtn}  val={state === "/explore_images/orchid.webp" ? lang.Explore.Buttons.Orchid :  state === "/explore_images/tulip.webp" ? lang.Explore.Buttons.Tulip  : lang.Explore.Buttons.Iris  } lang={lang} />
               }
             </div>
           </div>
           <div className="w-full relative col-span-2 order-first md:mt-10  lg:order-last lg:col-span-1">
             <AspectRatio ratio={4 / 3}   className="cursor-pointer h-24 ">
               <Image
-                src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric1.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_isometric1.png" :  "/explore_images/Iris_isometric1.png"}
+                src={state === "/explore_images/orchid.webp" ? "/explore_images/orchid_isometric1.webp" : state === "/explore_images/tulip.webp" ?  "/explore_images/tulip_isometric1.webp" :  "/explore_images/iris_isometric1.webp"}
                 alt="Orchid"
                 fill
-                onClick={() => handleClick(state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric1.png" : state === "/explore_images/Tulip.jpg" ? "/explore_images/Tulip_isometric1.png" : "/explore_images/Iris_isometric1.png")}
+                onClick={() => handleClick(state === "/explore_images/orchid.webp" ? "/explore_images/orchid_isometric1.webp" : state === "/explore_images/tulip.webp" ? "/explore_images/tulip_isometric1.webp" : "/explore_images/iris_isometric1.webp")}
                 className="object-cover overflow-visible"
               />
             </AspectRatio>
@@ -155,10 +155,10 @@ setShowImage(false)
           <div className="w-full  relative order-first col-span-2 md:mt-10  lg:order-last lg:col-span-1">
             <AspectRatio ratio={4 / 3} className="cursor-pointer h-24 ">
               <Image
-                src={state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric2.png" : state === "/explore_images/Tulip.jpg" ?  "/explore_images/Tulip_isometric2.png" :  "/explore_images/Iris_isometric2.png"}
+                src={state === "/explore_images/orchid.webp" ? "/explore_images/orchid_isometric2.webp" : state === "/explore_images/tulip.webp" ?  "/explore_images/tulip_isometric2.webp" :  "/explore_images/iris_isometric2.webp"}
                 alt="Orchid"
                 fill
-                onClick={() => handleClick(state === "/explore_images/Orchid.png" ? "/explore_images/Orchid_isometric2.png" : state === "/explore_images/Tulip.jpg" ? "/explore_images/Tulip_isometric2.png" : "/explore_images/Iris_isometric2.png")}
+                onClick={() => handleClick(state === "/explore_images/orchid.webp" ? "/explore_images/orchid_isometric2.webp" : state === "/explore_images/tulip.webp" ? "/explore_images/tulip_isometric2.webp" : "/explore_images/iris_isometric2.webp")}
                 className="object-cover overflow-visible"
               />
             </AspectRatio>

@@ -86,7 +86,7 @@ const Hero= ({ images,lang }) => {
   }, [index, images]);
 
   return (
-    <div className="w-full relative bg-[url('/paralax-bg.jpg')] bg-no-repeat bg-cover min-h-screen overflow-x-hidden">
+    <div className="w-full relative bg-no-repeat bg-cover min-h-screen overflow-x-hidden overflow-y-hidden">
       <div className="  md:block">
         <motion.img
          animate={cloudAnimationControls}
