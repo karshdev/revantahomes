@@ -9,7 +9,7 @@ const tenor = Tenor_Sans({ subsets: ["latin"], weight: "400" });
 
 const Footer = ({lang}) => {
   return (
-    <div className="relative bg-[url('/explore_images/explore_bg.png')] bg-brand w-full bg-blend-multiply py-12">
+    <div className="relative bg-[url('/explore_images/explore-bg.webp')] bg-brand w-full bg-blend-multiply py-12">
       <div className="w-full max-w-screen-xl mx-auto grid grid-cols-3 gap-y-12 p-2">
         <div className="flex col-span-3 lg:col-span-1 flex-col gap-4 items-center justify-center sm:items-start">
           <Image src={"/assets/logo.png"} alt="logo" width={100} height={100} />

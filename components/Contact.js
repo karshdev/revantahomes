@@ -68,7 +68,7 @@ if(res.message=="Leads and email Sent"){
 }
  }
   return (
-    <div className="py-14 relative w-full bg-[url('/spesification/element_bg.png')] bg-right bg-contain bg-no-repeat flex items-center overflow-hidden">
+    <div className="py-14 relative w-full bg-[url('/spesification/element-bg.webp')] bg-right bg-contain bg-no-repeat flex items-center overflow-hidden">
       <ToastContainer />
       <div className="w-full p-2 max-w-screen-xl mx-auto h-full flex flex-col justify-center gap-6">
         <h1
