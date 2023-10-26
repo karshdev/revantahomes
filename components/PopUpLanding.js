@@ -53,7 +53,7 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
         }
     }
     return (
-        <div className=" fixed  flex items-center justify-center backdrop w-full h-full top-0 m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000]  ">
+        <div className=" fixed  flex items-center justify-center backdrop w-full h-full top-[100px] m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[10000]  ">
 
             <motion.div className="position relative bg-[url('/explore_images/explore_bg.png')]  border-[4px] border-white bg-brand flex max-w-max items-center justify-center bg-blend-multiply  object-cover rounded-md px-8 pt-6 pb-8 w-[90vw] sm:w-[80%] sm:h-[60%] "
                 initial={{ opacity: 0, scale: 5 }}

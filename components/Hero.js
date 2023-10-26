@@ -24,9 +24,16 @@ const Hero= ({ images,lang }) => {
 
   const cloudAnimationControls = useAnimation();
 
- useEffect(() => {
-  const animateClouds = async () => {
-    while (true) {
+  useEffect(() => {
+    const animateClouds = async () => {
+      cloudAnimationControls.set({
+        x: "0%",
+        opacity: 1,
+        rotate: 0,
+        scale: 1,
+      });
+  
+      while (true) {
         await cloudAnimationControls.start({
           x: "100%",
           opacity: 0,
@@ -37,14 +44,14 @@ const Hero= ({ images,lang }) => {
             ease: "linear",
           },
         });
-
+  
         cloudAnimationControls.set({
           x: "-100%",
           opacity: 1,
           rotate: -45,
           scale: 1,
         });
-
+  
         await cloudAnimationControls.start({
           x: "50%",
           opacity: 1,
@@ -55,25 +62,19 @@ const Hero= ({ images,lang }) => {
             ease: "linear",
           },
         });
-
+  
         cloudAnimationControls.set({
           x: "0%",
           opacity: 1,
           rotate: 0,
           scale: 1,
         });
-        cloudAnimationControls.set({
-          x: "0%",
-          opacity: 1,
-          rotate: 0,
-          scale: 1,
-        });
-      
-    }
-  };
-
-  animateClouds();
-}, [cloudAnimationControls]);
+      }
+    };
+  
+    animateClouds();
+  }, [cloudAnimationControls]);
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedTab(images[index]);

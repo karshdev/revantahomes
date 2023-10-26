@@ -75,7 +75,7 @@ setShowImage(false)
           </div>
           <div className="w-full  relative">
             <Image
-              src= {state === "/explore_images/orchid.webp" ? "/explore_images/orchid_floor_plan1.webp" : state === "/explore_images/tulip.webp" ?  "/explore_images/tulip_floor_plan1.webp" :  "/explore_images/iris_floor_plan1.webp"}
+              src= {state === "/explore_images/orchid.w" ? "/explore_images/orchid_floor_plan1.webp" : state === "/explore_images/tulip.webp" ?  "/explore_images/tulip_floor_plan1.webp" :  "/explore_images/iris_floor_plan1.webp"}
               alt="Orchid"
               onClick={() => handleClick(state === "/explore_images/orchid.webp" ? "/explore_images/orchid_floor_plan1.webp" : state === "/explore_images/tulip.webp" ? "/explore_images/tulip_floor_plan1.webp" : "/explore_images/iris_floor_plan1.webp")} 
               fill
@@ -96,7 +96,7 @@ setShowImage(false)
           <div className="w-full col-span-5 lg:col-span-3 relative">
             <div className="flex flex-col text-white items-center justify-center lg:items-start ">
               <h3 className={`text-2xl lg:text-4xl text-center lg:text-start mb-4 ${tenor.className}`}>
-                {state === "/explore_images/Orchid.png" ? val=lang.Explore.Buttons.Orchid : state === "/explore_images/Tulip.jpg" ?  val=lang.Explore.Buttons.Tulip : val=lang.Explore.Buttons.Iris}
+                {state === "/explore_images/orchid.webp" ? val=lang.Explore.Buttons.Orchid : state === "/explore_images/tulip.webp" ?  val=lang.Explore.Buttons.Tulip : val=lang.Explore.Buttons.Iris}
                 
               </h3>
               {state === "/explore_images/orchid.webp" ?
@@ -164,7 +164,7 @@ setShowImage(false)
             </AspectRatio>
           </div>
           {showImage && (
-        <div className="fixed top-0 left-0 w-full  flex justify-center items-center bg-black bg-opacity-70 z-50" onClick={handleCloseImage}>
+        <div className="fixed top-0 left-0 w-full h-full  flex justify-center items-center bg-black bg-opacity-70 z-50" onClick={handleCloseImage}>
           <div className="bg-white h-[500px] w-[500px] relative max-w-3xl mx-auto">
             <button
               onClick={()=>setShowImage(false)}
