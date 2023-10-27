@@ -54,7 +54,7 @@ const Footer = ({lang}) => {
                   />
                 </svg>
               </div>
-              <p className="mt-1">94256-50333, 94256-60333</p>
+              <p className="mt-1"><a href="tel:9425650333">94256-50333</a>, <a href="tel:9425660333">94256-60333</a></p>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Footer = ({lang}) => {
               <Link
                 prefetch={false}
                 target="_blank"
-                href={"revantahomesmp@gmail.com"}
+                href={"mailto:revantahomesmp@gmail.com"}
                 className="flex-none bg-white rounded-full flex justify-center items-center"
               >
                 <svg
