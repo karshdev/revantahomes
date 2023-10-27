@@ -53,8 +53,8 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
     }
     return (
 
-        <div className="fixed  flex  items-center justify-center backdrop w-full h-full m-auto backdrop-blur ml-auto mr-auto left-0 right-0 z-[100] ">
-            <motion.div className="position relative bg-[url('/explore_images/explore-bg.webp')] z-[10000]  border-[4px] border-white bg-brand flex max-w-max items-center justify-center bg-blend-multiply  object-cover rounded-md px-8 pt-6 pb-8 w-[90vw] sm:w-[80%] sm:h-[60%] "
+        <div className="fixed flex  items-center justify-center backdrop w-full h-full m-auto backdrop-blur ml-auto mr-auto left-0 top-0 z-[100]">
+            <motion.div className="relative bg-[url('/explore_images/explore-bg.webp')] z-[10000]  border-[4px] border-white bg-brand flex max-w-max items-center justify-center bg-blend-multiply  object-cover rounded-md px-8 pt-6 pb-8 w-[90vw] sm:w-[80%] sm:h-[60%] "
                 initial={{ opacity: 0, scale: 5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -64,12 +64,12 @@ const PopUpLanding = ({ setBtn,val,lang }) => {
             >
                 <ToastContainer />
                
-                <form onSubmit={e => e.preventDefault()} className='position relative'>
+                <form onSubmit={e => e.preventDefault()} className='relative'>
                 <h2 className="text-[50px] font-bold mb-4 text-center text-white">{val}</h2>
                     <div className="flex flex-wrap -mx-4 mb-4">
 
                         <div className="w-1/2 md:w-1/2 px-4 mb-4">
-                            <label htmlFor="fullName" className="position relative block text-white">  {lang.PopUpLanding.name}<span className='position absolute'>*</span></label>
+                            <label htmlFor="fullName" className="relative block text-white">  {lang.PopUpLanding.name}<span className='position absolute'>*</span></label>
                             <input
                                 type="text"
                                 id="fullName"

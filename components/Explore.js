@@ -89,7 +89,7 @@ setShowImage(false)
         </div>
         <div className="grid grid-cols-5 w-full gap-4">
           <div className="w-full h-full col-span-5 lg:col-span-3 relative">
-            <div className="flex flex-col text-white items-center justify-center lg:items-start ">
+            <div className="flex flex-col text-white items-center justify-center lg:items-start relative">
               <h3 className={`text-2xl lg:text-4xl text-center lg:text-start mb-4 ${tenor.className}`}>
                 {state === "/explore_images/orchid.webp" ? val=lang.Explore.Buttons.Orchid : state === "/explore_images/tulip.webp" ?  val=lang.Explore.Buttons.Tulip : val=lang.Explore.Buttons.Iris}
                 
