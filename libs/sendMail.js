@@ -2,7 +2,7 @@ import nodemailer from 'nodemailer'
 const sendEmail=async (fullName,email,phone,message,address)=>{
     try {
     // Create a Nodemailer transporter
-    console.log(fullName,email,phone,message,address);
+    // console.log(fullName,email,phone,message,address);
     const transporter = nodemailer.createTransport({
         // Specify your email service and credentials
         service: 'gmail',
