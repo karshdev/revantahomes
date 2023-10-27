@@ -22,9 +22,7 @@ const Navbar =  ({lang}) => {
   // };
   
   const handleToggle=()=>{
-    alert('pushing')
-    router.push(lang.Language==='english' ? "/hi" : "/en")
-    alert('pushed')
+    location.assign(lang.Language==='english' ? "/hi" : "/en")
 }
 
  
