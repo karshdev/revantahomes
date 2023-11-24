@@ -30,6 +30,9 @@ setShowImage(false)
         >
           {lang.Explore.title}
         </h1>
+           <p className="text-md text-white lg:text-xl max-w-xl text-center sm:text-center">
+            {lang.Explore?.description}
+            </p>
         <div className="flex gap-4">
           <Button
             variant={"brand"}
